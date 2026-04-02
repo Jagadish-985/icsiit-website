@@ -12,10 +12,10 @@ const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Call for Papers', href: '/call-for-papers' },
+  { name: 'Committee', href: '/committee' },
   { name: 'Dates', href: '/important-dates' },
   { name: 'Registration', href: '/registration' },
   { name: 'Contact', href: '/contact' },
-  { name: 'Venue', href: '/venue' },
 ];
 
 export default function Navbar() {
@@ -87,7 +87,7 @@ export default function Navbar() {
         "lg:hidden fixed inset-0 top-[64px] bg-background z-40 transition-transform duration-300 ease-in-out transform",
         isOpen ? "translate-x-0" : "translate-x-full"
       )}>
-        <nav className="flex flex-col p-6 gap-4">
+        <nav className="flex flex-col p-6 gap-4 overflow-y-auto h-full">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -101,7 +101,7 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <div className="mt-4 flex flex-col gap-3">
+          <div className="mt-4 flex flex-col gap-3 pb-20">
             <Button asChild className="w-full bg-primary text-primary-foreground">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now

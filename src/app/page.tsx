@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -12,7 +13,8 @@ import {
   CheckCircle2, 
   ArrowRight,
   Globe,
-  Building
+  Building,
+  ShieldCheck
 } from 'lucide-react';
 import CountdownTimer from '@/components/countdown-timer';
 import SectionHeading from '@/components/section-heading';
@@ -75,6 +77,26 @@ export default function Home() {
             <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-lg border-primary/20 hover:border-primary/50" asChild>
               <Link href="/about">Learn More</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Patrons Brief */}
+      <section className="py-12 border-y border-white/5">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-12">
+            <div className="text-center max-w-[200px]">
+              <p className="text-xs uppercase text-primary font-bold mb-2">Chief Patron</p>
+              <p className="font-bold text-sm">Hon'ble Vice Chancellor, RUAS</p>
+            </div>
+            <div className="text-center max-w-[200px]">
+              <p className="text-xs uppercase text-secondary font-bold mb-2">Patron</p>
+              <p className="font-bold text-sm">Registrar & Dean-FET, RUAS</p>
+            </div>
+            <div className="text-center max-w-[200px]">
+              <p className="text-xs uppercase text-primary font-bold mb-2">General Chair</p>
+              <p className="font-bold text-sm">Head, Dept. of Mechanical Engg.</p>
+            </div>
           </div>
         </div>
       </section>
