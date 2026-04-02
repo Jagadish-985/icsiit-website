@@ -1,28 +1,27 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 188 19% 14%;
-    --foreground: 0 0% 100%;
-    --card: 188 19% 16%;
-    --card-foreground: 0 0% 100%;
-    --popover: 188 19% 14%;
-    --popover-foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 188 19% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 188 19% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 188 19% 14%;
     --primary: 184 75% 47%;
-    --primary-foreground: 188 19% 14%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 158 74% 57%;
     --secondary-foreground: 188 19% 14%;
-    --muted: 188 19% 20%;
-    --muted-foreground: 188 10% 70%;
+    --muted: 188 19% 96%;
+    --muted-foreground: 188 10% 40%;
     --accent: 158 74% 57%;
     --accent-foreground: 188 19% 14%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 188 19% 25%;
-    --input: 188 19% 25%;
+    --border: 188 19% 90%;
+    --input: 188 19% 90%;
     --ring: 184 75% 47%;
     --radius: 0.75rem;
   }
@@ -39,7 +38,7 @@
 }
 
 .glass-card {
-  @apply bg-card/40 backdrop-blur-md border border-white/10 shadow-2xl;
+  @apply bg-white/70 backdrop-blur-md border border-gray-200/50 shadow-xl;
 }
 
 .text-gradient {

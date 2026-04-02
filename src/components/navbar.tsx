@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -35,7 +34,7 @@ export default function Navbar() {
     <header 
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-lg border-b border-border py-3" : "bg-transparent py-5"
+        scrolled ? "bg-white/90 backdrop-blur-lg border-b border-border py-3 shadow-sm" : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -43,7 +42,7 @@ export default function Navbar() {
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-xl text-primary-foreground group-hover:scale-110 transition-transform">
             IC
           </div>
-          <span className="font-headline font-bold text-xl tracking-tight hidden sm:block">
+          <span className="font-headline font-bold text-xl tracking-tight hidden sm:block text-foreground">
             SMART <span className="text-primary">2026</span>
           </span>
         </Link>
@@ -67,7 +66,7 @@ export default function Navbar() {
               Register Now
             </a>
           </Button>
-          <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:border-primary/50">
+          <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:border-primary/50 text-foreground">
             <Download className="w-4 h-4" />
             Brochure
           </Button>
@@ -94,7 +93,7 @@ export default function Navbar() {
               href={item.href}
               onClick={() => setIsOpen(false)}
               className={cn(
-                "text-lg font-medium py-2 border-b border-border/50",
+                "text-lg font-medium py-2 border-b border-border/50 text-foreground",
                 pathname === item.href ? "text-primary" : "text-foreground/80"
               )}
             >
@@ -107,7 +106,7 @@ export default function Navbar() {
                 Register Now
               </a>
             </Button>
-            <Button variant="outline" className="w-full gap-2">
+            <Button variant="outline" className="w-full gap-2 text-foreground">
               <Download className="w-4 h-4" />
               Download Brochure
             </Button>
