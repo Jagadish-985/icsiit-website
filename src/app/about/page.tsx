@@ -1,4 +1,3 @@
-
 import SectionHeading from '@/components/section-heading';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -13,7 +12,6 @@ export default function AboutPage() {
           <Badge variant="outline" className="mb-4 border-primary text-primary">About IC-SMART 2026</Badge>
           <SectionHeading 
             title="International Conference on Smart and Integrated Engineering Systems" 
-            fullWidthLine={true}
           />
           
           <div className="prose prose-invert max-w-none text-muted-foreground text-lg leading-relaxed mb-16">
@@ -67,7 +65,6 @@ export default function AboutPage() {
 
           <SectionHeading 
             title="Conference Benefits" 
-            fullWidthLine={true}
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[

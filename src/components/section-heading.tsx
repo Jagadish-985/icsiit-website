@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
@@ -6,23 +5,21 @@ interface SectionHeadingProps {
   subtitle?: string;
   centered?: boolean;
   className?: string;
-  fullWidthLine?: boolean;
 }
 
-export default function SectionHeading({ title, subtitle, centered = false, className, fullWidthLine = false }: SectionHeadingProps) {
+export default function SectionHeading({ title, subtitle, centered = false, className }: SectionHeadingProps) {
   return (
     <div className={cn(
       "mb-12 space-y-4",
       centered ? "text-center" : "text-left",
       className
     )}>
-      <div className={cn(fullWidthLine ? "inline-block" : "block")}>
+      <div className="inline-block relative">
         <h2 className="text-3xl md:text-4xl font-headline font-bold">
           {title}
         </h2>
         <div className={cn(
-          "h-1.5 bg-primary rounded-full mt-2",
-          fullWidthLine ? "w-full" : "w-24",
+          "h-1.5 bg-primary rounded-full mt-2 w-full",
           centered ? "mx-auto" : "mr-auto"
         )} />
       </div>
