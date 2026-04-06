@@ -1,11 +1,14 @@
+
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Download } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -21,6 +24,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const uniLogo = PlaceHolderImages.find(img => img.id === 'uni-logo');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,14 +42,31 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-xl text-primary-foreground group-hover:scale-110 transition-transform">
-            IC
+        <div className="flex items-center gap-4">
+          {/* University Logo */}
+          <div className="flex items-center h-10">
+            <Image 
+              src={uniLogo?.imageUrl || ''} 
+              alt="University Logo" 
+              width={160} 
+              height={40} 
+              className="h-full w-auto object-contain"
+              data-ai-hint="university logo"
+            />
           </div>
-          <span className="font-headline font-bold text-xl tracking-tight hidden sm:block text-foreground">
-            SMART <span className="text-primary">2026</span>
-          </span>
-        </Link>
+          
+          <div className="h-8 w-px bg-border/60 hidden md:block" />
+
+          {/* Conference Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-xl text-primary-foreground group-hover:scale-110 transition-transform">
+              IC
+            </div>
+            <span className="font-headline font-bold text-xl tracking-tight hidden sm:block text-foreground">
+              SMART <span className="text-primary">2026</span>
+            </span>
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6">

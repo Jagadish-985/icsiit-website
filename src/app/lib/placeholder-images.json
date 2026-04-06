@@ -24,6 +24,12 @@
       "description": "Ramaiah University campus",
       "imageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1986&auto=format&fit=crop",
       "imageHint": "university building"
+    },
+    {
+      "id": "uni-logo",
+      "description": "Ramaiah University of Applied Sciences Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1599305090598-fe179d501c27?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "university logo"
     }
   ]
 }
