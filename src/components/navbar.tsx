@@ -41,65 +41,69 @@ export default function Navbar() {
         scrolled ? "bg-white/90 backdrop-blur-lg border-b border-border py-3 shadow-sm" : "bg-transparent py-5"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          {/* University Logo */}
-          <div className="flex items-center h-10">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[48px]">
+        {/* Left: University Logo */}
+        <div className="flex items-center">
+          <div className="flex items-center h-8 md:h-10">
             <Image 
               src={uniLogo?.imageUrl || ''} 
               alt="University Logo" 
-              width={160} 
-              height={40} 
+              width={140} 
+              height={35} 
               className="h-full w-auto object-contain"
               data-ai-hint="university logo"
             />
           </div>
-          
-          <div className="h-8 w-px bg-border/60 hidden md:block" />
+        </div>
 
-          {/* Conference Logo */}
+        {/* Center: Conference Logo (Absolutely Positioned) */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center z-10">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-xl text-primary-foreground group-hover:scale-110 transition-transform">
+            <div className="w-9 h-9 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-lg md:text-xl text-primary-foreground group-hover:scale-105 transition-transform">
               IC
             </div>
-            <span className="font-headline font-bold text-xl tracking-tight hidden sm:block text-foreground">
+            <span className="font-headline font-bold text-lg md:text-xl tracking-tight hidden sm:block text-foreground">
               SMART <span className="text-primary">2026</span>
             </span>
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === item.href ? "text-primary" : "text-foreground/80"
-              )}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Button asChild variant="default" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
-              Register Now
-            </a>
-          </Button>
-          <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:border-primary/50 text-foreground">
-            <Download className="w-4 h-4" />
-            Brochure
-          </Button>
-        </nav>
+        {/* Right: Desktop Navigation & Mobile Toggle */}
+        <div className="flex items-center gap-4">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "text-xs xl:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap",
+                  pathname === item.href ? "text-primary" : "text-foreground/80"
+                )}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className="flex items-center gap-2 ml-2">
+              <Button asChild variant="default" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 h-9">
+                <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
+                  Register
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:border-primary/50 text-foreground h-9 hidden xl:flex">
+                <Download className="w-4 h-4" />
+                Brochure
+              </Button>
+            </div>
+          </nav>
 
-        {/* Mobile Toggle */}
-        <button 
-          className="lg:hidden p-2 text-foreground"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
+          {/* Mobile Toggle */}
+          <button 
+            className="lg:hidden p-2 text-foreground"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
