@@ -25,17 +25,17 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center pt-32 pb-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImg?.imageUrl || ''}
             alt="Hero Background"
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-5"
             priority
             data-ai-hint="robotics engineering"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white to-white" />
+          <div className="absolute inset-0 bg-white/90" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -54,25 +54,25 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 animate-fade-in [animation-delay:600ms]">
             <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full border-primary/20 bg-white/80">
               <span className="w-3 h-3 bg-primary rounded-full animate-pulse" />
-              <span className="font-medium text-foreground">14th & 15th May 2026</span>
+              <span className="font-medium text-foreground text-sm md:text-base">14th & 15th May 2026</span>
             </div>
             <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full border-primary/20 bg-white/80">
               <Building className="w-5 h-5 text-primary" />
-              <span className="font-medium text-foreground">Bangalore, India</span>
+              <span className="font-medium text-foreground text-sm md:text-base">Bangalore, India</span>
             </div>
           </div>
 
-          <div className="mb-12 animate-fade-in [animation-delay:800ms]">
+          <div className="mb-16 animate-fade-in [animation-delay:800ms]">
             <CountdownTimer />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:1000ms]">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 h-12 text-lg shadow-lg">
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:1000ms] mb-12">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 h-14 text-lg shadow-lg">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-lg border-primary/20 hover:border-primary/50 text-foreground" asChild>
+            <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-lg border-primary/20 hover:border-primary/50 text-foreground" asChild>
               <Link href="/about">Learn More</Link>
             </Button>
           </div>
@@ -80,21 +80,21 @@ export default function Home() {
       </section>
 
       {/* Patrons Section */}
-      <section className="py-16 border-y border-border bg-muted/20">
+      <section className="py-20 border-y border-border bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-3xl shadow-sm border border-border">
-              <p className="text-xs uppercase text-primary font-bold mb-2 tracking-widest">Chief Patron</p>
+            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border">
+              <p className="text-xs uppercase text-primary font-bold mb-3 tracking-widest">Chief Patron</p>
               <p className="font-bold text-lg text-foreground">Hon'ble Vice Chancellor</p>
               <p className="text-sm text-muted-foreground">RUAS, Bangalore</p>
             </div>
-            <div className="text-center p-6 bg-white rounded-3xl shadow-sm border border-border">
-              <p className="text-xs uppercase text-secondary font-bold mb-2 tracking-widest">Patron</p>
+            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border">
+              <p className="text-xs uppercase text-secondary font-bold mb-3 tracking-widest">Patron</p>
               <p className="font-bold text-lg text-foreground">Registrar & Dean-FET</p>
               <p className="text-sm text-muted-foreground">RUAS, Bangalore</p>
             </div>
-            <div className="text-center p-6 bg-white rounded-3xl shadow-sm border border-border">
-              <p className="text-xs uppercase text-primary font-bold mb-2 tracking-widest">General Chair</p>
+            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border">
+              <p className="text-xs uppercase text-primary font-bold mb-3 tracking-widest">General Chair</p>
               <p className="font-bold text-lg text-foreground">Head, Dept. of Mechanical Engg.</p>
               <p className="text-sm text-muted-foreground">FET, RUAS</p>
             </div>
