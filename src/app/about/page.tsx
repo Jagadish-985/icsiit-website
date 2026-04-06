@@ -11,7 +11,10 @@ export default function AboutPage() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <Badge variant="outline" className="mb-4 border-primary text-primary">About IC-SMART 2026</Badge>
-          <SectionHeading title="International Conference on Smart and Integrated Engineering Systems" />
+          <SectionHeading 
+            title="International Conference on Smart and Integrated Engineering Systems" 
+            fullWidthLine={true}
+          />
           
           <div className="prose prose-invert max-w-none text-muted-foreground text-lg leading-relaxed mb-16">
             <p>
@@ -62,7 +65,10 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
           </div>
 
-          <SectionHeading title="Conference Benefits" />
+          <SectionHeading 
+            title="Conference Benefits" 
+            fullWidthLine={true}
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               { title: 'Global Recognition', icon: Globe, desc: 'Present your work to an international audience and gain global exposure.' },
