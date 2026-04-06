@@ -39,19 +39,16 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <Badge variant="outline" className="mb-6 border-primary text-primary px-4 py-1 text-sm animate-fade-in bg-white/50">
-            IC-SMART 2026
-          </Badge>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 tracking-tight animate-fade-in [animation-delay:200ms] text-foreground">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 tracking-tight animate-fade-in text-foreground">
             International Conference on <br />
             <span className="text-gradient">Smart & Integrated Engineering Systems</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in [animation-delay:400ms]">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in [animation-delay:200ms]">
             Organized by Department of Mechanical Engineering <br />
             <span className="text-primary font-bold">Ramaiah University of Applied Sciences</span>
           </p>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 animate-fade-in [animation-delay:600ms]">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 animate-fade-in [animation-delay:400ms]">
             <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full border-primary/20 bg-white/80">
               <span className="w-3 h-3 bg-primary rounded-full animate-pulse" />
               <span className="font-medium text-foreground text-sm md:text-base">14th & 15th May 2026</span>
@@ -62,11 +59,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mb-16 animate-fade-in [animation-delay:800ms]">
+          <div className="mb-16 animate-fade-in [animation-delay:600ms]">
             <CountdownTimer />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:1000ms] mb-20">
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-20">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 h-14 text-lg shadow-lg">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
