@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-32 pb-40 overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-center pt-32 pb-56 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImg?.imageUrl || ''}
@@ -35,7 +35,7 @@ export default function Home() {
             priority
             data-ai-hint="robotics engineering"
           />
-          <div className="absolute inset-0 bg-white/90" />
+          <div className="absolute inset-0 bg-white/95" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -66,7 +66,7 @@ export default function Home() {
             <CountdownTimer />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:1000ms] mb-12">
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:1000ms] mb-20">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 h-14 text-lg shadow-lg">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
@@ -79,21 +79,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Patrons Section */}
-      <section className="py-20 border-y border-border bg-muted/20">
+      {/* Patrons Section - This section has a border-t which creates the "Line" */}
+      <section className="py-24 border-y border-border bg-muted/20 relative z-20">
         <div className="container mx-auto px-4">
+          <SectionHeading centered title="Our Distinguished Patrons" subtitle="Under the guidance of visionary leadership from RUAS." className="mb-16" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border">
+            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-md transition-shadow">
               <p className="text-xs uppercase text-primary font-bold mb-3 tracking-widest">Chief Patron</p>
               <p className="font-bold text-lg text-foreground">Hon'ble Vice Chancellor</p>
               <p className="text-sm text-muted-foreground">RUAS, Bangalore</p>
             </div>
-            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border">
+            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-md transition-shadow">
               <p className="text-xs uppercase text-secondary font-bold mb-3 tracking-widest">Patron</p>
               <p className="font-bold text-lg text-foreground">Registrar & Dean-FET</p>
               <p className="text-sm text-muted-foreground">RUAS, Bangalore</p>
             </div>
-            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border">
+            <div className="text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-md transition-shadow">
               <p className="text-xs uppercase text-primary font-bold mb-3 tracking-widest">General Chair</p>
               <p className="font-bold text-lg text-foreground">Head, Dept. of Mechanical Engg.</p>
               <p className="text-sm text-muted-foreground">FET, RUAS</p>
@@ -103,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Thrust Areas Section */}
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeading 
             centered 
@@ -185,21 +186,21 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="p-12 bg-white rounded-[3rem] text-center border-primary/20 border-2 shadow-2xl relative overflow-hidden">
+          <div className="p-12 md:p-20 bg-muted/10 rounded-[3rem] text-center border-primary/10 border-2 shadow-sm relative overflow-hidden">
             <div className="absolute top-0 right-0 p-8 opacity-5">
               <Globe className="w-64 h-64 text-primary" />
             </div>
-            <h2 className="text-3xl font-headline font-bold mb-6 text-foreground">Ready to present your research?</h2>
+            <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6 text-foreground">Ready to present your research?</h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Join us at IC-SMART 2026 and be part of the future of integrated engineering systems.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground shadow-lg px-10">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground shadow-lg px-10 h-16 text-lg rounded-full">
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">Register Now</a>
               </Button>
-              <Button variant="outline" size="lg" asChild className="text-foreground">
+              <Button variant="outline" size="lg" asChild className="text-foreground h-16 px-10 text-lg rounded-full border-primary/20">
                 <Link href="/call-for-papers">Download Templates</Link>
               </Button>
             </div>
