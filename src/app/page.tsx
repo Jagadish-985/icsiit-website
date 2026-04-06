@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center pt-32 pb-56 overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-center pt-32 pb-48 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImg?.imageUrl || ''}
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 tracking-tight animate-fade-in text-foreground">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 tracking-tight animate-fade-in text-foreground leading-[1.1]">
             International Conference on <br />
             <span className="text-gradient">Smart & Integrated Engineering Systems</span>
           </h1>
@@ -48,35 +48,35 @@ export default function Home() {
             <span className="text-primary font-bold">Ramaiah University of Applied Sciences</span>
           </p>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 animate-fade-in [animation-delay:400ms]">
-            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full border-primary/20 bg-white/80">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
+            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full border-primary/20 bg-white/80 shadow-sm">
               <span className="w-3 h-3 bg-primary rounded-full animate-pulse" />
               <span className="font-medium text-foreground text-sm md:text-base">14th & 15th May 2026</span>
             </div>
-            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full border-primary/20 bg-white/80">
+            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full border-primary/20 bg-white/80 shadow-sm">
               <Building className="w-5 h-5 text-primary" />
               <span className="font-medium text-foreground text-sm md:text-base">Bangalore, India</span>
             </div>
           </div>
 
-          <div className="mb-16 animate-fade-in [animation-delay:600ms]">
+          <div className="mb-20 animate-fade-in [animation-delay:600ms]">
             <CountdownTimer />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-20">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 h-14 text-lg shadow-lg">
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-12">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:brightness-90 transition-all rounded-full px-10 h-14 text-lg shadow-lg border-none">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full px-8 h-14 text-lg border-primary/20 hover:border-primary/50 text-foreground" asChild>
+            <Button variant="outline" size="lg" className="rounded-full px-10 h-14 text-lg border-primary/20 hover:border-primary/50 text-foreground bg-white/50 backdrop-blur-sm" asChild>
               <Link href="/about">Learn More</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Patrons Section - This section has a border-t which creates the "Line" */}
+      {/* Patrons Section */}
       <section className="py-24 border-y border-border bg-muted/20 relative z-20">
         <div className="container mx-auto px-4">
           <SectionHeading centered title="Our Distinguished Patrons" subtitle="Under the guidance of visionary leadership from RUAS." className="mb-16" />
@@ -115,13 +115,13 @@ export default function Home() {
               { title: 'Electronics Engineering', icon: Lightbulb, color: 'text-yellow-600' },
               { title: 'Civil Engineering', icon: Building, color: 'text-green-600' }
             ].map((area, i) => (
-              <Card key={area.title} className="hover:border-primary/50 transition-all duration-300 group border-border shadow-sm">
+              <Card key={area.title} className="hover:border-primary/50 transition-all duration-300 group border-border shadow-sm rounded-2xl overflow-hidden">
                 <CardContent className="pt-8 pb-6 flex flex-col items-center text-center">
                   <div className={cn("p-4 rounded-2xl bg-muted mb-6 group-hover:scale-110 transition-transform", area.color)}>
                     <area.icon className="w-10 h-10" />
                   </div>
                   <h3 className="text-xl font-headline font-bold mb-2 text-foreground">{area.title}</h3>
-                  <p className="text-sm text-muted-foreground">Integrating smart systems into modern {area.title.toLowerCase()} practices.</p>
+                  <p className="text-sm text-muted-foreground px-4">Integrating smart systems into modern {area.title.toLowerCase()} practices.</p>
                 </CardContent>
               </Card>
             ))}
@@ -194,10 +194,10 @@ export default function Home() {
               Join us at IC-SMART 2026 and be part of the future of integrated engineering systems.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground shadow-lg px-10 h-16 text-lg rounded-full">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:brightness-90 transition-all px-10 h-16 text-lg rounded-full shadow-lg border-none">
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">Register Now</a>
               </Button>
-              <Button variant="outline" size="lg" asChild className="text-foreground h-16 px-10 text-lg rounded-full border-primary/20">
+              <Button variant="outline" size="lg" asChild className="text-foreground h-16 px-10 text-lg rounded-full border-primary/20 bg-white/50">
                 <Link href="/call-for-papers">Download Templates</Link>
               </Button>
             </div>

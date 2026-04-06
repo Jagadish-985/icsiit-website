@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -84,12 +83,12 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex items-center gap-2 ml-2">
-              <Button asChild variant="default" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 h-9">
+              <Button asChild variant="default" size="sm" className="bg-primary text-primary-foreground hover:brightness-90 transition-all h-9 rounded-full px-5">
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                   Register
                 </a>
               </Button>
-              <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:border-primary/50 text-foreground h-9 hidden xl:flex">
+              <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:border-primary/50 text-foreground h-9 hidden xl:flex rounded-full">
                 <Download className="w-4 h-4" />
                 Brochure
               </Button>
@@ -126,12 +125,12 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="mt-4 flex flex-col gap-3 pb-20">
-            <Button asChild className="w-full bg-primary text-primary-foreground">
+            <Button asChild className="w-full bg-primary text-primary-foreground hover:brightness-90 rounded-full">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
               </a>
             </Button>
-            <Button variant="outline" className="w-full gap-2 text-foreground">
+            <Button variant="outline" className="w-full gap-2 text-foreground rounded-full border-primary/20">
               <Download className="w-4 h-4" />
               Download Brochure
             </Button>
