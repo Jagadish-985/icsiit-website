@@ -63,7 +63,7 @@ export default function Home() {
             <CountdownTimer />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-12">
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-24">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:brightness-90 transition-all rounded-full px-10 h-14 text-lg shadow-lg border-none">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
