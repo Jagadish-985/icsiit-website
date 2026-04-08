@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
-  Cpu, 
+  Settings, 
   Rocket, 
   Lightbulb, 
   Users, 
@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center pt-32 pb-48 overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-center pt-32 pb-64 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImg?.imageUrl || ''}
@@ -63,7 +63,7 @@ export default function Home() {
             <CountdownTimer />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-24">
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-40">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:brightness-90 transition-all rounded-full px-10 h-14 text-lg shadow-lg border-none">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
@@ -110,7 +110,7 @@ export default function Home() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Mechanical Engineering', icon: Cpu, color: 'text-primary' },
+              { title: 'Mechanical Engineering', icon: Settings, color: 'text-primary' },
               { title: 'Aerospace Engineering', icon: Rocket, color: 'text-blue-500' },
               { title: 'Electronics Engineering', icon: Lightbulb, color: 'text-yellow-600' },
               { title: 'Civil Engineering', icon: Building, color: 'text-green-600' }
