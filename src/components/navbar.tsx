@@ -56,18 +56,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Center: Conference Logo (Absolutely Positioned) */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center z-10">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-lg md:text-xl text-primary-foreground group-hover:scale-105 transition-transform">
-              S
-            </div>
-            <span className="font-headline font-bold text-lg md:text-xl tracking-tight hidden sm:block text-white">
-              SYNERGY <span className="text-primary-foreground opacity-90">2026</span>
-            </span>
-          </Link>
-        </div>
-
         {/* Right: Desktop Navigation & Mobile Toggle */}
         <div className="flex items-center gap-4">
           <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
