@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Download } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -37,19 +37,20 @@ export default function Navbar() {
     <header 
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-white/90 backdrop-blur-lg border-b border-border py-3 shadow-sm" : "bg-transparent py-5"
+        // Using deep navy blue #002147 to match the institutional RUAS style
+        scrolled ? "bg-[#002147] py-3 shadow-lg" : "bg-[#002147] py-4"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[48px]">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[56px]">
         {/* Left: University Logo */}
         <div className="flex items-center">
-          <div className="flex items-center h-8 md:h-10">
+          <div className="flex items-center h-10 md:h-12">
             <Image 
               src={uniLogo?.imageUrl || ''} 
-              alt="University Logo" 
-              width={140} 
-              height={35} 
-              className="h-full w-auto object-contain"
+              alt="Ramaiah University Logo" 
+              width={220} 
+              height={55} 
+              className="h-full w-auto object-contain brightness-0 invert" // Ensures visibility on dark background
               data-ai-hint="university logo"
             />
           </div>
@@ -61,8 +62,8 @@ export default function Navbar() {
             <div className="w-9 h-9 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-lg md:text-xl text-primary-foreground group-hover:scale-105 transition-transform">
               S
             </div>
-            <span className="font-headline font-bold text-lg md:text-xl tracking-tight hidden sm:block text-foreground">
-              SYNERGY <span className="text-primary">2026</span>
+            <span className="font-headline font-bold text-lg md:text-xl tracking-tight hidden sm:block text-white">
+              SYNERGY <span className="text-primary-foreground opacity-90">2026</span>
             </span>
           </Link>
         </div>
@@ -75,15 +76,15 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-xs xl:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap",
-                  pathname === item.href ? "text-primary" : "text-foreground/80"
+                  "text-xs xl:text-sm font-semibold transition-colors hover:text-primary-foreground whitespace-nowrap",
+                  pathname === item.href ? "text-primary-foreground" : "text-white/80"
                 )}
               >
                 {item.name}
               </Link>
             ))}
             <div className="flex items-center gap-2 ml-2">
-              <Button asChild variant="default" size="sm" className="bg-primary text-primary-foreground hover:brightness-90 transition-all h-9 rounded-full px-5">
+              <Button asChild variant="default" size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-9 rounded-full px-5 border-none">
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                   Register
                 </a>
@@ -93,7 +94,7 @@ export default function Navbar() {
 
           {/* Mobile Toggle */}
           <button 
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X /> : <Menu />}
@@ -103,7 +104,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div className={cn(
-        "lg:hidden fixed inset-0 top-[64px] bg-background z-40 transition-transform duration-300 ease-in-out transform",
+        "lg:hidden fixed inset-0 top-[72px] bg-[#002147] z-40 transition-transform duration-300 ease-in-out transform",
         isOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <nav className="flex flex-col p-6 gap-4 overflow-y-auto h-full">
@@ -113,15 +114,15 @@ export default function Navbar() {
               href={item.href}
               onClick={() => setIsOpen(false)}
               className={cn(
-                "text-lg font-medium py-2 border-b border-border/50 text-foreground",
-                pathname === item.href ? "text-primary" : "text-foreground/80"
+                "text-lg font-bold py-3 border-b border-white/10 text-white",
+                pathname === item.href ? "text-primary-foreground" : "text-white/80"
               )}
             >
               {item.name}
             </Link>
           ))}
-          <div className="mt-4 flex flex-col gap-3 pb-20">
-            <Button asChild className="w-full bg-primary text-primary-foreground hover:brightness-90 rounded-full">
+          <div className="mt-6 flex flex-col gap-3 pb-20">
+            <Button asChild className="w-full bg-primary text-primary-foreground hover:brightness-110 rounded-full h-12 text-lg">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
               </a>
