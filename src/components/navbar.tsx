@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -37,21 +38,32 @@ export default function Navbar() {
     <header 
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        // Using deep navy blue #002147 to match the institutional RUAS style
         scrolled ? "bg-[#002147] py-3 shadow-lg" : "bg-[#002147] py-4"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[56px]">
-        {/* Left: University Logo */}
-        <div className="flex items-center">
-          <div className="flex items-center h-10 md:h-12">
+        {/* Left: University and Conference Logos */}
+        <div className="flex items-center gap-4 lg:gap-6">
+          <Link href="/" className="flex items-center">
+            <div className="h-10 md:h-12 flex items-center">
+              <Image 
+                src={uniLogo?.imageUrl || ''} 
+                alt="Ramaiah University Logo" 
+                width={200} 
+                height={50} 
+                className="h-full w-auto object-contain brightness-0 invert"
+                data-ai-hint="university logo"
+              />
+            </div>
+          </Link>
+          <div className="h-8 w-px bg-white/20 hidden sm:block" />
+          <div className="h-10 md:h-12 flex items-center">
             <Image 
-              src={uniLogo?.imageUrl || ''} 
-              alt="Ramaiah University Logo" 
-              width={220} 
-              height={55} 
-              className="h-full w-auto object-contain brightness-0 invert" // Ensures visibility on dark background
-              data-ai-hint="university logo"
+              src="/abc.webp" 
+              alt="SYNERGY 2026 Logo"
+              width={120}
+              height={50}
+              className="h-full w-auto object-contain brightness-0 invert"
             />
           </div>
         </div>
