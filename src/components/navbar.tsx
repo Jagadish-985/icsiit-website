@@ -59,10 +59,10 @@ export default function Navbar() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center z-10">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center font-headline font-bold text-lg md:text-xl text-primary-foreground group-hover:scale-105 transition-transform">
-              IC
+              S
             </div>
             <span className="font-headline font-bold text-lg md:text-xl tracking-tight hidden sm:block text-foreground">
-              SMART <span className="text-primary">2026</span>
+              SYNERGY <span className="text-primary">2026</span>
             </span>
           </Link>
         </div>
@@ -87,10 +87,6 @@ export default function Navbar() {
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                   Register
                 </a>
-              </Button>
-              <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:border-primary/50 text-foreground h-9 hidden xl:flex rounded-full">
-                <Download className="w-4 h-4" />
-                Brochure
               </Button>
             </div>
           </nav>
@@ -129,10 +125,6 @@ export default function Navbar() {
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
               </a>
-            </Button>
-            <Button variant="outline" className="w-full gap-2 text-foreground rounded-full border-primary/20">
-              <Download className="w-4 h-4" />
-              Download Brochure
             </Button>
           </div>
         </nav>

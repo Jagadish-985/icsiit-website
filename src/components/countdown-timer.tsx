@@ -1,9 +1,8 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
 
-const TARGET_DATE = new Date('2026-05-14T09:00:00');
+const TARGET_DATE = new Date('2026-05-13T09:00:00');
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -32,18 +31,18 @@ export default function CountdownTimer() {
   }, []);
 
   const TimeUnit = ({ value, label }: { value: number, label: string }) => (
-    <div className="flex flex-col items-center p-3 md:p-6 glass-card rounded-xl min-w-[80px] md:min-w-[120px]">
-      <span className="text-3xl md:text-5xl font-headline font-bold text-primary tabular-nums">
+    <div className="flex flex-col items-center p-4 md:p-8 glass-card rounded-3xl min-w-[90px] md:min-w-[140px] border-border bg-white shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all group">
+      <span className="text-4xl md:text-6xl font-headline font-bold text-primary tabular-nums group-hover:scale-110 transition-transform">
         {value.toString().padStart(2, '0')}
       </span>
-      <span className="text-xs md:text-sm uppercase tracking-wider text-muted-foreground mt-1">
+      <span className="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-muted-foreground mt-2">
         {label}
       </span>
     </div>
   );
 
   return (
-    <div className="flex gap-2 md:gap-4 justify-center">
+    <div className="flex gap-3 md:gap-6 justify-center flex-wrap">
       <TimeUnit value={timeLeft.days} label="Days" />
       <TimeUnit value={timeLeft.hours} label="Hours" />
       <TimeUnit value={timeLeft.minutes} label="Mins" />

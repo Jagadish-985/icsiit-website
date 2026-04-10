@@ -1,85 +1,88 @@
 import SectionHeading from '@/components/section-heading';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Building, Users, BookOpen, Globe } from 'lucide-react';
+import { Building, Users, BookOpen, Globe, Lightbulb, Zap } from 'lucide-react';
 import Image from 'next/image';
 
 export default function AboutPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <Badge variant="outline" className="mb-4 border-primary text-primary">About IC-SMART 2026</Badge>
+        <div className="max-w-5xl mx-auto">
+          <Badge variant="outline" className="mb-6 border-primary text-primary px-4 py-1 font-semibold">SYNERGY 2026 - IC-SIIT</Badge>
           <SectionHeading 
-            title="International Conference on Smart and Integrated Engineering Systems" 
+            title="Need for SYNERGY 2026" 
           />
           
-          <div className="prose prose-invert max-w-none text-muted-foreground text-lg leading-relaxed mb-16">
+          <div className="prose prose-invert max-w-none text-muted-foreground text-lg leading-relaxed mb-16 space-y-6">
             <p>
-              IC-SMART 2026 is a flagship international conference aimed at bringing together researchers, 
-              scientists, engineers, and scholars to exchange and share their experiences, new ideas, 
-              and research results in all aspects of Smart and Integrated Engineering Systems.
+              The rapid convergence of engineering disciplines is reshaping the way we design, build, and sustain the systems that power modern society. In this context, the International Conference on Smart, Intelligent and Innovative Technologies (IC-SIIT) serves as a dynamic platform to explore the transformative potential of interdisciplinary innovation.
             </p>
-            <p className="mt-4">
-              The conference focuses on bridging the gap between theoretical research and practical applications 
-              in futuristic engineering domains including Aerospace, Robotics, Artificial Intelligence, 
-              and Advanced Manufacturing.
+            <p>
+              Bringing together researchers, academicians, industry experts, and practitioners, the conference aims to foster collaboration across the domains of mechanical, aerospace, automotive, electronics, communication, and civil engineering.
+            </p>
+            <p>
+              SYNERGY 2026 is focussed on projects involving intelligent sensing, advanced materials, automation, connectivity, and data-driven decision-making seamlessly interact. From autonomous vehicles and sustainable infrastructure to smart cities and aerospace advancements, the integration of diverse engineering fields is enabling enhanced levels of efficiency, safety, and performance.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <Card className="glass-card">
-              <CardContent className="p-8">
-                <Building className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-headline font-bold mb-4">Organizer</h3>
-                <p className="text-muted-foreground">
-                  The event is organized by the <span className="text-foreground font-semibold">Department of Mechanical Engineering</span> 
-                  at Ramaiah University of Applied Sciences (RUAS), Bangalore. RUAS is known for its academic excellence 
-                  and research-driven approach to technical education.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <Card className="bg-white rounded-[2.5rem] border-border shadow-lg overflow-hidden group hover:border-primary/30 transition-all">
+              <CardContent className="p-10">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+                  <Building className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-headline font-bold mb-4">Organizer</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  The event is organized by the <span className="text-foreground font-semibold">Faculty of Engineering and Technology (FET)</span> 
+                  at Ramaiah University of Applied Sciences (RUAS), Bangalore. We focus on bridging traditional boundaries 
+                  to encourage holistic and scalable solutions.
                 </p>
               </CardContent>
             </Card>
-            <Card className="glass-card">
-              <CardContent className="p-8">
-                <Users className="w-10 h-10 text-secondary mb-4" />
-                <h3 className="text-xl font-headline font-bold mb-4">Target Audience</h3>
-                <p className="text-muted-foreground">
-                  We welcome contributions from Faculty members, Ph.D. scholars, M.Tech and B.Tech students 
-                  from engineering colleges across the globe. Industry professionals are also encouraged to participate 
-                  and share practical insights.
+            <Card className="bg-white rounded-[2.5rem] border-border shadow-lg overflow-hidden group hover:border-secondary/30 transition-all">
+              <CardContent className="p-10">
+                <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-all">
+                  <Users className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-headline font-bold mb-4">Target Audience</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We welcome contributions from researchers, academicians, and industry practitioners worldwide. 
+                  The conference serves as a dynamic platform to share share experiences and Share research results 
+                  across futuristic engineering domains.
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          <div className="relative aspect-[21/9] rounded-3xl overflow-hidden mb-16 border border-white/10">
+          <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden mb-20 border border-border shadow-2xl">
             <Image 
               src="https://images.unsplash.com/photo-1540575861501-7ad05823c9f5?q=80&w=2070&auto=format&fit=crop" 
-              alt="Conference Audience" 
+              alt="SYNERGY Conference" 
               fill 
               className="object-cover"
-              data-ai-hint="conference audience"
+              data-ai-hint="engineering conference"
             />
-            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
 
           <SectionHeading 
-            title="Conference Benefits" 
+            title="Key Benefits" 
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
             {[
-              { title: 'Global Recognition', icon: Globe, desc: 'Present your work to an international audience and gain global exposure.' },
-              { title: 'Networking', icon: Users, desc: 'Interact with leading experts and peer researchers in your field.' },
-              { title: 'Publications', icon: BookOpen, desc: 'Chance to publish in indexed international journals with DOI.' },
-              { title: 'Certification', icon: Badge, desc: 'All participants and presenters will receive official certificates from RUAS.' }
+              { title: 'Holistic Solutions', icon: Lightbulb, desc: 'Explore the convergence of multiple engineering disciplines for real-world impact.' },
+              { title: 'Global Connectivity', icon: Globe, desc: 'Engage with a diverse network of international experts and peer researchers.' },
+              { title: 'Indexed Publications', icon: BookOpen, desc: 'Opportunity to publish in reputed indexed journals with DOI support.' },
+              { title: 'RUAS Recognition', icon: Zap, desc: 'Official certification and validation from a leading applied sciences university.' }
             ].map((benefit, i) => (
-              <div key={i} className="flex gap-4 p-6 glass-card rounded-2xl">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <benefit.icon className="w-6 h-6 text-primary" />
+              <div key={i} className="flex gap-6 p-8 bg-white border border-border rounded-[2rem] shadow-sm hover:shadow-md transition-shadow group">
+                <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                  <benefit.icon className="w-7 h-7" />
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1">{benefit.title}</h4>
-                  <p className="text-sm text-muted-foreground">{benefit.desc}</p>
+                  <h4 className="font-bold text-xl mb-2 text-foreground">{benefit.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{benefit.desc}</p>
                 </div>
               </div>
             ))}
