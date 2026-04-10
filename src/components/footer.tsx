@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Twitter, Linkedin, Instagram, Globe, Mail, Phone, Zap } from 'lucide-react';
 
 export default function Footer() {
@@ -8,13 +9,16 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-8">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center font-headline font-bold text-2xl text-primary-foreground group-hover:scale-110 transition-transform">
-                S
+            <Link href="/" className="flex items-center group">
+              <div className="h-12 flex items-center">
+                <Image 
+                  src="/abc.webp" 
+                  alt="SYNERGY 2026 Logo"
+                  width={150}
+                  height={50}
+                  className="h-full w-auto object-contain"
+                />
               </div>
-              <span className="font-headline font-bold text-2xl tracking-tight text-foreground">
-                SYNERGY <span className="text-primary">2026</span>
-              </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               International Conference on Smart, Intelligent and Innovative Technologies (IC-SIIT). 
