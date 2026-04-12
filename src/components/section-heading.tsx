@@ -15,18 +15,18 @@ export default function SectionHeading({ title, subtitle, centered = false, clas
       className
     )}>
       <div className="inline-block relative">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold">
+        <h2 className="text-3xl md:text-5xl font-headline font-bold text-foreground">
           {title}
         </h2>
         <div className={cn(
-          "h-1.5 bg-primary rounded-full mt-2 w-full",
+          "h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-2 w-2/3",
           centered ? "mx-auto" : "mr-auto"
         )} />
       </div>
       {subtitle && (
         <p className={cn(
-          "text-muted-foreground text-lg",
-          centered ? "max-w-2xl mx-auto" : "max-w-2xl"
+          "text-muted-foreground text-lg md:text-xl",
+          centered ? "max-w-3xl mx-auto" : "max-w-2xl"
         )}>
           {subtitle}
         </p>
