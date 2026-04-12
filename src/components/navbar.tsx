@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -39,11 +40,22 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[56px]">
-        {/* Empty left section to maintain navigation alignment to the right */}
-        <div className="hidden lg:block" />
+        {/* Left: Branding */}
+        <Link href="/" className="flex items-center group">
+          <div className="h-10 md:h-12 flex items-center">
+            <Image 
+              src="/abc.webp" 
+              alt="SYNERGY 2026 Logo"
+              width={150}
+              height={50}
+              className="h-full w-auto object-contain"
+              priority
+            />
+          </div>
+        </Link>
 
         {/* Right: Desktop Navigation & Mobile Toggle */}
-        <div className="flex items-center gap-4 w-full lg:w-auto justify-between lg:justify-end">
+        <div className="flex items-center gap-4 w-auto">
           <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navItems.map((item) => (
               <Link
@@ -66,11 +78,8 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* Mobile Branding (Simplified) or just toggle */}
-          <div className="lg:hidden flex items-center justify-between w-full">
-            <Link href="/" className="text-white font-headline font-bold text-lg">
-              SYNERGY 2026
-            </Link>
+          {/* Mobile Toggle */}
+          <div className="lg:hidden flex items-center">
             <button 
               className="p-2 text-white"
               onClick={() => setIsOpen(!isOpen)}
