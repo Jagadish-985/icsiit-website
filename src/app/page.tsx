@@ -44,18 +44,6 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          {/* Conference Logo Image */}
-          <div className="mb-8 flex justify-center animate-fade-in">
-            <Image 
-              src="/abc.webp" 
-              alt="SYNERGY 2026 Logo"
-              width={200}
-              height={200}
-              className="h-32 md:h-40 w-auto object-contain"
-              priority
-            />
-          </div>
-
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 tracking-tight animate-fade-in text-foreground leading-[1.1]">
             SYNERGY 2026 <br />
             <span className="text-gradient">Smart, Intelligent and Innovative Technologies</span>
