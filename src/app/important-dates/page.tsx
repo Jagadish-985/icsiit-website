@@ -4,7 +4,7 @@ import { Calendar, Zap } from 'lucide-react';
 
 export default function ImportantDates() {
   const dates = [
-    { title: "Abstract Submission Deadline", date: "10th April 2026", status: "Open" },
+    { title: "Abstract Submission Deadline", date: "25th April 2026", status: "Open" },
     { title: "Notification of Acceptance", date: "15th April 2026", status: "Upcoming" },
     { title: "Full Paper Submission Deadline", date: "10th May 2026", status: "Pending" },
     { title: "Registration Deadline", date: "12th May 2026", status: "Pending" },
