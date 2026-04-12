@@ -1,57 +1,8 @@
 
-'use client';
-
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { doc, collection } from 'firebase/firestore';
-import { useFirebase } from '@/firebase';
-import { setDocumentNonBlocking } from '@/firebase/non-blocking-updates';
-import { useToast } from '@/hooks/use-toast';
 import SectionHeading from '@/components/section-heading';
-import { Phone, Mail, MapPin, MessageCircle, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
-
-const contactFormSchema = z.object({
-  fullName: z.string().min(2, { message: 'Full name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
-  subject: z.string().min(1, { message: 'Please select a subject.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
-});
-
-type ContactFormValues = z.infer<typeof contactFormSchema>;
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 export default function ContactPage() {
-  const { firestore } = useFirebase();
-  const { toast } = useToast();
-  
-  const form = useForm<ContactFormValues>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      fullName: '',
-      email: '',
-      subject: 'Registration Query',
-      message: '',
-    },
-  });
-
   const coordinators = [
     { name: "Coordinator 1", phone: "+91 9480343844" },
     { name: "Coordinator 2", phone: "+91 9611640888" },
@@ -59,36 +10,13 @@ export default function ContactPage() {
     { name: "Coordinator 4", phone: "+91 9535762626" }
   ];
 
-  function onSubmit(values: ContactFormValues) {
-    if (!firestore) return;
-
-    const messagesRef = collection(firestore, 'contact_messages');
-    const newDocRef = doc(messagesRef);
-    
-    const messageData = {
-      id: newDocRef.id,
-      ...values,
-      sentAt: new Date().toISOString(),
-      toEmail: 'jagadishb.985@gmail.com' // Field for Trigger Email extension to pick up
-    };
-
-    setDocumentNonBlocking(newDocRef, messageData, { merge: true });
-    
-    toast({
-      title: "Inquiry Sent",
-      description: "Thank you for reaching out. We will get back to you shortly.",
-    });
-    
-    form.reset();
-  }
-
   return (
     <div className="pt-32 pb-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <SectionHeading centered title="Get In Touch" subtitle="Our team is here to help you with any conference-related inquiries." />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-headline font-bold mb-6">Contact Information</h3>
@@ -102,7 +30,7 @@ export default function ContactPage() {
                       <p className="text-muted-foreground text-sm">Available Mon - Sat (9 AM - 6 PM)</p>
                       <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {coordinators.map((c, i) => (
-                          <a key={i} href={`tel:${c.phone.replace(/\s/g, '')}`} className="text-primary hover:underline">{c.phone}</a>
+                          <a key={i} href={`tel:${c.phone.replace(/\s/g, '')}`} className="text-primary hover:underline font-semibold">{c.phone}</a>
                         ))}
                       </div>
                     </div>
@@ -114,7 +42,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-bold">Email</p>
-                      <a href="mailto:icsmart@msruas.ac.in" className="text-primary hover:underline">icsmart@msruas.ac.in</a>
+                      <a href="mailto:icsmart@msruas.ac.in" className="text-primary hover:underline font-semibold">icsmart@msruas.ac.in</a>
                       <p className="text-muted-foreground text-sm">For papers and publication queries</p>
                     </div>
                   </div>
@@ -126,116 +54,37 @@ export default function ContactPage() {
                     <div>
                       <p className="font-bold">Venue Address</p>
                       <p className="text-muted-foreground">MSRUAS, RTC, Peenya, Bangalore</p>
-                      <p className="text-muted-foreground text-sm">Near Brindavan Bus Stop, Peenya 4th Phase</p>
+                      <p className="text-muted-foreground text-sm font-medium">Near Brindavan Bus Stop, Peenya 4th Phase, Bangalore - 560058</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 glass-card rounded-2xl border-l-4 border-secondary">
+              <div className="p-6 bg-muted/50 rounded-2xl border-l-4 border-secondary">
                 <div className="flex items-center gap-3 mb-4">
                   <MessageCircle className="w-6 h-6 text-secondary" />
                   <h4 className="font-bold">Quick Assistance</h4>
                 </div>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   The fastest way to reach us is via phone calls to any of our coordinators listed above. 
-                  Please mention "IC-SMART 2026" in your query.
+                  Please mention <span className="text-foreground font-bold">"IC-SIIT 2026"</span> in your query for prioritized support.
                 </p>
               </div>
             </div>
 
-            <div className="glass-card rounded-3xl p-8 border border-white/5 h-full">
-              <h3 className="text-2xl font-headline font-bold mb-6">Send a Message</h3>
-              
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                  <FormField
-                    control={form.control}
-                    name="fullName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input className="bg-muted border-none rounded-xl" placeholder="Enter your name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input className="bg-muted border-none rounded-xl" placeholder="Email address" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="subject"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Subject</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger className="bg-muted border-none rounded-xl">
-                              <SelectValue placeholder="Select a subject" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="Registration Query">Registration Query</SelectItem>
-                            <SelectItem value="Paper Submission">Paper Submission</SelectItem>
-                            <SelectItem value="Publication Info">Publication Info</SelectItem>
-                            <SelectItem value="Other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            rows={4} 
-                            className="bg-muted border-none rounded-xl" 
-                            placeholder="How can we help?" 
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-primary text-primary-foreground font-bold py-6 rounded-xl hover:opacity-90 transition-opacity"
-                    disabled={form.formState.isSubmitting}
-                  >
-                    {form.formState.isSubmitting ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      'Send Inquiry'
-                    )}
-                  </Button>
-                </form>
-              </Form>
+            {/* Google Maps Embed */}
+            <div className="glass-card rounded-[2.5rem] overflow-hidden border border-border shadow-2xl h-[450px] lg:h-full min-h-[400px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.9455353133687!2d77.5135153112261!3d13.039097487226593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d1000000001%3A0x67396a8439401764!2sRamaiah%20University%20of%20Applied%20Sciences!5e0!3m2!1sen!2sin!4v1709191000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="MSRUAS Peenya Campus Map"
+                className="grayscale-[0.2] contrast-[1.1]"
+              ></iframe>
             </div>
           </div>
         </div>
