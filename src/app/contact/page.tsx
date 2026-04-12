@@ -12,10 +12,10 @@ export default function ContactPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <SectionHeading centered title="Get In Touch" subtitle="Our team is here to help you with any conference-related inquiries." />
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+          <div className="mt-12 space-y-12">
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-headline font-bold mb-6">Contact Information</h3>
@@ -69,21 +69,6 @@ export default function ContactPage() {
                   Please mention <span className="text-foreground font-bold">"IC-SIIT 2026"</span> in your query for prioritized support.
                 </p>
               </div>
-            </div>
-
-            {/* Google Maps Embed with Orange Border */}
-            <div className="rounded-[2.5rem] overflow-hidden border-4 border-primary shadow-2xl h-[450px] lg:h-full min-h-[400px]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2642592717752!2d77.50573037540221!3d13.018836513840283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cfb3dbaee73%3A0xb6777a4ce0b09eb5!2sRamaiah%20University%20Of%20Applied%20Sciences!5e0!3m2!1sen!2sin!4v1775996670597!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="MSRUAS Campus Map"
-                className="grayscale-[0.2] contrast-[1.1]"
-              ></iframe>
             </div>
           </div>
         </div>
