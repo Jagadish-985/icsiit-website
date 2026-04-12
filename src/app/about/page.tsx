@@ -2,7 +2,6 @@ import SectionHeading from '@/components/section-heading';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Building, Users, BookOpen, Globe, Lightbulb, Zap } from 'lucide-react';
-import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -51,17 +50,6 @@ export default function AboutPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-
-          <div className="relative aspect-[21/9] rounded-[3rem] overflow-hidden mb-20 border border-border shadow-2xl">
-            <Image 
-              src="https://images.unsplash.com/photo-1540575861501-7ad05823c9f5?q=80&w=2070&auto=format&fit=crop" 
-              alt="SYNERGY Conference" 
-              fill 
-              className="object-cover"
-              data-ai-hint="engineering conference"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
 
           <SectionHeading 
