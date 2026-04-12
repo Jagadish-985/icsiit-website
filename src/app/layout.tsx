@@ -2,6 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import { FirebaseClientProvider } from '@/firebase';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'SYNERGY 2026 | International Conference on Smart, Intelligent and Innovative Technologies (IC-SIIT)',
@@ -23,11 +25,14 @@ export default function RootLayout({
       <body className="font-body antialiased min-h-screen flex flex-col bg-background relative overflow-x-hidden">
         {/* Subtle Background Pattern */}
         <div className="fixed inset-0 z-[-1] opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <FirebaseClientProvider>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
+        </FirebaseClientProvider>
       </body>
     </html>
   );
