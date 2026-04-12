@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -65,9 +64,6 @@ export default function Home() {
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now <ArrowRight className="ml-2 w-6 h-6" />
               </a>
-            </Button>
-            <Button variant="outline" size="lg" className="rounded-full px-16 h-20 text-xl font-bold border-secondary/20 hover:border-secondary/50 text-foreground bg-white/50 backdrop-blur-sm shadow-lg" asChild>
-              <Link href="/about">Conference Themes</Link>
             </Button>
           </div>
 
