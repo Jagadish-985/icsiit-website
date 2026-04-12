@@ -9,7 +9,7 @@ export default function HowToReachPage() {
           <SectionHeading 
             centered 
             title="How to Reach" 
-            subtitle="Directions and travel information for SYNERGY 2026 participants visiting the Ramaiah University Peenya Campus." 
+            subtitle="Directions and travel information for SYNERGY 2026 participants visiting the Ramaiah University of Applied Sciences, Peenya Campus." 
           />
           
           <div className="rounded-[3rem] overflow-hidden mb-12 border-4 border-primary shadow-2xl h-[450px]">
