@@ -1,15 +1,86 @@
 
+'use client';
+
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import { doc, collection } from 'firebase/firestore';
+import { useFirebase } from '@/firebase';
+import { setDocumentNonBlocking } from '@/firebase/non-blocking-updates';
+import { useToast } from '@/hooks/use-toast';
 import SectionHeading from '@/components/section-heading';
-import { Card, CardContent } from '@/components/ui/card';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
+
+const contactFormSchema = z.object({
+  fullName: z.string().min(2, { message: 'Full name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Please enter a valid email address.' }),
+  subject: z.string().min(1, { message: 'Please select a subject.' }),
+  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactPage() {
+  const { firestore } = useFirebase();
+  const { toast } = useToast();
+  
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      fullName: '',
+      email: '',
+      subject: 'Registration Query',
+      message: '',
+    },
+  });
+
   const coordinators = [
     { name: "Coordinator 1", phone: "+91 9480343844" },
     { name: "Coordinator 2", phone: "+91 9611640888" },
     { name: "Coordinator 3", phone: "+91 7975255006" },
     { name: "Coordinator 4", phone: "+91 9535762626" }
   ];
+
+  function onSubmit(values: ContactFormValues) {
+    if (!firestore) return;
+
+    const messagesRef = collection(firestore, 'contact_messages');
+    const newDocRef = doc(messagesRef);
+    
+    const messageData = {
+      id: newDocRef.id,
+      ...values,
+      sentAt: new Date().toISOString(),
+      toEmail: 'jagadishb.985@gmail.com' // Hint for Trigger Email extension
+    };
+
+    setDocumentNonBlocking(newDocRef, messageData, { merge: true });
+    
+    toast({
+      title: "Inquiry Sent",
+      description: "Thank you for reaching out. We will get back to you shortly.",
+    });
+    
+    form.reset();
+  }
 
   return (
     <div className="pt-32 pb-24">
@@ -75,32 +146,96 @@ export default function ContactPage() {
 
             <div className="glass-card rounded-3xl p-8 border border-white/5 h-full">
               <h3 className="text-2xl font-headline font-bold mb-6">Send a Message</h3>
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Full Name</label>
-                  <input type="text" className="w-full bg-muted border-none rounded-xl p-3 focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your name" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Email</label>
-                  <input type="email" className="w-full bg-muted border-none rounded-xl p-3 focus:ring-2 focus:ring-primary outline-none" placeholder="Email address" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Subject</label>
-                  <select className="w-full bg-muted border-none rounded-xl p-3 focus:ring-2 focus:ring-primary outline-none">
-                    <option>Registration Query</option>
-                    <option>Paper Submission</option>
-                    <option>Publication Info</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Message</label>
-                  <textarea rows={4} className="w-full bg-muted border-none rounded-xl p-3 focus:ring-2 focus:ring-primary outline-none" placeholder="How can we help?"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-primary text-primary-foreground font-bold py-4 rounded-xl hover:opacity-90 transition-opacity">
-                  Send Inquiry
-                </button>
-              </form>
+              
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <FormField
+                    control={form.control}
+                    name="fullName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Full Name</FormLabel>
+                        <FormControl>
+                          <Input className="bg-muted border-none rounded-xl" placeholder="Enter your name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input className="bg-muted border-none rounded-xl" placeholder="Email address" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Subject</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="bg-muted border-none rounded-xl">
+                              <SelectValue placeholder="Select a subject" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="Registration Query">Registration Query</SelectItem>
+                            <SelectItem value="Paper Submission">Paper Submission</SelectItem>
+                            <SelectItem value="Publication Info">Publication Info</SelectItem>
+                            <SelectItem value="Other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            rows={4} 
+                            className="bg-muted border-none rounded-xl" 
+                            placeholder="How can we help?" 
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary text-primary-foreground font-bold py-6 rounded-xl hover:opacity-90 transition-opacity"
+                    disabled={form.formState.isSubmitting}
+                  >
+                    {form.formState.isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Inquiry'
+                    )}
+                  </Button>
+                </form>
+              </Form>
             </div>
           </div>
         </div>
