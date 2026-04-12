@@ -46,8 +46,8 @@ export default function Navbar() {
             <Image 
               src="/abc.webp" 
               alt="SYNERGY 2026 Logo"
-              width={220}
-              height={70}
+              width={240}
+              height={80}
               className="h-full w-auto object-contain"
               priority
             />
@@ -55,14 +55,14 @@ export default function Navbar() {
         </Link>
 
         {/* Right: Desktop Navigation & Mobile Toggle */}
-        <div className="flex items-center gap-4 w-auto">
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <div className="flex items-center gap-6 w-auto">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-xs xl:text-sm font-semibold transition-colors hover:text-primary-foreground whitespace-nowrap",
+                  "text-sm xl:text-base font-semibold transition-colors hover:text-primary-foreground whitespace-nowrap",
                   pathname === item.href ? "text-primary-foreground" : "text-white/80"
                 )}
               >
@@ -70,7 +70,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex items-center gap-2 ml-2">
-              <Button asChild variant="default" size="sm" className="bg-[#E34A21] text-primary-foreground hover:bg-[#E34A21]/90 transition-all h-9 rounded-full px-5 border-none">
+              <Button asChild variant="default" size="sm" className="bg-[#E34A21] text-primary-foreground hover:bg-[#E34A21]/90 transition-all h-10 rounded-full px-6 border-none text-base">
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                   Register
                 </a>
