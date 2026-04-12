@@ -14,7 +14,7 @@ export default function AboutPage() {
             title="Need for SYNERGY 2026" 
           />
           
-          <div className="prose prose-invert max-w-none text-muted-foreground text-lg leading-relaxed mb-16 space-y-6">
+          <div className="prose prose-invert max-w-none text-muted-foreground text-lg leading-relaxed mb-16 space-y-6 text-justify">
             <p>
               The rapid convergence of engineering disciplines is reshaping the way we design, build, and sustain the systems that power modern society. In this context, the International Conference on Smart, Intelligent and Innovative Technologies (IC-SIIT) serves as a dynamic platform to explore the transformative potential of interdisciplinary innovation.
             </p>
@@ -33,7 +33,7 @@ export default function AboutPage() {
                   <Building className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4">Organizer</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-justify">
                   The event is organized by the <span className="text-foreground font-semibold">Faculty of Engineering and Technology (FET)</span> at Ramaiah University of Applied Sciences (RUAS), Bangalore. We focus on bridging traditional boundaries to encourage holistic and scalable solutions.
                 </p>
               </CardContent>
@@ -44,7 +44,7 @@ export default function AboutPage() {
                   <Users className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4">Target Audience</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-justify">
                   We welcome contributions from researchers, academicians, and industry practitioners worldwide. 
                   The conference serves as a dynamic platform to share share experiences and Share research results 
                   across futuristic engineering domains.
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-xl mb-2 text-foreground">{benefit.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{benefit.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{benefit.desc}</p>
                 </div>
               </div>
             ))}
