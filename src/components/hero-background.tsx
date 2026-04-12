@@ -30,7 +30,7 @@ export default function HeroBackground() {
           key={image.id}
           className={cn(
             "absolute inset-0 transition-opacity duration-1000 ease-in-out",
-            index === currentIndex ? "opacity-40" : "opacity-0"
+            index === currentIndex ? "opacity-70" : "opacity-0"
           )}
         >
           <Image
@@ -43,9 +43,10 @@ export default function HeroBackground() {
           />
         </div>
       ))}
-      {/* Refined gradient overlay: transparent in the middle to show images, background-colored at top/bottom for flow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/20 to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--secondary)_0%,_transparent_70%)] opacity-[0.08]" />
+      {/* Refined gradient overlay: provides a subtle tint and ensures text readability without washing out images */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/10 to-background" />
+      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--secondary)_0%,_transparent_70%)] opacity-[0.1]" />
     </div>
   );
 }
