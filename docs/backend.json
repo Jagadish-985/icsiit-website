@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "ContactMessage": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactMessage",
+      "type": "object",
+      "description": "Represents a message sent by a user through the website's contact form. This entity facilitates the persistence of inquiries made via the 'Send a Message' section, which implies a backend processing capability not explicitly detailed in the initial UI-focused app requirements. This entity assumes the addition of a backend to handle form submissions and data storage.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the ContactMessage entity."
+        },
+        "fullName": {
+          "type": "string",
+          "description": "The full name of the person sending the message."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the person sending the message.",
+          "format": "email"
+        },
+        "subject": {
+          "type": "string",
+          "description": "The subject of the inquiry, selected from predefined options (e.g., 'Registration Query', 'Paper Submission', 'Publication Info', 'Other')."
+        },
+        "message": {
+          "type": "string",
+          "description": "The detailed content of the message sent by the user."
+        },
+        "sentAt": {
+          "type": "string",
+          "description": "The timestamp when the contact message was sent.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "fullName",
+        "email",
+        "subject",
+        "message",
+        "sentAt"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/contact_messages/{contactMessageId}",
+        "definition": {
+          "entityName": "ContactMessage",
+          "schema": {
+            "$ref": "#/backend/entities/ContactMessage"
+          },
+          "description": "Stores individual contact messages submitted through the website's contact form. Messages are created by any user (authenticated or unauthenticated) and are intended to be read by authorized administrators/conference organizers. No denormalized authorization fields are required within the document itself, as read authorization is based on a global role check for the requesting user.",
+          "params": [
+            {
+              "name": "contactMessageId",
+              "description": "Unique identifier for a specific contact message."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The recommended Firestore structure for the `ContactMessage` entity is a top-level collection named `/contact_messages`. Each document within this collection will represent a single contact message submitted via the website. This simple, flat structure is chosen because `ContactMessage` entities are independent submissions and do not inherently belong to a user's private data or a collaborative project. This design prioritizes direct access and simplifies security rules.Authorization Independence: This structure achieves authorization independence by storing the `ContactMessage` documents in a single, dedicated collection. Access to create these messages can be granted broadly (e.g., to any user, authenticated or unauthenticated), while read/list access would be restricted to specific authorized personnel (e.g., conference organizers or administrators). Critically, the authorization for reading/listing these messages does NOT depend on any attributes within the `ContactMessage` document itself, nor on any parent document. Instead, it relies on a separate, global role check (e.g., checking if `request.auth.uid` exists in an `/admin_roles` collection). This eliminates the need for `get()` calls in security rules to determine access, adhering to the core principle of Authorization Independence.QAPs (Rules are not Filters): The structure supports QAPs for list operations by applying authorization at the collection level. For instance, creating a message would be allowed for everyone, making it a simple `allow create: true` (or similar for authenticated/unauthenticated users). For reading and listing, the rule would check the requesting user's global role (e.g., `allow read, list: if exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid));`). If the user is an administrator, they can perform a `list` query on `/contact_messages` and retrieve all documents. If they are not an administrator, the entire `list` operation will be denied upfront, preventing any data leakage or inefficient filtering after data retrieval. This ensures that security rules act as query enforcers, not post-query filters."
+  }
+}

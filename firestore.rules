@@ -1,0 +1,84 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * CORE PHILOSOPHY:
+     * This ruleset implements a "Public Ingestion" model for contact form submissions. 
+     * Inquiries are treated as high-integrity write-only data for the general public, 
+     * while read and management access is strictly controlled via Role-Based Access 
+     * Control (RBAC). 
+     *
+     * DATA STRUCTURE:
+     * All contact inquiries are stored in a flat, top-level collection `/contact_messages`.
+     * Administrative roles are verified by checking for the presence of a user's UID 
+     * within a dedicated `/admin_roles` collection.
+     *
+     * KEY SECURITY DECISIONS:
+     * 1. Open Submission: To maximize accessibility for potential users/customers, 
+     *    the `create` operation on contact messages is permitted for both 
+     *    authenticated and unauthenticated users.
+     * 2. Administrative Lockdown: Reading, listing, updating, or deleting messages 
+     *    is restricted to users who possess an entry in the `/admin_roles` collection.
+     * 3. Identity Verification: For all administrative actions, `request.auth.uid` 
+     *    serves as the source of truth against the roles collection.
+     * 4. Relational Integrity: On creation, we enforce that the internal `id` 
+     *    field matches the document ID to ensure data consistency.
+     */
+
+    // --- Helper Functions ---
+
+    /** Checks if the user is authenticated with any provider. */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /** 
+     * Checks if the authenticated user has an administrative role.
+     * Performs a lookup in the /admin_roles collection.
+     */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admin_roles/$(request.auth.uid));
+    }
+
+    /** 
+     * Combined check for administrative access and document existence.
+     * Used for destructive or state-changing operations.
+     */
+    function isExistingAdmin() {
+      return isAdmin() && resource != null;
+    }
+
+    // --- Collection Rules ---
+
+    /**
+     * @description Rules for managing administrative user roles. 
+     * @path /admin_roles/{uid}
+     * @allow get (isSignedIn): To allow the app to check the current user's role.
+     * @deny write (all): Roles should be managed via Firebase Console or Admin SDK for security.
+     * @principle Restricts role assignment to secure environments.
+     */
+    match /admin_roles/{uid} {
+      allow get: if isSignedIn();
+      allow list: if isAdmin();
+      allow create, update, delete: if false;
+    }
+
+    /**
+     * @description Handles public form submissions for contact inquiries.
+     * @path /contact_messages/{contactMessageId}
+     * @allow create (any): Allows anyone to submit an inquiry.
+     * @allow get, list, update, delete (isAdmin): Restricts access to authorized staff.
+     * @deny get, list (isSignedIn): Standard users cannot view other people's inquiries.
+     * @principle Public write for ingestion, Role-based access for retrieval.
+     */
+    match /contact_messages/{contactMessageId} {
+      // READS: Restricted to Admins/Organizers
+      allow get, list: if isAdmin();
+
+      // WRITES: Anyone can create; Admins can manage existing
+      allow create: if request.resource.data.id == contactMessageId;
+      allow update, delete: if isExistingAdmin();
+    }
+  }
+}
