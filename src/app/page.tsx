@@ -49,10 +49,6 @@ export default function Home() {
               <Zap className="w-6 h-6 text-primary" />
               <span className="font-bold text-foreground text-lg md:text-xl">13th - 15th May 2026</span>
             </div>
-            <div className="flex items-center gap-3 bg-white px-8 py-5 rounded-3xl border border-secondary/10 shadow-xl">
-              <Globe className="w-6 h-6 text-secondary" />
-              <span className="font-bold text-foreground text-lg md:text-xl">MSRUAS, Bangalore</span>
-            </div>
           </div>
 
           <div className="mb-20 animate-fade-in [animation-delay:600ms]">
