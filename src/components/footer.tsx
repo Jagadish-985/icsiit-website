@@ -18,7 +18,7 @@ export default function Footer() {
                   alt="SYNERGY 2026 Logo"
                   width={320}
                   height={100}
-                  className="h-full w-auto object-contain brightness-0 invert"
+                  className="h-full w-auto object-contain"
                 />
               </div>
             </Link>
