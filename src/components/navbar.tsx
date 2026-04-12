@@ -39,7 +39,7 @@ export default function Navbar() {
         scrolled ? "bg-[#361C6A] py-3 shadow-lg" : "bg-[#361C6A] py-4"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[56px]">
+      <div className="container mx-auto pl-2 pr-4 md:pl-4 md:pr-6 flex items-center justify-between relative min-h-[56px]">
         {/* Left: Branding */}
         <Link href="/" className="flex items-center group">
           <div className="h-12 md:h-16 flex items-center">
