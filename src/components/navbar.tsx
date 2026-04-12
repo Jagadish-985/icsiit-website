@@ -1,10 +1,8 @@
-
 "use client";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -16,7 +14,7 @@ const navItems = [
   { name: 'Committee', href: '/committee' },
   { name: 'Dates', href: '/important-dates' },
   { name: 'Registration', href: '/registration' },
-  { name: 'Venue', href: '/venue' },
+  { name: 'How to Reach', href: '/venue' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -79,6 +77,7 @@ export default function Navbar() {
             <button 
               className="p-2 text-white"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
             >
               {isOpen ? <X /> : <Menu />}
             </button>
