@@ -67,7 +67,7 @@ export default function AboutPage() {
           <SectionHeading 
             title="Key Benefits" 
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20">
             {[
               { title: 'Holistic Solutions', icon: Lightbulb, desc: 'Explore the convergence of multiple engineering disciplines for real-world impact.' },
               { title: 'Global Connectivity', icon: Globe, desc: 'Engage with a diverse network of international experts and peer researchers.' },
@@ -84,6 +84,19 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <SectionHeading 
+            title="University Highlights" 
+          />
+          <div className="relative aspect-video rounded-[3rem] overflow-hidden mb-16 border border-border shadow-2xl bg-black group">
+            <iframe 
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/IQiXvmrTNcM?autoplay=1&mute=1&rel=0" 
+              title="Ramaiah University Highlights" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>
