@@ -39,8 +39,7 @@ export default function Home() {
             <span className="text-gradient">IC-SIIT</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
-            Smart, Intelligent and Innovative Technologies across <br />
-            <span className="text-secondary font-bold">Aerospace, Automotive, Civil Engineering, Computer Science, Electronics and Mechanical</span>
+            Smart, Intelligent and Innovative Technologies across <span className="text-secondary font-bold">Aerospace, Automotive, Civil Engineering, Computer Science, Electronics and Mechanical</span>
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
@@ -190,7 +189,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="p-16 md:p-32 bg-secondary/5 rounded-[5rem] text-center border-secondary/20 border-2 shadow-2xl relative overflow-hidden group">
             <div className="absolute top-[-100px] right-[-100px] p-8 opacity-5 group-hover:rotate-45 transition-transform duration-1000">
-              <Zap className="w-[600px] h-[600px] text-secondary" />
+              <Zap className="w-[600px] h={600} text-secondary" />
             </div>
             <h2 className="text-4xl md:text-7xl font-headline font-extrabold mb-10 text-foreground leading-[1.1]">
               Shape the Future at <br /> <span className="text-primary">SYNERGY 2026</span>
