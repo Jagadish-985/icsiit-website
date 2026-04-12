@@ -44,8 +44,14 @@ export default function CallForPapers() {
                   All submissions will undergo a plagiarism check before the peer review process.
                 </p>
                 <div className="mt-4 flex gap-4">
-                  <Button size="sm" className="gap-2">
-                    <Download className="w-4 h-4" /> Template.docx
+                  <Button size="sm" className="gap-2" asChild>
+                    <a 
+                      href="https://msruas-my.sharepoint.com/:w:/g/personal/ananth_me_et_msruas_ac_in/IQAthed5dtgoQr9SImTpRKfJAcP3XnN32L-OzEdKpFdLlms?rtime=mxSPWI-Y3kg" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="w-4 h-4" /> Template.docx
+                    </a>
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2">
                     Submission Portal
