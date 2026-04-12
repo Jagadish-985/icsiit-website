@@ -65,7 +65,7 @@ export default function HowToReachPage() {
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       The nearest bus stop is <span className="font-bold text-foreground">Brundavana Peenya Bus Stop</span>. 
                       Click on the link below to get the 
-                      <a href="https://nammabmtcapp.karnataka.gov.in/commuter/journey-planner" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold mx-1">
+                      <a href="https://nammabmtcapp.karnataka.gov.in/commuter/dashboard" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold mx-1">
                         BMTC Bus Planner
                       </a> 
                       to find your bus number and access live bus tracking.
