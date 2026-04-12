@@ -62,8 +62,10 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm xl:text-base font-semibold transition-colors hover:text-primary-foreground whitespace-nowrap",
-                  pathname === item.href ? "text-primary-foreground" : "text-white/80"
+                  "text-sm xl:text-base font-semibold transition-all hover:text-white whitespace-nowrap pb-1 border-b-2",
+                  pathname === item.href 
+                    ? "text-white border-[#E34A21]" 
+                    : "text-white/80 border-transparent hover:border-white/20"
                 )}
               >
                 {item.name}
@@ -102,8 +104,8 @@ export default function Navbar() {
               href={item.href}
               onClick={() => setIsOpen(false)}
               className={cn(
-                "text-lg font-bold py-3 border-b border-white/10 text-white",
-                pathname === item.href ? "text-primary-foreground" : "text-white/80"
+                "text-lg font-bold py-3 border-b-2 text-white",
+                pathname === item.href ? "border-[#E34A21]" : "border-white/10"
               )}
             >
               {item.name}
