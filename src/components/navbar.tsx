@@ -16,6 +16,7 @@ const navItems = [
   { name: 'Committee', href: '/committee' },
   { name: 'Dates', href: '/important-dates' },
   { name: 'Registration', href: '/registration' },
+  { name: 'Venue', href: '/venue' },
   { name: 'Contact', href: '/contact' },
 ];
 
