@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -29,7 +30,7 @@ export default function HeroBackground() {
           key={image.id}
           className={cn(
             "absolute inset-0 transition-opacity duration-1000 ease-in-out",
-            index === currentIndex ? "opacity-20" : "opacity-0"
+            index === currentIndex ? "opacity-25" : "opacity-0"
           )}
         >
           <Image
@@ -42,8 +43,9 @@ export default function HeroBackground() {
           />
         </div>
       ))}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--secondary)_0%,_transparent_70%)] opacity-[0.1]" />
+      {/* Soft gradient overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--secondary)_0%,_transparent_70%)] opacity-[0.05]" />
     </div>
   );
 }
