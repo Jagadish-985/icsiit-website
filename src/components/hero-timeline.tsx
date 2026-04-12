@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -5,11 +6,11 @@ import { Calendar, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const timelineItems = [
-  { title: "Abstract Submission", date: "25th April", target: new Date('2026-04-25T23:59:59') },
-  { title: "Acceptance Notification", date: "30th April", target: new Date('2026-04-30T23:59:59') },
-  { title: "Full Paper Submission", date: "10th May", target: new Date('2026-05-10T23:59:59') },
-  { title: "Registration Deadline", date: "12th May", target: new Date('2026-05-12T23:59:59') },
-  { title: "Conference", date: "13th-15th May", target: new Date('2026-05-13T09:00:00') }
+  { title: "Abstract Submission", date: "25th April 2026", target: new Date('2026-04-25T23:59:59') },
+  { title: "Acceptance Notification", date: "30th April 2026", target: new Date('2026-04-30T23:59:59') },
+  { title: "Full Paper Submission", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
+  { title: "Registration Deadline", date: "12th May 2026", target: new Date('2026-05-12T23:59:59') },
+  { title: "Conference", date: "13th-15th May 2026", target: new Date('2026-05-13T09:00:00') }
 ];
 
 export default function HeroTimeline() {
