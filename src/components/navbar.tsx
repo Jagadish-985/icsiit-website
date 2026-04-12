@@ -42,12 +42,12 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[56px]">
         {/* Left: Branding */}
         <Link href="/" className="flex items-center group">
-          <div className="h-10 md:h-12 flex items-center">
+          <div className="h-12 md:h-16 flex items-center">
             <Image 
               src="/abc.webp" 
               alt="SYNERGY 2026 Logo"
-              width={150}
-              height={50}
+              width={220}
+              height={70}
               className="h-full w-auto object-contain"
               priority
             />
