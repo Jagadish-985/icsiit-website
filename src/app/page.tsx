@@ -20,28 +20,15 @@ import {
 } from 'lucide-react';
 import CountdownTimer from '@/components/countdown-timer';
 import SectionHeading from '@/components/section-heading';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
+import HeroBackground from '@/components/hero-background';
 
 export default function Home() {
-  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center pt-32 pb-48 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={heroImg?.imageUrl || ''}
-            alt="Hero Background"
-            fill
-            className="object-cover opacity-10"
-            priority
-            data-ai-hint="engineering technologies"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--secondary)_0%,_transparent_70%)] opacity-[0.05]" />
-        </div>
+        <HeroBackground />
 
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Badge className="mb-6 px-6 py-2 rounded-full bg-secondary/10 text-secondary border-secondary/20 font-bold text-sm tracking-widest animate-fade-in">
