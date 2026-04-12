@@ -69,7 +69,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in [animation-delay:800ms] mb-12">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:brightness-90 transition-all rounded-full px-12 h-16 text-lg shadow-xl border-none">
+            <Button asChild size="lg" className="bg-[#E34A21] text-primary-foreground hover:bg-[#E34A21]/90 transition-all rounded-full px-12 h-16 text-lg shadow-xl border-none">
               <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                 Register Now
               </a>
@@ -207,7 +207,7 @@ export default function Home() {
               Join leading experts and researchers from across the globe in exploring the frontiers of intelligent technologies.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:brightness-90 transition-all px-12 h-18 text-xl rounded-full shadow-2xl border-none">
+              <Button asChild size="lg" className="bg-[#E34A21] text-primary-foreground hover:bg-[#E34A21]/90 transition-all px-12 h-18 text-xl rounded-full shadow-2xl border-none">
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">Register Now</a>
               </Button>
               <Button variant="outline" size="lg" asChild className="text-foreground h-18 px-12 text-xl rounded-full border-primary/20 bg-white shadow-lg">

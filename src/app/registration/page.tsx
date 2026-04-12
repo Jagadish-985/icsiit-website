@@ -31,7 +31,7 @@ export default function RegistrationPage() {
                   </li>
                 ))}
               </ul>
-              <Button asChild className="w-full bg-primary text-primary-foreground py-6 text-lg mt-auto rounded-2xl">
+              <Button asChild className="w-full bg-[#E34A21] text-primary-foreground hover:bg-[#E34A21]/90 py-6 text-lg mt-auto rounded-2xl">
                 <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
                   Register as Student <ExternalLink className="ml-2 w-4 h-4" />
                 </a>
