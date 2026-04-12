@@ -36,7 +36,7 @@ export default function Navbar() {
     <header 
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-[#002147] py-3 shadow-lg" : "bg-[#002147] py-4"
+        scrolled ? "bg-[#361C6A] py-3 shadow-lg" : "bg-[#361C6A] py-4"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[56px]">
@@ -92,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div className={cn(
-        "lg:hidden fixed inset-0 top-[72px] bg-[#002147] z-40 transition-transform duration-300 ease-in-out transform",
+        "lg:hidden fixed inset-0 top-[72px] bg-[#361C6A] z-40 transition-transform duration-300 ease-in-out transform",
         isOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <nav className="flex flex-col p-6 gap-4 overflow-y-auto h-full">
