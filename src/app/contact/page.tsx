@@ -69,7 +69,7 @@ export default function ContactPage() {
       id: newDocRef.id,
       ...values,
       sentAt: new Date().toISOString(),
-      toEmail: 'jagadishb.985@gmail.com' // Hint for Trigger Email extension
+      toEmail: 'jagadishb.985@gmail.com' // Field for Trigger Email extension to pick up
     };
 
     setDocumentNonBlocking(newDocRef, messageData, { merge: true });
