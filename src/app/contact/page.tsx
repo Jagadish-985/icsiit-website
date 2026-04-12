@@ -52,8 +52,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-bold">Venue Address</p>
-                      <p className="text-muted-foreground">MSRUAS, RTC, Peenya, Bangalore</p>
-                      <p className="text-muted-foreground text-sm font-medium">Near Brindavan Bus Stop, Peenya 4th Phase, Bangalore - 560058</p>
+                      <p className="text-muted-foreground">Ramaiah University Of Applied Sciences</p>
+                      <p className="text-muted-foreground text-sm font-medium">470-P, Peenya 4th Phase, Peenya, Bengaluru, Karnataka 560058</p>
                     </div>
                   </div>
                 </div>

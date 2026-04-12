@@ -1,4 +1,3 @@
-
 import SectionHeading from '@/components/section-heading';
 import { MapPin, Plane, Train, Bus } from 'lucide-react';
 import Image from 'next/image';
@@ -22,9 +21,9 @@ export default function VenuePage() {
             <div className="absolute bottom-0 left-0 p-8">
               <div className="flex items-center gap-3 text-primary mb-2">
                 <MapPin className="w-6 h-6" />
-                <span className="font-bold text-xl">MSRUAS RTC, Peenya</span>
+                <span className="font-bold text-xl">MSRUAS, Peenya</span>
               </div>
-              <p className="text-muted-foreground">Bangalore 560058, Karnataka, India</p>
+              <p className="text-muted-foreground">470-P, Peenya 4th Phase, Peenya, Bengaluru, Karnataka 560058</p>
             </div>
           </div>
 
