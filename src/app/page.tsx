@@ -40,7 +40,7 @@ export default function Home() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
             Smart, Intelligent and Innovative Technologies across <br />
-            <span className="text-secondary font-bold">Aerospace, Automotive, Mechanical, Electronics and Civil Engineering</span>
+            <span className="text-secondary font-bold">Aerospace, Automotive, Civil Engineering, Computer Science, Electronics and Mechanical</span>
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
