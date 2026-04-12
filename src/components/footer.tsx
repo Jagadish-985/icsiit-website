@@ -59,7 +59,7 @@ export default function Footer() {
                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 shadow-lg border border-white/10">
                    <Mail className="w-6 h-6 text-primary" />
                 </div>
-                <span className="break-all text-white">icsmart@msruas.ac.in</span>
+                <a href="mailto:icsmart@msruas.ac.in" className="break-all text-white hover:text-primary transition-colors">icsmart@msruas.ac.in</a>
               </li>
               <li className="flex gap-5 items-start">
                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 shadow-lg border border-white/10">
