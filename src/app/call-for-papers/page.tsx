@@ -46,9 +46,10 @@ export default function CallForPapers() {
                 <div className="mt-4 flex gap-4">
                   <Button size="sm" className="gap-2" asChild>
                     <a 
-                      href="https://msruas-my.sharepoint.com/:w:/g/personal/ananth_me_et_msruas_ac_in/IQAthed5dtgoQr9SImTpRKfJAcP3XnN32L-OzEdKpFdLlms?rtime=mxSPWI-Y3kg" 
+                      href="https://msruas-my.sharepoint.com/:w:/g/personal/ananth_me_et_msruas_ac_in/IQAthed5dtgoQr9SImTpRKfJAcP3XnN32L-OzEdKpFdLlms?download=1" 
                       target="_blank" 
                       rel="noopener noreferrer"
+                      download="Template.docx"
                     >
                       <Download className="w-4 h-4" /> Template.docx
                     </a>
