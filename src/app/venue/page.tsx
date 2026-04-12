@@ -1,6 +1,5 @@
 import SectionHeading from '@/components/section-heading';
 import { MapPin, Plane, Train, Bus, Info } from 'lucide-react';
-import Image from 'next/image';
 
 export default function HowToReachPage() {
   return (
@@ -13,22 +12,17 @@ export default function HowToReachPage() {
             subtitle="Directions and travel information for SYNERGY 2026 participants visiting the Ramaiah University Peenya Campus." 
           />
           
-          <div className="relative aspect-video rounded-[3rem] overflow-hidden mb-12 border-4 border-primary shadow-2xl group">
-            <Image 
-              src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=2070&auto=format&fit=crop" 
-              alt="Venue Location" 
-              fill 
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-              data-ai-hint="university campus"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 p-10">
-              <div className="flex items-center gap-3 text-primary mb-3">
-                <MapPin className="w-8 h-8" />
-                <span className="font-headline font-bold text-2xl">MSRUAS, Peenya Campus</span>
-              </div>
-              <p className="text-muted-foreground text-lg max-w-lg">470-P, Peenya 4th Phase, Peenya, Bengaluru, Karnataka 560058</p>
-            </div>
+          <div className="rounded-[3rem] overflow-hidden mb-12 border-4 border-primary shadow-2xl h-[450px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2642592717752!2d77.5057303754022!3d13.018836513840279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cfb3dbaee73%3A0xb6777a4ce0b09eb5!2sRamaiah%20University%20Of%20Applied%20Sciences!5e0!3m2!1sen!2sin!4v1775999404278!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="MSRUAS Campus Map"
+            ></iframe>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
