@@ -65,7 +65,7 @@ export default function Footer() {
                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 shadow-lg border border-white/10">
                    <Globe className="w-6 h-6 text-primary" />
                 </div>
-                <span className="text-white">www.msruas.ac.in</span>
+                <a href="https://www.msruas.ac.in" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">www.msruas.ac.in</a>
               </li>
             </ul>
           </div>
