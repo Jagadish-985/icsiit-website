@@ -16,7 +16,8 @@ import {
   Truck,
   Zap,
   Globe,
-  ArrowRight
+  ArrowRight,
+  Calendar
 } from 'lucide-react';
 import CountdownTimer from '@/components/countdown-timer';
 import SectionHeading from '@/components/section-heading';
@@ -24,6 +25,14 @@ import { cn } from '@/lib/utils';
 import HeroBackground from '@/components/hero-background';
 
 export default function Home() {
+  const timelineItems = [
+    { title: "Abstracts", date: "25th April" },
+    { title: "Notification", date: "30th April" },
+    { title: "Full Paper", date: "10th May" },
+    { title: "Registration", date: "12th May" },
+    { title: "Conference", date: "13th-15th May" }
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -66,6 +75,40 @@ export default function Home() {
             <Button variant="outline" size="lg" className="rounded-full px-16 h-20 text-xl font-bold border-secondary/20 hover:border-secondary/50 text-foreground bg-white/50 backdrop-blur-sm shadow-lg" asChild>
               <Link href="/about">Conference Themes</Link>
             </Button>
+          </div>
+
+          {/* Horizontal Timeline */}
+          <div className="max-w-6xl mx-auto mt-20 animate-fade-in [animation-delay:1000ms] hidden lg:block">
+            <div className="relative pt-12">
+              {/* Main Connecting Line */}
+              <div className="absolute top-[68px] left-8 right-8 h-1 bg-gradient-to-r from-primary/30 via-secondary/40 to-primary/30 rounded-full" />
+              
+              <div className="flex justify-between relative">
+                {timelineItems.map((item, i) => (
+                  <div key={i} className="flex flex-col items-center group relative px-4">
+                    {/* Circle/Icon */}
+                    <div className="w-14 h-14 rounded-2xl bg-white border-2 border-primary/20 shadow-xl flex items-center justify-center mb-6 z-10 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300 transform group-hover:-translate-y-2 group-hover:shadow-primary/20">
+                      <Calendar className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                    </div>
+                    {/* Label */}
+                    <div className="space-y-1 bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-sm transition-all group-hover:bg-white/80">
+                      <p className="text-sm font-extrabold text-foreground uppercase tracking-widest">{item.title}</p>
+                      <p className="text-lg font-bold text-primary">{item.date}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          {/* Mobile Simplified Timeline */}
+          <div className="lg:hidden mt-12 animate-fade-in [animation-delay:1000ms] grid grid-cols-2 gap-4">
+            {timelineItems.slice(0, 4).map((item, i) => (
+              <div key={i} className="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-white/20 shadow-sm text-center">
+                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-1">{item.title}</p>
+                <p className="text-sm font-bold text-primary">{item.date}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
