@@ -63,8 +63,12 @@ export default function HowToReachPage() {
                   <div>
                     <h4 className="font-bold text-xl mb-1">By Local Transport</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      BMTC buses (Route 250 series) ply frequently to Peenya 4th Phase. 
-                      The campus is located near the Brindavan Bus Stop. Plan your journey using the <a href="https://nammabmtcapp.karnataka.gov.in/commuter/journey-planner" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Namma BMTC Journey Planner</a>.
+                      The nearest bus stop is <span className="font-bold text-foreground">Brundavana Peenya Bus Stop</span>. 
+                      Click on the link below to get the 
+                      <a href="https://nammabmtcapp.karnataka.gov.in/commuter/journey-planner" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold mx-1">
+                        BMTC Bus Planner
+                      </a> 
+                      to find your bus number and access live bus tracking.
                     </p>
                   </div>
                 </div>
