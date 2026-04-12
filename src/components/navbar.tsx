@@ -2,13 +2,11 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -24,7 +22,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const uniLogo = PlaceHolderImages.find(img => img.id === 'uni-logo');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,34 +39,11 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between relative min-h-[56px]">
-        {/* Left: University and Conference Logos */}
-        <div className="flex items-center gap-4 lg:gap-6">
-          <Link href="/" className="flex items-center">
-            <div className="h-10 md:h-12 flex items-center">
-              <Image 
-                src={uniLogo?.imageUrl || ''} 
-                alt="Ramaiah University Logo" 
-                width={200} 
-                height={50} 
-                className="h-full w-auto object-contain brightness-0 invert"
-                data-ai-hint="university logo"
-              />
-            </div>
-          </Link>
-          <div className="h-8 w-px bg-white/20 hidden sm:block" />
-          <div className="h-10 md:h-12 flex items-center">
-            <Image 
-              src="/abc.webp" 
-              alt="SYNERGY 2026 Logo"
-              width={120}
-              height={50}
-              className="h-full w-auto object-contain brightness-0 invert"
-            />
-          </div>
-        </div>
+        {/* Empty left section to maintain navigation alignment to the right */}
+        <div className="hidden lg:block" />
 
         {/* Right: Desktop Navigation & Mobile Toggle */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 w-full lg:w-auto justify-between lg:justify-end">
           <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navItems.map((item) => (
               <Link
@@ -92,13 +66,18 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* Mobile Toggle */}
-          <button 
-            className="lg:hidden p-2 text-white"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
-          </button>
+          {/* Mobile Branding (Simplified) or just toggle */}
+          <div className="lg:hidden flex items-center justify-between w-full">
+            <Link href="/" className="text-white font-headline font-bold text-lg">
+              SYNERGY 2026
+            </Link>
+            <button 
+              className="p-2 text-white"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </div>
 
