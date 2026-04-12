@@ -71,13 +71,6 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center gap-2 ml-2">
-              <Button asChild variant="default" size="sm" className="bg-[#E34A21] text-primary-foreground hover:bg-[#E34A21]/90 transition-all h-10 rounded-full px-6 border-none text-base">
-                <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
-                  Register
-                </a>
-              </Button>
-            </div>
           </nav>
 
           {/* Mobile Toggle */}
@@ -111,13 +104,6 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <div className="mt-6 flex flex-col gap-3 pb-20">
-            <Button asChild className="w-full bg-[#E34A21] text-primary-foreground hover:bg-[#E34A21]/90 rounded-full h-12 text-lg">
-              <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
-                Register Now
-              </a>
-            </Button>
-          </div>
         </nav>
       </div>
     </header>
