@@ -104,12 +104,12 @@ export default function Home() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Computer Science', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics and Intelligent Systems.' },
               { title: 'Aerospace Engineering', icon: Rocket, color: 'bg-[#E34A21]', desc: 'UAVs, Satellite Systems and Aerodynamics.' },
               { title: 'Automotive Engineering', icon: Truck, color: 'bg-[#992361]', desc: 'EV Technology, Smart Mobility and Autonomous Vehicles.' },
-              { title: 'Mechanical Engineering', icon: Settings, color: 'bg-primary', desc: 'Additive Manufacturing, Smart Materials and Robotics.' },
+              { title: 'Civil Engineering', icon: Building, color: 'bg-green-600', desc: 'Smart Cities, Sustainable Infrastructure and Monitoring.' },
+              { title: 'Computer Science', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics and Intelligent Systems.' },
               { title: 'Electronics & Comm.', icon: Cpu, color: 'bg-secondary', desc: 'IoT, VLSI, Sensors and Integrated Circuits.' },
-              { title: 'Civil Engineering', icon: Building, color: 'bg-green-600', desc: 'Smart Cities, Sustainable Infrastructure and Monitoring.' }
+              { title: 'Mechanical Engineering', icon: Settings, color: 'bg-primary', desc: 'Additive Manufacturing, Smart Materials and Robotics.' }
             ].map((area, i) => (
               <Card key={area.title} className="hover:border-primary/50 transition-all duration-500 group border-border shadow-lg rounded-[2.5rem] overflow-hidden bg-white border-2 hover:-translate-y-2">
                 <CardContent className="pt-10 pb-10 flex flex-col items-center text-center">
