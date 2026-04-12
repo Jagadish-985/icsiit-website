@@ -75,14 +75,14 @@ export default function ContactPage() {
             {/* Google Maps Embed */}
             <div className="glass-card rounded-[2.5rem] overflow-hidden border border-border shadow-2xl h-[450px] lg:h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.9455353133687!2d77.5135153112261!3d13.039097487226593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d1000000001%3A0x67396a8439401764!2sRamaiah%20University%20of%20Applied%20Sciences!5e0!3m2!1sen!2sin!4v1709191000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2642592717752!2d77.50573037540221!3d13.018836513840283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cfb3dbaee73%3A0xb6777a4ce0b09eb5!2sRamaiah%20University%20Of%20Applied%20Sciences!5e0!3m2!1sen!2sin!4v1775996670597!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="MSRUAS Peenya Campus Map"
+                title="MSRUAS Campus Map"
                 className="grayscale-[0.2] contrast-[1.1]"
               ></iframe>
             </div>
