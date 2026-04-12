@@ -34,9 +34,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4">Organizer</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  The event is organized by the <span className="text-foreground font-semibold">Faculty of Engineering and Technology (FET)</span> 
-                  at Ramaiah University of Applied Sciences (RUAS), Bangalore. We focus on bridging traditional boundaries 
-                  to encourage holistic and scalable solutions.
+                  The event is organized by the <span className="text-foreground font-semibold">Faculty of Engineering and Technology (FET)</span> at Ramaiah University of Applied Sciences (RUAS), Bangalore. We focus on bridging traditional boundaries to encourage holistic and scalable solutions.
                 </p>
               </CardContent>
             </Card>
