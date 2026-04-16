@@ -40,21 +40,24 @@ export default function HeroTimeline() {
     <div className="max-w-6xl mx-auto mt-20 animate-fade-in [animation-delay:1000ms]">
       {/* Desktop Timeline */}
       <div className="hidden lg:block relative pt-12">
-        {/* Background Track */}
-        <div className="absolute top-[68px] left-8 right-8 h-1 bg-white/20 rounded-full" />
+        {/* Progress Track Wrapper - Positioned to bisect the 56px (w-14) icons */}
+        <div className="absolute top-[76px] left-[28px] right-[28px] h-1 z-0">
+          {/* Background Track */}
+          <div className="absolute inset-0 bg-white/20 rounded-full" />
+          
+          {/* Dynamic Progress Bar */}
+          <div 
+            className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000 ease-in-out shadow-[0_0_10px_rgba(227,74,33,0.5)]"
+            style={{ width: `${progressPercent}%` }}
+          />
+        </div>
         
-        {/* Dynamic Progress Bar */}
-        <div 
-          className="absolute top-[68px] left-8 h-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000 ease-in-out shadow-[0_0_10px_rgba(227,74,33,0.5)]"
-          style={{ width: `calc(${progressPercent}% - ${progressPercent > 0 ? '16px' : '0px'})` }}
-        />
-        
-        <div className="flex justify-between relative">
+        <div className="flex justify-between relative z-10">
           {timelineItems.map((item, i) => {
             const status = getStatus(item.target, i);
             return (
               <div key={i} className="flex flex-col items-center group relative px-4">
-                {/* Milestone Node */}
+                {/* Milestone Node (56x56 pixels) */}
                 <div className={cn(
                   "w-14 h-14 rounded-2xl shadow-2xl flex items-center justify-center mb-6 z-10 transition-all duration-500 transform group-hover:-translate-y-2 border-2",
                   status === 'completed' ? "bg-primary border-primary text-white scale-110 shadow-primary/40" : 
