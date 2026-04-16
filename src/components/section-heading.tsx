@@ -19,7 +19,7 @@ export default function SectionHeading({ title, subtitle, centered = false, clas
           {title}
         </h2>
         <div className={cn(
-          "h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-2 w-2/3",
+          "h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-2 w-full",
           centered ? "mx-auto" : "mr-auto"
         )} />
       </div>
