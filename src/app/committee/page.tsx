@@ -1,7 +1,7 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Users, User, ShieldCheck, Globe, Star, Cpu, Award } from 'lucide-react';
+import { Users, User, ShieldCheck, Globe, Star, Cpu, Award, Phone, Mail } from 'lucide-react';
 
 export default function CommitteePage() {
   const leadership = [
@@ -27,6 +27,21 @@ export default function CommitteePage() {
     { name: "Dr. Narendra Babu Chindanur", role: "HOD, CSE, RUAS" },
     { name: "Dr. Harshad Rameshwar Parate", role: "HOD, Civil, RUAS" },
     { name: "Dr. Sulake Nagaraja Rao", role: "HOD, EEE, RUAS" }
+  ];
+
+  const conveners = [
+    {
+      name: "Dr. Jyothi A P",
+      role: "Associate Professor and Head, Mathematics and Computing Program, Department of Computer Science and Engineering, RUAS",
+      phone: "9686311475",
+      email: "Jyothi.cs.et@msruas.ac.in"
+    },
+    {
+      name: "Dr. Ananth S. Iyengar",
+      role: "Assistant Professor, Dept. of Mechanical and Manufacturing Engineering, RUAS",
+      phone: "9480343844",
+      email: "ananth.me.et@msruas.ac.in"
+    }
   ];
 
   const advisoryCommittee = [
@@ -80,6 +95,38 @@ export default function CommitteePage() {
                   <p className="font-bold text-foreground leading-tight">{member.name}</p>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Conveners Section */}
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-3 bg-primary/10 rounded-2xl">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-3xl font-headline font-bold">Conveners</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {conveners.map((convener, i) => (
+                <Card key={i} className="glass-card border-border bg-white shadow-sm rounded-3xl overflow-hidden hover:border-primary/30 transition-all">
+                  <CardContent className="p-8">
+                    <h4 className="text-xl font-bold mb-2 text-foreground">{convener.name}</h4>
+                    <p className="text-sm text-muted-foreground font-medium mb-6 leading-relaxed">
+                      {convener.role}
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3 text-sm">
+                        <Phone className="w-4 h-4 text-primary" />
+                        <a href={`tel:${convener.phone}`} className="hover:text-primary transition-colors font-bold">{convener.phone}</a>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm">
+                        <Mail className="w-4 h-4 text-primary" />
+                        <a href={`mailto:${convener.email}`} className="hover:text-primary transition-colors font-bold break-all">{convener.email}</a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
