@@ -1,38 +1,52 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Users, User, ShieldCheck, Globe, Star, Cpu } from 'lucide-react';
+import { Users, User, ShieldCheck, Globe, Star, Cpu, Award } from 'lucide-react';
 
 export default function CommitteePage() {
   const leadership = [
     { role: "Patron", name: "Dr. M. R. Jayaram", organization: "Hon'ble Chancellor, RUAS" },
-    { role: "Co-Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
-    { role: "Co-Patron", name: "Prof. Ranganath R. V.", organization: "Provost (Engineering & Allied Sciences), RUAS" },
-    { role: "Co-Patron", name: "Dean - Academics", organization: "RUAS, Bangalore" },
+    { role: "Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
     { role: "General Chair", name: "Dr. Sarat Kumar Maharana", organization: "Professor & Dean - FET, RUAS" }
   ];
 
-  const coChairs = [
-    { name: "Dr. Dayananda B. S.", role: "Associate Dean - FET, RUAS" },
-    { name: "Dr. Suresh", role: "HOD, MME Dept, RUAS" },
-    { name: "Dr. Jayahar", role: "HOD, AAE Dept, RUAS" },
-    { name: "Dr. Christy Bobby", role: "HOD, ECE Dept, RUAS" },
-    { name: "Dr. C Narendra Babu", role: "HOD, CSE Dept, RUAS" },
-    { name: "Dr. Harshad Parathe", role: "HOD, Civil Dept, RUAS" }
+  const coPatrons = [
+    { name: "Mr. S. Ashok Rao", role: "Registrar, RUAS" },
+    { name: "Prof. Ranganath R. V.", role: "Provost (Engineering & Allied Sciences), RUAS" },
+    { name: "Dr. G. S. Venkatesh", role: "Provost (Health and Allied Sciences), RUAS" },
+    { name: "Dr. Indira Ramarao", role: "Provost (Social Sciences & Allied Faculties), RUAS" }
+  ];
+
+  const organizingCommittee = [
+    { name: "Dr. Dayananda. B. S.", role: "Associate Dean - RTC, RUAS" },
+    { name: "Dr. Nayana P Patil", role: "Associate Dean, Student Wellbeing - RTC, RUAS" },
+    { name: "Dr. Rinki Sharma", role: "Associate Dean, CADAR - RTC, RUAS" },
+    { name: "Dr. Suresh R", role: "HOD, MME, RUAS" },
+    { name: "Dr. Mahesh K Varpe", role: "HOD, AAE, RUAS" },
+    { name: "Dr. T. Christy Bobby", role: "HOD, ECE, RUAS" },
+    { name: "Dr. Narendra Babu Chindanur", role: "HOD, CSE, RUAS" },
+    { name: "Dr. Harshad Rameshwar Parate", role: "HOD, Civil, RUAS" },
+    { name: "Dr. Sulake Nagaraja Rao", role: "HOD, EEE, RUAS" }
   ];
 
   const advisoryCommittee = [
-    { name: "Dr. G. L. Samuel", institution: "Professor, Dept. of Mechanical Engineering, IITM, Chennai" },
+    { name: "Dr. Dhanesh G. Mohan", institution: "Programme Leader, Senior Lecturer, University of Sunderland, UK" },
+    { name: "Mr. Charles Chow", institution: "Singapore Management University, Singapore" },
+    { name: "Dr. Salunkhe Sachin", institution: "Professor, Gazi University, Turkiye" },
+    { name: "Prof Dileep A. D.", institution: "Professor, IIT Dharwad" },
+    { name: "Prof. Bidyadhar Subudhi", institution: "Member Director, NIT Warangal" },
+    { name: "Dr. G. L. Samuel", institution: "Professor, IITM, Chennai" },
     { name: "Dr. Narendra Nath S.", institution: "Professor, NITK - Surathkal" },
     { name: "Dr. Basavarajappa", institution: "Professor, UBDT, Davangere" },
-    { name: "Dr. Mallikarjun U. S.", institution: "Professor & Head, SIT - Tumkur" }
+    { name: "Dr. Mallikarjun U. S.", institution: "Professor & Head, SIT - Tumkur" },
+    { name: "Dr Vijaykumar S Jatti", institution: "Professor, Bennett University, UP" }
   ];
 
   return (
     <div className="pt-32 pb-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading centered title="Conference Committees" subtitle="Visionary leadership and experts driving SYNERGY 2026." />
+          <SectionHeading centered title="Conference Committees" subtitle="Visionary leadership and global experts driving SYNERGY 2026." />
           
           {/* Main Leadership Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
@@ -52,19 +66,37 @@ export default function CommitteePage() {
             ))}
           </div>
 
+          {/* Co-Patrons Section */}
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8 justify-center md:justify-start">
+              <div className="p-3 bg-secondary/10 rounded-2xl">
+                <Award className="w-6 h-6 text-secondary" />
+              </div>
+              <h3 className="text-3xl font-headline font-bold">Co-Patrons</h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {coPatrons.map((member, i) => (
+                <div key={i} className="p-6 bg-white rounded-3xl border border-border hover:shadow-lg hover:border-secondary/20 transition-all flex flex-col gap-2">
+                  <p className="font-bold text-foreground leading-tight">{member.name}</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Conference Co-Chairs */}
+            {/* Organizing Committee */}
             <div className="space-y-8">
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-secondary/10 rounded-2xl">
-                  <Star className="w-6 h-6 text-secondary" />
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <Star className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-3xl font-headline font-bold">Conference Co-Chairs</h3>
+                <h3 className="text-3xl font-headline font-bold">Organizing Committee</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {coChairs.map((member, i) => (
+                {organizingCommittee.map((member, i) => (
                   <div key={i} className="p-6 bg-white rounded-3xl border border-border hover:shadow-lg hover:border-primary/20 transition-all flex flex-col gap-1">
-                    <p className="font-bold text-foreground">{member.name}</p>
+                    <p className="font-bold text-foreground leading-tight">{member.name}</p>
                     <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
                   </div>
                 ))}
@@ -82,8 +114,8 @@ export default function CommitteePage() {
                   </h4>
                   <div className="space-y-4">
                     <div className="p-5 bg-white rounded-2xl border border-border shadow-sm">
-                       <p className="font-bold">Dr. R. Suresh</p>
-                       <p className="text-sm text-muted-foreground">HOD, Dept. of MME, RUAS</p>
+                       <p className="font-bold text-lg">Dr. Suresh R</p>
+                       <p className="text-sm text-muted-foreground font-semibold">HOD, Dept. of MME, RUAS</p>
                     </div>
                   </div>
                 </div>
@@ -93,21 +125,21 @@ export default function CommitteePage() {
             {/* Advisory Committee */}
             <div className="space-y-8">
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-primary/10 rounded-2xl">
-                  <Globe className="w-6 h-6 text-primary" />
+                <div className="p-3 bg-secondary/10 rounded-2xl">
+                  <Globe className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-3xl font-headline font-bold">Advisory Committee</h3>
               </div>
               <div className="space-y-4">
                 {advisoryCommittee.map((member, i) => (
-                  <Card key={i} className="border-border hover:border-primary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
+                  <Card key={i} className="border-border hover:border-secondary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
                     <CardContent className="p-6 flex items-center gap-6">
-                      <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center shrink-0">
-                         <span className="text-primary font-bold">{i+1}</span>
+                      <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                         <span className="text-primary font-bold text-sm">{i+1}</span>
                       </div>
                       <div>
-                        <p className="font-bold text-foreground text-lg">{member.name}</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{member.institution}</p>
+                        <p className="font-bold text-foreground text-lg leading-tight">{member.name}</p>
+                        <p className="text-xs font-semibold text-muted-foreground leading-relaxed mt-1">{member.institution}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -116,7 +148,7 @@ export default function CommitteePage() {
 
               <div className="p-10 bg-muted/30 border border-border rounded-[2.5rem] mt-8">
                 <h4 className="font-bold text-xl mb-4 flex items-center gap-3">
-                  <Users className="w-6 h-6 text-secondary" />
+                  <Users className="w-6 h-6 text-primary" />
                   Technical Committee
                 </h4>
                 <p className="text-sm text-muted-foreground leading-relaxed italic">
