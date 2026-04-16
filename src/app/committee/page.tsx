@@ -131,77 +131,73 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Organizing Committee */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-primary/10 rounded-2xl">
-                  <Star className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-3xl font-headline font-bold">Organizing Committee</h3>
+          {/* Organizing Committee & TPC */}
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-3 bg-primary/10 rounded-2xl">
+                <Star className="w-6 h-6 text-primary" />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {organizingCommittee.map((member, i) => (
-                  <div key={i} className="p-6 bg-white rounded-3xl border border-border hover:shadow-lg hover:border-primary/20 transition-all flex flex-col gap-1">
-                    <p className="font-bold text-foreground leading-tight">{member.name}</p>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* TPC & Conveners */}
-              <Card className="bg-primary/[0.02] border-primary/10 rounded-[2.5rem] mt-8 p-8 overflow-hidden relative group">
-                <div className="absolute top-0 right-0 p-8 opacity-5">
-                   <Cpu className="w-32 h-32 text-primary" />
+              <h3 className="text-3xl font-headline font-bold">Organizing Committee</h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {organizingCommittee.map((member, i) => (
+                <div key={i} className="p-6 bg-white rounded-3xl border border-border hover:shadow-lg hover:border-primary/20 transition-all flex flex-col gap-1">
+                  <p className="font-bold text-foreground leading-tight">{member.name}</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
                 </div>
-                <div className="relative z-10">
-                   <h4 className="font-bold text-2xl mb-6 flex items-center gap-3">
-                    <ShieldCheck className="w-6 h-6 text-primary" />
-                    Technical Program Chair
-                  </h4>
-                  <div className="space-y-4">
-                    <div className="p-5 bg-white rounded-2xl border border-border shadow-sm">
-                       <p className="font-bold text-lg">Dr. Suresh R</p>
-                       <p className="text-sm text-muted-foreground font-semibold">HOD, Dept. of MME, RUAS</p>
-                    </div>
-                  </div>
-                </div>
-              </Card>
+              ))}
             </div>
 
-            {/* Advisory Committee */}
-            <div className="space-y-8">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-secondary/10 rounded-2xl">
-                  <Globe className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="text-3xl font-headline font-bold">Advisory Committee</h3>
+            {/* Technical Program Chair */}
+            <Card className="bg-primary/[0.02] border-primary/10 rounded-[2.5rem] p-8 overflow-hidden relative group max-w-2xl">
+              <div className="absolute top-0 right-0 p-8 opacity-5">
+                 <Cpu className="w-32 h-32 text-primary" />
               </div>
-              <div className="space-y-4">
-                {advisoryCommittee.map((member, i) => (
-                  <Card key={i} className="border-border hover:border-secondary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
-                    <CardContent className="p-6 flex items-center gap-6">
-                      <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
-                         <span className="text-primary font-bold text-sm">{i+1}</span>
-                      </div>
-                      <div>
-                        <p className="font-bold text-foreground text-lg leading-tight">{member.name}</p>
-                        <p className="text-xs font-semibold text-muted-foreground leading-relaxed mt-1">{member.institution}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              <div className="p-10 bg-muted/30 border border-border rounded-[2.5rem] mt-8">
-                <h4 className="font-bold text-xl mb-4 flex items-center gap-3">
-                  <Users className="w-6 h-6 text-primary" />
-                  Technical Committee
+              <div className="relative z-10">
+                 <h4 className="font-bold text-2xl mb-6 flex items-center gap-3">
+                  <ShieldCheck className="w-6 h-6 text-primary" />
+                  Technical Program Chair
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed italic">
-                  "The committee consists of eminent researchers from premier institutions who ensure high-quality standards through a rigorous peer review process."
-                </p>
+                <div className="p-5 bg-white rounded-2xl border border-border shadow-sm w-fit min-w-[300px]">
+                   <p className="font-bold text-lg">Dr. Suresh R</p>
+                   <p className="text-sm text-muted-foreground font-semibold">HOD, Dept. of MME, RUAS</p>
+                </div>
               </div>
+            </Card>
+          </div>
+
+          {/* Advisory Committee */}
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-3 bg-secondary/10 rounded-2xl">
+                <Globe className="w-6 h-6 text-secondary" />
+              </div>
+              <h3 className="text-3xl font-headline font-bold">Advisory Committee</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {advisoryCommittee.map((member, i) => (
+                <Card key={i} className="border-border hover:border-secondary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
+                  <CardContent className="p-6 flex items-center gap-6">
+                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                       <span className="text-primary font-bold text-sm">{i+1}</span>
+                    </div>
+                    <div>
+                      <p className="font-bold text-foreground text-lg leading-tight">{member.name}</p>
+                      <p className="text-xs font-semibold text-muted-foreground leading-relaxed mt-1">{member.institution}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="p-10 bg-muted/30 border border-border rounded-[2.5rem] mt-12 max-w-4xl">
+              <h4 className="font-bold text-xl mb-4 flex items-center gap-3">
+                <Users className="w-6 h-6 text-primary" />
+                Technical Committee
+              </h4>
+              <p className="text-sm text-muted-foreground leading-relaxed italic">
+                "The committee consists of eminent researchers from premier institutions who ensure high-quality standards through a rigorous peer review process."
+              </p>
             </div>
           </div>
         </div>
