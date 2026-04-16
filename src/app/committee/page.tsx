@@ -131,7 +131,7 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Organizing Committee & TPC */}
+          {/* Organizing Committee (Stacked Top) */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-primary/10 rounded-2xl">
@@ -166,7 +166,7 @@ export default function CommitteePage() {
             </Card>
           </div>
 
-          {/* Advisory Committee */}
+          {/* Advisory Committee (Stacked Bottom) */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-secondary/10 rounded-2xl">
@@ -195,7 +195,7 @@ export default function CommitteePage() {
                 <Users className="w-6 h-6 text-primary" />
                 Technical Committee
               </h4>
-              <p className="text-sm text-muted-foreground leading-relaxed italic">
+              <p className="text-sm text-muted-foreground leading-relaxed italic font-medium">
                 "The committee consists of eminent researchers from premier institutions who ensure high-quality standards through a rigorous peer review process."
               </p>
             </div>
