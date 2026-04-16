@@ -80,32 +80,43 @@ export default function HowToReachPage() {
                 <div className="w-2 h-8 bg-secondary rounded-full" />
                 Useful Tips
               </h3>
-              <div className="bg-muted/50 p-8 rounded-[2.5rem] border border-border space-y-6">
-                <div>
-                  <h4 className="font-bold text-xl mb-3 flex items-center gap-2">
-                    <Info className="w-5 h-5 text-secondary" />
-                    Accommodation
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    Several hotels and guest houses are located within a 5km radius of the Peenya campus. 
-                    Participants are requested to make their own arrangements. A list of recommended 
-                    hotels can be provided by the technical committee upon request.
-                  </p>
+              <div className="space-y-6">
+                <div className="flex gap-5 p-6 bg-white rounded-3xl border border-border hover:shadow-lg transition-shadow">
+                  <div className="p-4 bg-secondary/10 rounded-2xl h-fit">
+                    <Info className="w-8 h-8 text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-1">Accommodation</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Several hotels and guest houses are located within a 5km radius of the Peenya campus. 
+                      A list of recommended hotels can be provided by the committee upon request.
+                    </p>
+                  </div>
                 </div>
                 
-                <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
-                  <p className="font-bold text-primary mb-2">Weather Forecast</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed italic">
-                    Bangalore typically enjoys pleasant weather in May. Expect temperatures 
-                    ranging between 22°C (min) and 33°C (max). Light summer wear is recommended.
-                  </p>
+                <div className="flex gap-5 p-6 bg-white rounded-3xl border border-border hover:shadow-lg transition-shadow">
+                  <div className="p-4 bg-primary/5 rounded-2xl h-fit">
+                    <div className="w-8 h-8 flex items-center justify-center font-bold text-primary">°C</div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-1">Weather</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Bangalore typically enjoys pleasant weather in May (22°C - 33°C). 
+                      Light summer wear is recommended for all participants.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="p-6 bg-secondary/5 rounded-2xl border border-secondary/20">
-                  <p className="font-bold text-secondary mb-2">Google Maps</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Search for "Ramaiah University of Applied Sciences, Peenya Campus" on your mobile device for real-time navigation.
-                  </p>
+                <div className="flex gap-5 p-6 bg-white rounded-3xl border border-border hover:shadow-lg transition-shadow">
+                  <div className="p-4 bg-secondary/5 rounded-2xl h-fit">
+                    <MapPin className="w-8 h-8 text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-1">Navigation</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Search for "Ramaiah University of Applied Sciences, Peenya Campus" on your mobile device for real-time navigation.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
