@@ -10,7 +10,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto">
           <Badge variant="outline" className="mb-6 border-primary text-primary px-4 py-1 font-semibold">SYNERGY 2026 - IC-SIIT</Badge>
           <SectionHeading 
-            title="Need for SYNERGY 2026" 
+            title="SYNERGY 2026" 
           />
           
           <div className="prose prose-invert max-w-none text-muted-foreground text-lg leading-relaxed mb-16 space-y-6 text-justify">
