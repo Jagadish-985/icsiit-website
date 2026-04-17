@@ -4,6 +4,8 @@ import { Check, ExternalLink, CreditCard, ShieldCheck } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function RegistrationPage() {
+  const registrationLink = "https://ruasportal.msruas.ac.in/asd_EventPublicUserMaster.htm?eventID=174";
+
   return (
     <div className="pt-40 pb-32 bg-white">
       <div className="container mx-auto px-4">
@@ -34,7 +36,7 @@ export default function RegistrationPage() {
                 ))}
               </ul>
               <Button asChild className="w-full bg-[#E34A21] text-white hover:bg-[#ce380e] py-8 text-xl font-bold mt-auto rounded-3xl shadow-xl">
-                <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
+                <a href={registrationLink} target="_blank" rel="noopener noreferrer">
                   Register as Student <ExternalLink className="ml-2 w-6 h-6" />
                 </a>
               </Button>
@@ -63,7 +65,7 @@ export default function RegistrationPage() {
                 ))}
               </ul>
               <Button asChild className="w-full bg-[#992361] text-white hover:bg-[#811c52] py-8 text-xl font-bold mt-auto rounded-3xl shadow-xl border-none">
-                <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
+                <a href={registrationLink} target="_blank" rel="noopener noreferrer">
                   Register as Professional <ExternalLink className="ml-2 w-6 h-6" />
                 </a>
               </Button>
@@ -89,7 +91,7 @@ export default function RegistrationPage() {
                 </div>
                 <div className="flex gap-6 items-start">
                   <span className="w-10 h-10 bg-white rounded-full flex items-center justify-center font-bold text-primary flex-shrink-0 shadow-md">3</span>
-                  <p>Upload a clear soft copy of the payment receipt in the Microsoft Forms portal.</p>
+                  <p>Upload a clear soft copy of the payment receipt in the registration portal.</p>
                 </div>
               </div>
               <div className="p-10 bg-white rounded-[3rem] border border-border shadow-xl">

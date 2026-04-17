@@ -26,6 +26,8 @@ import HeroBackground from '@/components/hero-background';
 import HeroTimeline from '@/components/hero-timeline';
 
 export default function Home() {
+  const registrationLink = "https://ruasportal.msruas.ac.in/asd_EventPublicUserMaster.htm?eventID=174";
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -57,7 +59,7 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-6 animate-fade-in [animation-delay:800ms] mb-12">
             <Button asChild size="lg" className="bg-[#E34A21] text-white hover:bg-[#ce380e] transition-all rounded-full px-16 h-20 text-xl font-bold shadow-[0_20px_50px_rgba(227,74,33,0.3)] border-none">
-              <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">
+              <a href={registrationLink} target="_blank" rel="noopener noreferrer">
                 Register Now <ArrowRight className="ml-2 w-6 h-6" />
               </a>
             </Button>
@@ -172,7 +174,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-8">
               <Button asChild size="lg" className="bg-[#E34A21] text-white hover:bg-[#ce380e] transition-all px-16 h-20 text-2xl font-bold rounded-full shadow-2xl border-none">
-                <a href="https://forms.office.com/r/yjydBRn5Nx" target="_blank" rel="noopener noreferrer">Register Now</a>
+                <a href={registrationLink} target="_blank" rel="noopener noreferrer">Register Now</a>
               </Button>
               <Button variant="outline" size="lg" asChild className="text-foreground h-20 px-16 text-2xl font-bold rounded-full border-secondary/20 bg-white shadow-xl hover:bg-muted">
                 <Link href="/contact">Get in Touch</Link>
