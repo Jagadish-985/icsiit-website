@@ -42,6 +42,7 @@ export default function Footer() {
               <li><Link href="/call-for-papers" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Call for Papers</Link></li>
               <li><Link href="/committee" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Committees</Link></li>
               <li><Link href="/registration" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Registration</Link></li>
+              <li><Link href="/important-dates" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Dates</Link></li>
               <li><Link href="/venue" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> How to Reach</Link></li>
             </ul>
           </div>
