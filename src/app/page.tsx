@@ -68,31 +68,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Organizer Highlight */}
-      <section className="py-24 bg-muted relative z-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto bg-white rounded-[4rem] p-12 md:p-20 shadow-2xl border border-border overflow-hidden relative">
-             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2" />
-             <SectionHeading centered title="The Organizers" subtitle="Faculty of Engineering and Technology, Ramaiah University of Applied Sciences." className="mb-16" />
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                {[
-                  { role: "Chancellor & Patron", name: "Dr. M. R. Jayaram", color: "bg-primary" },
-                  { role: "Vice Chancellor", name: "Prof. Kuldeep Kumar Raina", color: "bg-secondary" },
-                  { role: "General Chair", name: "Dr. Sarat Kumar Maharana", color: "bg-primary" }
-                ].map((item, i) => (
-                  <div key={i} className="text-center group">
-                    <div className={cn("w-20 h-20 rounded-3xl mx-auto mb-6 flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform", item.color)}>
-                      <Users className="w-10 h-10" />
-                    </div>
-                    <p className="text-sm uppercase font-bold text-muted-foreground mb-2 tracking-widest">{item.role}</p>
-                    <h4 className="text-2xl font-bold text-foreground">{item.name}</h4>
-                  </div>
-                ))}
-             </div>
-          </div>
-        </div>
-      </section>
-
       {/* Thrust Areas Section */}
       <section className="py-32 bg-white relative">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
