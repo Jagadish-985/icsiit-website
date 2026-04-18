@@ -15,7 +15,7 @@ const XIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   const socialLinks = [
-    { Icon: Facebook, href: "#" },
+    { Icon: Facebook, href: "https://www.facebook.com/MSRUAS/" },
     { Icon: XIcon, href: "https://x.com/MSRUAS" },
     { Icon: Linkedin, href: "https://www.linkedin.com/company/ramaiahuniversity/posts/?feedView=all" },
     { Icon: Instagram, href: "https://www.instagram.com/ramaiah.university/" },
@@ -49,8 +49,8 @@ export default function Footer() {
                 <a 
                   key={i} 
                   href={social.href} 
-                  target={social.href !== "#" ? "_blank" : undefined}
-                  rel={social.href !== "#" ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-md group"
                 >
                   <social.Icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
