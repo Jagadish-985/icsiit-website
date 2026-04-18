@@ -6,7 +6,7 @@ export default function Footer() {
   const socialLinks = [
     { Icon: Facebook, href: "#" },
     { Icon: Twitter, href: "#" },
-    { Icon: Linkedin, href: "#" },
+    { Icon: Linkedin, href: "https://www.linkedin.com/company/ramaiahuniversity/posts/?feedView=all" },
     { Icon: Instagram, href: "https://www.instagram.com/ramaiah.university/" },
   ];
 
