@@ -5,8 +5,8 @@ import { Users, User, ShieldCheck, Globe, Star, Cpu, Award, Phone, Mail } from '
 
 export default function CommitteePage() {
   const leadership = [
-    { role: "Patron", name: "Dr. M. R. Jayaram", organization: "Hon'ble Chancellor, RUAS" },
-    { role: "Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
+    { role: "Chief Patron", name: "Dr. M. R. Jayaram", organization: "Hon'ble Chancellor, RUAS" },
+    { role: "Chief Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
     { role: "General Chair", name: "Dr. Sarat Kumar Maharana", organization: "Professor & Dean - FET, RUAS" }
   ];
 
