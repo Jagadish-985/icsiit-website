@@ -6,7 +6,7 @@ import { Users, User, ShieldCheck, Globe, Star, Cpu, Award, Phone, Mail } from '
 export default function CommitteePage() {
   const leadership = [
     { role: "Chief Patron", name: "Dr. M. R. Jayaram", organization: "Hon'ble Chancellor, RUAS" },
-    { role: "Chief Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
+    { role: "Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
     { role: "General Chair", name: "Dr. Sarat Kumar Maharana", organization: "Professor & Dean - FET, RUAS" }
   ];
 
@@ -22,11 +22,11 @@ export default function CommitteePage() {
     { name: "Dr. Nayana P Patil", role: "Associate Dean, Student Wellbeing - RTC, RUAS" },
     { name: "Dr. Rinki Sharma", role: "Associate Dean, CADAR - RTC, RUAS" },
     { name: "Dr. Suresh R", role: "HOD, MME, RUAS" },
-    { name: "Dr. Mahesh K Varpe", role: "HOD, AAE, RUAS" },
-    { name: "Dr. T. Christy Bobby", role: "HOD, ECE, RUAS" },
     { name: "Dr. Narendra Babu Chindanur", role: "HOD, CSE, RUAS" },
     { name: "Dr. Harshad Rameshwar Parate", role: "HOD, Civil, RUAS" },
-    { name: "Dr. Sulake Nagaraja Rao", role: "HOD, EEE, RUAS" }
+    { name: "Dr. Sulake Nagaraja Rao", role: "HOD, EEE, RUAS" },
+    { name: "Dr. Mahesh K Varpe", role: "HOD, AAE, RUAS" },
+    { name: "Dr. T. Christy Bobby", role: "HOD, ECE, RUAS" }
   ];
 
   const conveners = [
@@ -131,7 +131,7 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Organizing Committee (Stacked Top) */}
+          {/* Organizing Committee */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-primary/10 rounded-2xl">
@@ -166,7 +166,7 @@ export default function CommitteePage() {
             </Card>
           </div>
 
-          {/* Advisory Committee (Stacked Bottom) */}
+          {/* Advisory Committee */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-secondary/10 rounded-2xl">
