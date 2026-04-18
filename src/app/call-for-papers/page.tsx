@@ -25,6 +25,8 @@ export default function CallForPapers() {
     }
   ];
 
+  const submissionLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
+
   return (
     <div className="pt-32 pb-24">
       <div className="container mx-auto px-4">
@@ -54,8 +56,10 @@ export default function CallForPapers() {
                       <Download className="w-4 h-4" /> Template.docx
                     </a>
                   </Button>
-                  <Button size="sm" variant="outline" className="gap-2">
-                    Submission Portal
+                  <Button size="sm" variant="outline" className="gap-2" asChild>
+                    <a href={submissionLink} target="_blank" rel="noopener noreferrer">
+                      Submission Portal
+                    </a>
                   </Button>
                 </div>
               </div>
