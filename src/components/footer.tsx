@@ -83,8 +83,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-12 text-center text-sm font-bold text-gray-500 tracking-widest uppercase">
+        <div className="border-t border-white/10 pt-12 text-center text-sm font-bold text-gray-500 tracking-widest uppercase space-y-2">
           <p>© {new Date().getFullYear()} SYNERGY 2026 - IC-SIIT. All rights reserved.</p>
+          <p className="text-xs normal-case font-medium opacity-60">
+            Website Developed & Maintained by B Jagadish & Sanjeev Janardhan
+          </p>
         </div>
       </div>
     </footer>
