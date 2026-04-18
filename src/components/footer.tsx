@@ -5,7 +5,7 @@ import { Facebook, Twitter, Linkedin, Instagram, Globe, Mail, Phone, Zap } from 
 export default function Footer() {
   const socialLinks = [
     { Icon: Facebook, href: "#" },
-    { Icon: Twitter, href: "#" },
+    { Icon: Twitter, href: "https://x.com/MSRUAS" },
     { Icon: Linkedin, href: "https://www.linkedin.com/company/ramaiahuniversity/posts/?feedView=all" },
     { Icon: Instagram, href: "https://www.instagram.com/ramaiah.university/" },
   ];
