@@ -3,6 +3,13 @@ import Image from 'next/image';
 import { Facebook, Twitter, Linkedin, Instagram, Globe, Mail, Phone, Zap } from 'lucide-react';
 
 export default function Footer() {
+  const socialLinks = [
+    { Icon: Facebook, href: "#" },
+    { Icon: Twitter, href: "#" },
+    { Icon: Linkedin, href: "#" },
+    { Icon: Instagram, href: "https://www.instagram.com/ramaiah.university/" },
+  ];
+
   return (
     <footer className="bg-[#212529] border-t border-white/5 pt-24 pb-12 relative overflow-hidden text-white">
       {/* Subtle Background Glow */}
@@ -27,9 +34,15 @@ export default function Footer() {
               Driving interdisciplinary excellence in modern engineering.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-md group">
-                  <Icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              {socialLinks.map((social, i) => (
+                <a 
+                  key={i} 
+                  href={social.href} 
+                  target={social.href !== "#" ? "_blank" : undefined}
+                  rel={social.href !== "#" ? "noopener noreferrer" : undefined}
+                  className="w-12 h-12 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all shadow-md group"
+                >
+                  <social.Icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 </a>
               ))}
             </div>
