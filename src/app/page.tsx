@@ -41,7 +41,7 @@ export default function Home() {
           </Badge>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-8 tracking-tighter animate-fade-in text-foreground leading-[1]">
             SYNERGY 2026 <br />
-            <span className="text-gradient text-2xl md:text-4xl lg:text-5xl block mt-4 font-bold">
+            <span className="text-gradient text-3xl md:text-5xl lg:text-6xl block mt-4 font-bold">
               International Convention of Smart Intelligent and Innovative Technologies
             </span>
           </h1>
