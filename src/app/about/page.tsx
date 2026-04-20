@@ -1,14 +1,14 @@
 import SectionHeading from '@/components/section-heading';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Building, Users, BookOpen, Globe, Lightbulb, Zap } from 'lucide-react';
+import { Building, Users, Zap } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <Badge variant="outline" className="mb-6 border-primary text-primary px-4 py-1 font-semibold">SYNERGY 2026 - IC-SIIT</Badge>
+          <Badge variant="outline" className="mb-6 border-primary text-primary px-4 py-1 font-semibold">SYNERGY 2026 - International Conference</Badge>
           <SectionHeading 
             title="SYNERGY 2026" 
           />
@@ -50,28 +50,6 @@ export default function AboutPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-
-          <SectionHeading 
-            title="Key Benefits" 
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20">
-            {[
-              { title: 'Holistic Solutions', icon: Lightbulb, desc: 'Explore the convergence of multiple engineering disciplines for real-world impact.' },
-              { title: 'Global Connectivity', icon: Globe, desc: 'Engage with a diverse network of international experts and peer researchers.' },
-              { title: 'Indexed Publications', icon: BookOpen, desc: 'Opportunity to publish in reputed indexed journals with DOI support.' },
-              { title: 'RUAS Recognition', icon: Zap, desc: 'Official certification and validation from a leading applied sciences university.' }
-            ].map((benefit, i) => (
-              <div key={i} className="flex gap-6 p-8 bg-white border border-border rounded-[2rem] shadow-sm hover:shadow-md transition-shadow group">
-                <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
-                  <benefit.icon className="w-7 h-7" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-xl mb-2 text-foreground">{benefit.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{benefit.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
 
           <SectionHeading 
