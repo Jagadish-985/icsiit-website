@@ -46,7 +46,10 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
-            across <span className="text-secondary font-bold">Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electrical and Electronics Engineering, Electronics and Communication Engineering and Mechanical Engineering</span>
+            across <br />
+            <span className="text-secondary font-bold">
+              Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electrical and Electronics Engineering, Electronics and Communication Engineering and Mechanical Engineering
+            </span>
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
