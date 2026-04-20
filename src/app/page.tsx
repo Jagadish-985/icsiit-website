@@ -41,10 +41,12 @@ export default function Home() {
           </Badge>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-8 tracking-tighter animate-fade-in text-foreground leading-[1]">
             SYNERGY 2026 <br />
-            <span className="text-gradient">IC-SIIT</span>
+            <span className="text-gradient text-2xl md:text-4xl lg:text-5xl block mt-4 font-bold">
+              International Convention of Smart Intelligent and Innovative Technologies
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
-            International Convention of Smart Intelligent and Innovative Technologies across <span className="text-secondary font-bold">Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electrical and Electronics Engineering, Electronics and Communication Engineering and Mechanical Engineering</span>
+            across <span className="text-secondary font-bold">Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electrical and Electronics Engineering, Electronics and Communication Engineering and Mechanical Engineering</span>
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
