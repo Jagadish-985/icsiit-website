@@ -1,4 +1,3 @@
-
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -33,7 +32,7 @@ export default function CallForPapers() {
         <div className="max-w-4xl mx-auto">
           <SectionHeading 
             title="Call for Papers" 
-            subtitle="Submit your original research articles for presentation at IC-SMART 2026."
+            subtitle="Submit your original research articles for presentation at IC-SIIT 2026."
           />
 
           <div className="bg-primary/10 p-8 rounded-3xl border border-primary/20 mb-12">
