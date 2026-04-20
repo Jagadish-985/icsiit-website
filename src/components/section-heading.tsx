@@ -5,9 +5,10 @@ interface SectionHeadingProps {
   subtitle?: string;
   centered?: boolean;
   className?: string;
+  lineClassName?: string;
 }
 
-export default function SectionHeading({ title, subtitle, centered = false, className }: SectionHeadingProps) {
+export default function SectionHeading({ title, subtitle, centered = false, className, lineClassName }: SectionHeadingProps) {
   return (
     <div className={cn(
       "mb-12 space-y-4",
@@ -20,7 +21,8 @@ export default function SectionHeading({ title, subtitle, centered = false, clas
         </h2>
         <div className={cn(
           "h-2 bg-gradient-to-r from-primary to-secondary rounded-full mt-2 w-full",
-          centered ? "mx-auto" : "mr-auto"
+          centered ? "mx-auto" : "mr-auto",
+          lineClassName
         )} />
       </div>
       {subtitle && (

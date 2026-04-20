@@ -42,7 +42,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-8 tracking-tighter animate-fade-in text-foreground leading-[1]">
             SYNERGY 2026 <br />
             <span className="text-gradient text-3xl md:text-5xl lg:text-6xl block mt-4 font-bold">
-              International Convention of Smart Intelligent and Innovative Technologies
+              International Conference on Smart, Intelligent and Innovative Technologies
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
@@ -117,6 +117,7 @@ export default function Home() {
             <div className="space-y-10">
               <SectionHeading 
                 title="Publication & Indexing" 
+                lineClassName="w-[60%]"
                 subtitle="All selected and presented papers will be indexed and published in reputed international journals with full DOI support."
               />
               <div className="space-y-8">
