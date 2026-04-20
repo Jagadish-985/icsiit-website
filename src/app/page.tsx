@@ -17,7 +17,8 @@ import {
   Zap,
   Globe,
   ArrowRight,
-  Calendar
+  Calendar,
+  ZapIcon
 } from 'lucide-react';
 import CountdownTimer from '@/components/countdown-timer';
 import SectionHeading from '@/components/section-heading';
@@ -43,7 +44,7 @@ export default function Home() {
             <span className="text-gradient">IC-SIIT</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
-            Smart, Intelligent and Innovative Technologies across <span className="text-secondary font-bold">Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electronics Engineering and Mechanical Engineering</span>
+            International Convention of Smart Intelligent and Innovative Technologies across <span className="text-secondary font-bold">Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electrical and Electronics Engineering, Electronics and Communication Engineering and Mechanical Engineering</span>
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
@@ -84,8 +85,9 @@ export default function Home() {
               { title: 'Aerospace Engineering', icon: Rocket, color: 'bg-[#E34A21]', desc: 'UAVs, Satellite Systems and Aerodynamics.' },
               { title: 'Automotive Engineering', icon: Truck, color: 'bg-[#992361]', desc: 'EV Technology, Smart Mobility and Autonomous Vehicles.' },
               { title: 'Civil Engineering', icon: Building, color: 'bg-green-600', desc: 'Smart Cities, Sustainable Infrastructure and Monitoring.' },
-              { title: 'Computer Science', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics and Intelligent Systems.' },
-              { title: 'Electronics & Comm.', icon: Cpu, color: 'bg-secondary', desc: 'IoT, VLSI, Sensors and Integrated Circuits.' },
+              { title: 'Computer Science Engineering', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics and Intelligent Systems.' },
+              { title: 'Electrical & Electronics Engineering', icon: Zap, color: 'bg-yellow-600', desc: 'Power Systems, Renewable Energy and Smart Grids.' },
+              { title: 'Electronics & Communication Engineering', icon: Cpu, color: 'bg-secondary', desc: 'IoT, VLSI, Sensors and Communication Networks.' },
               { title: 'Mechanical Engineering', icon: Settings, color: 'bg-primary', desc: 'Additive Manufacturing, Smart Materials and Robotics.' }
             ].map((area, i) => (
               <Card key={area.title} className="hover:border-primary/50 transition-all duration-500 group border-border shadow-lg rounded-[2.5rem] overflow-hidden bg-white border-2 hover:-translate-y-2">
