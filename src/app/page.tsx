@@ -117,7 +117,6 @@ export default function Home() {
             <div className="space-y-10">
               <SectionHeading 
                 title="Publication & Indexing" 
-                lineClassName="w-[60%]"
                 subtitle="All selected and presented papers will be indexed and published in reputed international journals with full DOI support."
               />
               <div className="space-y-8">
