@@ -1,3 +1,4 @@
+
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Zap } from 'lucide-react';
@@ -31,13 +32,11 @@ export default function ImportantDates() {
           <SectionHeading centered title="Critical Milestones" subtitle="Mark your calendar for the major SYNERGY 2026 events." />
           
           <div className="relative mt-16">
-            {/* Timeline Line: Centered at 24px (middle of the 48px icons) */}
             <div className="absolute left-[22px] top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary/20 to-primary/10 hidden md:block rounded-full" />
             
             <div className="space-y-10">
               {dates.map((item, i) => (
                 <div key={i} className="relative md:pl-20">
-                  {/* Milestone Icon: w-12 is 48px, center is 24px. left-0 aligns its center to the 24px line. */}
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-primary hidden md:flex items-center justify-center z-10 shadow-lg group">
                     <Calendar className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                   </div>
@@ -46,14 +45,14 @@ export default function ImportantDates() {
                     item.highlight ? 'border-primary/50 bg-primary/[0.02]' : 'bg-white'
                   )}>
                     <CardContent className="p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-4 flex-1">
                         {item.highlight && <Zap className="w-6 h-6 text-primary animate-pulse shrink-0" />}
                         <div>
                           <h4 className="text-2xl font-bold text-foreground">{item.title}</h4>
                           <p className="text-muted-foreground mt-1 text-sm font-medium">SYNERGY 2026 - IC-SIIT milestone</p>
                         </div>
                       </div>
-                      <div className="text-left sm:text-right">
+                      <div className="text-left sm:text-right min-w-[150px]">
                         <div className={cn(
                           "text-3xl font-headline font-bold leading-tight",
                           item.highlight ? 'text-primary' : 'text-foreground'
