@@ -35,6 +35,17 @@ export default function HeroTimeline() {
     ? (Math.min(completedCount, timelineItems.length - 1) / (timelineItems.length - 1)) * 100 
     : 0;
 
+  const renderDate = (dateStr: string) => {
+    const parts = dateStr.split(' 2026');
+    return (
+      <>
+        {parts[0]}
+        <br />
+        2026
+      </>
+    );
+  };
+
   return (
     <div className="max-w-6xl mx-auto mt-20 animate-fade-in [animation-delay:1000ms]">
       {/* Desktop Timeline */}
@@ -77,9 +88,9 @@ export default function HeroTimeline() {
                     status === 'active' ? "text-secondary" : "text-muted-foreground"
                   )}>{item.title}</p>
                   <p className={cn(
-                    "text-lg font-bold",
+                    "text-lg font-bold leading-tight",
                     status === 'completed' ? "text-primary" : status === 'active' ? "text-foreground" : "text-muted-foreground"
-                  )}>{item.date}</p>
+                  )}>{renderDate(item.date)}</p>
                 </div>
               </div>
             );
@@ -103,9 +114,9 @@ export default function HeroTimeline() {
                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{item.title}</p>
               </div>
               <p className={cn(
-                "text-sm font-bold",
+                "text-sm font-bold leading-tight",
                 status === 'completed' ? "text-primary" : "text-foreground"
-              )}>{item.date}</p>
+              )}>{renderDate(item.date)}</p>
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Zap } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function ImportantDates() {
   const dates = [
@@ -10,6 +11,17 @@ export default function ImportantDates() {
     { title: "Registration Deadline", date: "12th May 2026", status: "Pending" },
     { title: "Conference Dates", date: "13th - 15th May 2026", status: "Event", highlight: true }
   ];
+
+  const renderDate = (dateStr: string) => {
+    const parts = dateStr.split(' 2026');
+    return (
+      <>
+        {parts[0]}
+        <br />
+        2026
+      </>
+    );
+  };
 
   return (
     <div className="pt-32 pb-24 relative overflow-hidden">
@@ -29,7 +41,10 @@ export default function ImportantDates() {
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-primary hidden md:flex items-center justify-center z-10 shadow-lg group">
                     <Calendar className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                   </div>
-                  <Card className={`rounded-[2.5rem] border-border shadow-md transition-all hover:shadow-xl ${item.highlight ? 'border-primary/50 bg-primary/[0.02]' : 'bg-white'}`}>
+                  <Card className={cn(
+                    "rounded-[2.5rem] border-border shadow-md transition-all hover:shadow-xl",
+                    item.highlight ? 'border-primary/50 bg-primary/[0.02]' : 'bg-white'
+                  )}>
                     <CardContent className="p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
                       <div className="flex items-center gap-4">
                         {item.highlight && <Zap className="w-6 h-6 text-primary animate-pulse shrink-0" />}
@@ -39,7 +54,12 @@ export default function ImportantDates() {
                         </div>
                       </div>
                       <div className="text-left sm:text-right">
-                        <div className={`text-3xl font-headline font-bold ${item.highlight ? 'text-primary' : 'text-foreground'}`}>{item.date}</div>
+                        <div className={cn(
+                          "text-3xl font-headline font-bold leading-tight",
+                          item.highlight ? 'text-primary' : 'text-foreground'
+                        )}>
+                          {renderDate(item.date)}
+                        </div>
                         <div className="inline-block px-4 py-1.5 bg-muted rounded-full text-xs font-bold uppercase mt-3 tracking-widest">{item.status}</div>
                       </div>
                     </CardContent>
