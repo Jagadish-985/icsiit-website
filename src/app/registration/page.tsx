@@ -8,7 +8,7 @@ export default function RegistrationPage() {
 
   const tiers = [
     {
-      name: "UG / PG / Research Scholar",
+      name: "STUDENTS",
       price: "1500",
       color: "bg-primary",
       borderColor: "border-primary/10",
