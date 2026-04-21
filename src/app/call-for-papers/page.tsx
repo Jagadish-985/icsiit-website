@@ -6,22 +6,14 @@ import { Button } from '@/components/ui/button';
 
 export default function CallForPapers() {
   const themes = [
-    {
-      title: "Mechanical & Manufacturing",
-      topics: ["Smart Materials", "Additive Manufacturing", "Robotics & Automation", "Green Manufacturing", "Mechatronics"]
-    },
-    {
-      title: "Aerospace & Systems",
-      topics: ["Aerodynamics", "Avionics", "UAV Technology", "Satellite Systems", "Integrated Engineering"]
-    },
-    {
-      title: "Electronics & AI",
-      topics: ["IoT Systems", "Embedded Systems", "Machine Learning", "Smart Sensors", "Control Systems"]
-    },
-    {
-      title: "Sustainable Infrastructure",
-      topics: ["Smart Cities", "Sustainable Building Materials", "Geotechnical Engineering", "Structural Health Monitoring"]
-    }
+    "Artificial Intelligence, Data science and its Application",
+    "Design, Robotics and Product engineering",
+    "Design Automation, IoT & Computational Engineering",
+    "Sustainable Infrastructure: Monitoring, Assessment and Smart Construction Materials",
+    "Aerospace Automotive and Future Mobility Systems",
+    "Energy, Material and Advance Manufacturing",
+    "Biotechnology, Health care, Life sciences and Clinical Applications",
+    "Innovation, Entrepreneurship and Management"
   ];
 
   const submissionLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
@@ -66,19 +58,14 @@ export default function CallForPapers() {
           </div>
 
           <h3 className="text-2xl font-headline font-bold mb-8">Conference Themes</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
             {themes.map((theme, i) => (
-              <Card key={i} className="glass-card">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-bold text-primary mb-4">{theme.title}</h4>
-                  <ul className="space-y-2">
-                    {theme.topics.map((topic, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-secondary rounded-full" />
-                        {topic}
-                      </li>
-                    ))}
-                  </ul>
+              <Card key={i} className="border-border hover:border-primary/20 transition-all bg-white shadow-sm rounded-2xl overflow-hidden group">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center font-bold text-primary flex-shrink-0 text-sm group-hover:bg-primary group-hover:text-white transition-colors">
+                    {i + 1}
+                  </div>
+                  <p className="font-bold text-foreground leading-tight">{theme}</p>
                 </CardContent>
               </Card>
             ))}
