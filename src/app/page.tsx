@@ -36,15 +36,12 @@ export default function Home() {
         <HeroBackground />
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <Badge className="mb-6 px-6 py-2 rounded-full bg-secondary/10 text-secondary border-secondary/20 font-bold text-sm tracking-widest animate-fade-in">
-            INTERNATIONAL CONFERENCE 2026
-          </Badge>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-8 tracking-tighter animate-fade-in text-foreground leading-[1]">
             SYNERGY 2026 <br />
             <span className="text-gradient text-3xl md:text-5xl lg:text-6xl block mt-4 font-bold">
               International Conference on Smart, Intelligent and Innovative Technologies
             </span>
-            <span className="block mt-4 text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.4em] text-secondary uppercase opacity-90">
+            <span className="text-gradient block mt-4 text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.4em] uppercase">
               (IC-SIIT)
             </span>
           </h1>
