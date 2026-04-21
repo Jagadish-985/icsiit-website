@@ -18,7 +18,8 @@ import {
   Globe,
   ArrowRight,
   Calendar,
-  ZapIcon
+  ZapIcon,
+  Activity
 } from 'lucide-react';
 import CountdownTimer from '@/components/countdown-timer';
 import SectionHeading from '@/components/section-heading';
@@ -97,7 +98,8 @@ export default function Home() {
               { title: 'Computer Science Engineering', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics and Intelligent Systems.' },
               { title: 'Electrical & Electronics Engineering', icon: Zap, color: 'bg-yellow-600', desc: 'Power Systems, Renewable Energy and Smart Grids.' },
               { title: 'Electronics & Communication Engineering', icon: Cpu, color: 'bg-secondary', desc: 'IoT, VLSI, Sensors and Communication Networks.' },
-              { title: 'Mechanical Engineering', icon: Settings, color: 'bg-primary', desc: 'Additive Manufacturing, Smart Materials and Robotics.' }
+              { title: 'Mechanical Engineering', icon: Settings, color: 'bg-primary', desc: 'Additive Manufacturing, Smart Materials and Robotics.' },
+              { title: 'Life & Allied Health Sciences', icon: Activity, color: 'bg-rose-500', desc: 'Biotechnology, Healthcare, Life Sciences and Clinical Applications.' }
             ].map((area, i) => (
               <Card key={area.title} className="hover:border-primary/50 transition-all duration-500 group border-border shadow-lg rounded-[2.5rem] overflow-hidden bg-white border-2 hover:-translate-y-2">
                 <CardContent className="pt-10 pb-10 flex flex-col items-center text-center">
