@@ -32,64 +32,58 @@
       "imageHint": "university logo"
     },
     {
-      "id": "partner-1",
-      "description": "Partner Logo 1",
-      "imageUrl": "https://picsum.photos/seed/p1/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-ai",
+      "description": "AI Logo",
+      "imageUrl": "/AI.png",
+      "imageHint": "ai logo"
     },
     {
-      "id": "partner-2",
-      "description": "Partner Logo 2",
-      "imageUrl": "https://picsum.photos/seed/p2/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-aiaa",
+      "description": "AIAA Logo",
+      "imageUrl": "/AIAA.jpeg",
+      "imageHint": "aiaa logo"
     },
     {
-      "id": "partner-3",
-      "description": "Partner Logo 3",
-      "imageUrl": "https://picsum.photos/seed/p3/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-circuitopia",
+      "description": "Circuitopia Logo",
+      "imageUrl": "/Circuitopia.png",
+      "imageHint": "circuitopia logo"
     },
     {
-      "id": "partner-4",
-      "description": "Partner Logo 4",
-      "imageUrl": "https://picsum.photos/seed/p4/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-computex",
+      "description": "ComputeX Logo",
+      "imageUrl": "/ComputeX.png",
+      "imageHint": "computex logo"
     },
     {
-      "id": "partner-5",
-      "description": "Partner Logo 5",
-      "imageUrl": "https://picsum.photos/seed/p5/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-cynergy",
+      "description": "Cynergy Logo",
+      "imageUrl": "/cynergy.png",
+      "imageHint": "cynergy logo"
     },
     {
-      "id": "partner-6",
-      "description": "Partner Logo 6",
-      "imageUrl": "https://picsum.photos/seed/p6/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-ieee",
+      "description": "IEEE Logo",
+      "imageUrl": "/IEEE.jpeg",
+      "imageHint": "ieee logo"
     },
     {
-      "id": "partner-7",
-      "description": "Partner Logo 7",
-      "imageUrl": "https://picsum.photos/seed/p7/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-iic",
+      "description": "IIC Logo",
+      "imageUrl": "/IIC.png",
+      "imageHint": "iic logo"
     },
     {
-      "id": "partner-8",
-      "description": "Partner Logo 8",
-      "imageUrl": "https://picsum.photos/seed/p8/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-iste",
+      "description": "ISTE Logo",
+      "imageUrl": "/ISTE.png",
+      "imageHint": "iste logo"
     },
     {
-      "id": "partner-9",
-      "description": "Partner Logo 9",
-      "imageUrl": "https://picsum.photos/seed/p9/200/100",
-      "imageHint": "partner logo"
-    },
-    {
-      "id": "partner-10",
-      "description": "Partner Logo 10",
-      "imageUrl": "https://picsum.photos/seed/p10/200/100",
-      "imageHint": "partner logo"
+      "id": "partner-roobotics",
+      "description": "Roobotics Logo",
+      "imageUrl": "/Roobotics.png",
+      "imageHint": "roobotics logo"
     }
   ]
 }
