@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -47,8 +46,8 @@ export default function Home() {
               (IC-SIIT)
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
-            across <br />
+          <p className="text-xl md:text-2xl mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
+            <span className="text-foreground">across</span> <br />
             <span className="text-secondary font-bold">
               Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electrical and Electronics Engineering, Electronics and Communication Engineering and Mechanical Engineering
             </span>
