@@ -1,78 +1,118 @@
 import SectionHeading from '@/components/section-heading';
 import { Button } from '@/components/ui/button';
-import { Check, ExternalLink, CreditCard, ShieldCheck } from 'lucide-react';
+import { Check, ExternalLink, CreditCard, ShieldCheck, Info, Tag } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function RegistrationPage() {
   const registrationLink = "https://ruasportal.msruas.ac.in/asd_EventPublicUserMaster.htm?eventID=174";
 
+  const tiers = [
+    {
+      name: "UG/PG/ Research Scholar",
+      price: "1500",
+      color: "bg-primary",
+      borderColor: "border-primary/10",
+      iconColor: "text-primary",
+      features: ["Full access to technical sessions", "Physical Conference kit", "Networking Lunch & Refreshments", "Participation Certificate"]
+    },
+    {
+      name: "Faculty",
+      price: "2000",
+      color: "bg-secondary",
+      borderColor: "border-secondary/10",
+      iconColor: "text-secondary",
+      features: ["Priority session access", "Premium professional kit", "Executive Networking lunch", "Presentation Certificate", "Journal publication support"]
+    },
+    {
+      name: "Industry",
+      price: "3000",
+      color: "bg-foreground",
+      borderColor: "border-foreground/10",
+      iconColor: "text-foreground",
+      features: ["VIP Networking access", "Industry-Academic bridge sessions", "Premium kit & Proceedings", "Collaboration opportunities"]
+    }
+  ];
+
   return (
     <div className="pt-40 pb-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <SectionHeading centered title="Registration Details" subtitle="Invest in your professional growth and secure your participation at IC-SIIT 2026." />
+          <SectionHeading 
+            centered 
+            title="Registration Details" 
+            subtitle="Invest in your professional growth and secure your participation at IC-SIIT 2026." 
+          />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20 items-stretch">
-            {/* Student Card */}
-            <div className="p-12 pt-28 bg-muted rounded-[4rem] border-2 border-primary/10 relative overflow-hidden group flex flex-col shadow-xl hover:shadow-2xl transition-all">
-              <div className="absolute top-0 right-0 p-8 bg-primary text-white font-extrabold rounded-bl-[3rem] z-10 text-xl tracking-widest">
-                STUDENT
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 items-stretch">
+            {tiers.map((tier, i) => (
+              <div key={i} className={`p-8 pt-20 bg-muted rounded-[3rem] border-2 ${tier.borderColor} relative overflow-hidden group flex flex-col shadow-xl hover:shadow-2xl transition-all`}>
+                <div className={`absolute top-0 right-0 p-6 ${tier.color} text-white font-extrabold rounded-bl-[2.5rem] z-10 text-lg tracking-widest uppercase`}>
+                  {tier.name.split('/')[0]}
+                </div>
+                <div className="mb-6">
+                  <h3 className="text-5xl font-headline font-extrabold text-foreground">₹{tier.price}</h3>
+                  <p className={`text-sm ${tier.iconColor} font-bold mt-2 uppercase tracking-widest`}>INR Per Participant</p>
+                </div>
+                <p className="text-sm text-muted-foreground mb-8 font-medium">
+                  {tier.name} registration for the International Conference on Smart, Intelligent and Innovative Technologies.
+                </p>
+                <ul className="space-y-4 mb-10">
+                  {tier.features.map((item, j) => (
+                    <li key={j} className="flex items-center gap-3">
+                      <div className={`w-5 h-5 rounded-full ${tier.color}/10 flex items-center justify-center flex-shrink-0`}>
+                        <Check className={`w-3 h-3 ${tier.iconColor} font-bold`} />
+                      </div>
+                      <span className="text-sm font-semibold">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild className={`w-full ${tier.price === '3000' ? 'bg-foreground' : tier.price === '2000' ? 'bg-[#992361]' : 'bg-[#E34A21]'} text-white hover:opacity-90 py-6 text-lg font-bold mt-auto rounded-2xl shadow-lg border-none`}>
+                  <a href={registrationLink} target="_blank" rel="noopener noreferrer">
+                    Register <ExternalLink className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
               </div>
-              <div className="mb-8">
-                <h3 className="text-6xl font-headline font-extrabold text-foreground">₹1500</h3>
-                <p className="text-lg text-primary font-bold mt-2 uppercase tracking-widest">Per Participant</p>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div className="p-8 bg-accent/5 border-2 border-accent/20 rounded-[3rem] flex items-center gap-6 group hover:bg-accent/10 transition-colors">
+              <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
+                <Tag className="w-8 h-8 text-accent-foreground" />
               </div>
-              <p className="text-lg text-muted-foreground mb-10 font-medium">
-                Exclusive rate for B.Tech, M.Tech, and Ph.D. scholars currently enrolled in recognized institutions.
-              </p>
-              <ul className="space-y-5 mb-12">
-                {["Full access to technical sessions", "Physical Conference kit", "Networking Lunch & Refreshments", "Participation Certificate"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-4">
-                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-primary font-bold" />
-                    </div>
-                    <span className="text-base font-semibold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild className="w-full bg-[#E34A21] text-white hover:bg-[#ce380e] py-8 text-xl font-bold mt-auto rounded-3xl shadow-xl">
-                <a href={registrationLink} target="_blank" rel="noopener noreferrer">
-                  Register as Student <ExternalLink className="ml-2 w-6 h-6" />
-                </a>
-              </Button>
+              <div>
+                <h4 className="font-extrabold text-xl text-foreground">Professional Membership</h4>
+                <p className="text-muted-foreground font-medium">Get <span className="text-primary font-bold">15% Discount</span> on all registration types if you hold a professional body membership.</p>
+              </div>
             </div>
 
-            {/* Professional Card */}
-            <div className="p-12 pt-28 bg-muted rounded-[4rem] border-2 border-secondary/10 relative overflow-hidden group flex flex-col shadow-xl hover:shadow-2xl transition-all">
-              <div className="absolute top-0 right-0 p-8 bg-secondary text-white font-extrabold rounded-bl-[3rem] z-10 text-xl tracking-widest">
-                PROFESSIONAL
+            <div className="p-8 bg-primary/5 border-2 border-primary/20 rounded-[3rem] flex items-center gap-6 group hover:bg-primary/10 transition-colors">
+              <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg group-hover:rotate-6 transition-transform text-white">
+                <CreditCard className="w-8 h-8" />
               </div>
-              <div className="mb-8">
-                <h3 className="text-6xl font-headline font-extrabold text-foreground">₹2000</h3>
-                <p className="text-lg text-secondary font-bold mt-2 uppercase tracking-widest">Per Participant</p>
+              <div>
+                <h4 className="font-extrabold text-xl text-foreground">Additional Participation</h4>
+                <p className="text-muted-foreground font-medium">Bringing a guest? Extra participation is available at <span className="text-primary font-bold">₹200 per person</span>.</p>
               </div>
-              <p className="text-lg text-muted-foreground mb-10 font-medium">
-                Professional rate for Faculty members, Industry experts, and independent researchers worldwide.
-              </p>
-              <ul className="space-y-5 mb-12">
-                {["Priority session access", "Premium professional kit", "Executive Networking lunch", "Presentation Certificate", "Journal publication support"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-4">
-                    <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-secondary font-bold" />
-                    </div>
-                    <span className="text-base font-semibold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild className="w-full bg-[#992361] text-white hover:bg-[#811c52] py-8 text-xl font-bold mt-auto rounded-3xl shadow-xl border-none">
-                <a href={registrationLink} target="_blank" rel="noopener noreferrer">
-                  Register as Professional <ExternalLink className="ml-2 w-6 h-6" />
-                </a>
-              </Button>
             </div>
           </div>
 
-          <div className="mt-24 bg-[#f6f6f6] p-16 rounded-[4rem] border-2 border-border shadow-inner">
+          <div className="mt-12 p-8 bg-secondary/5 border-2 border-secondary/20 rounded-[3rem] flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
+              <Info className="w-32 h-32 text-secondary" />
+            </div>
+            <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-white relative z-10">
+              <ShieldCheck className="w-8 h-8" />
+            </div>
+            <div className="relative z-10">
+              <h4 className="font-extrabold text-2xl text-foreground mb-2">Online Attendance Policy</h4>
+              <p className="text-muted-foreground text-lg leading-relaxed font-medium">
+                Maximum <span className="text-secondary font-bold">200 participants</span> may be allowed to attend the conference online on a <span className="italic">first-come, first-served basis</span>.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-20 bg-[#f6f6f6] p-12 rounded-[4rem] border-2 border-border shadow-inner">
             <div className="flex items-center gap-4 mb-10">
                <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center shadow-lg">
                   <CreditCard className="w-8 h-8 text-accent-foreground" />
@@ -94,7 +134,7 @@ export default function RegistrationPage() {
                   <p>Upload a clear soft copy of the payment receipt in the registration portal.</p>
                 </div>
               </div>
-              <div className="p-10 bg-white rounded-[3rem] border border-border shadow-xl">
+              <div className="p-10 bg-white rounded-[3rem] border border-border shadow-xl h-fit">
                 <div className="flex items-center gap-3 mb-6">
                   <ShieldCheck className="w-8 h-8 text-secondary" />
                   <h4 className="font-extrabold text-2xl text-foreground">Group Registrations</h4>
