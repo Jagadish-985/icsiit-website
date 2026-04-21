@@ -32,6 +32,30 @@
       "imageHint": "university logo"
     },
     {
+      "id": "partner-cynergy",
+      "description": "Cynergy Logo",
+      "imageUrl": "/cynergy.png",
+      "imageHint": "cynergy logo"
+    },
+    {
+      "id": "partner-computex",
+      "description": "ComputeX Logo",
+      "imageUrl": "/ComputeX.png",
+      "imageHint": "computex logo"
+    },
+    {
+      "id": "partner-iic",
+      "description": "IIC Logo",
+      "imageUrl": "/IIC.png",
+      "imageHint": "iic logo"
+    },
+    {
+      "id": "partner-iste",
+      "description": "ISTE Logo",
+      "imageUrl": "/ISTE.png",
+      "imageHint": "iste logo"
+    },
+    {
       "id": "partner-ai",
       "description": "AI Logo",
       "imageUrl": "/AI.png",
@@ -50,34 +74,10 @@
       "imageHint": "circuitopia logo"
     },
     {
-      "id": "partner-computex",
-      "description": "ComputeX Logo",
-      "imageUrl": "/ComputeX.png",
-      "imageHint": "computex logo"
-    },
-    {
-      "id": "partner-cynergy",
-      "description": "Cynergy Logo",
-      "imageUrl": "/cynergy.png",
-      "imageHint": "cynergy logo"
-    },
-    {
       "id": "partner-ieee",
       "description": "IEEE Logo",
       "imageUrl": "/IEEE.jpeg",
       "imageHint": "ieee logo"
-    },
-    {
-      "id": "partner-iic",
-      "description": "IIC Logo",
-      "imageUrl": "/IIC.png",
-      "imageHint": "iic logo"
-    },
-    {
-      "id": "partner-iste",
-      "description": "ISTE Logo",
-      "imageUrl": "/ISTE.png",
-      "imageHint": "iste logo"
     },
     {
       "id": "partner-roobotics",
