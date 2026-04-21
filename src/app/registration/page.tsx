@@ -26,9 +26,9 @@ export default function RegistrationPage() {
     {
       name: "Industry",
       price: "3000",
-      color: "bg-foreground",
-      borderColor: "border-foreground/10",
-      iconColor: "text-foreground",
+      color: "bg-[#1E293B]",
+      borderColor: "border-slate-200",
+      iconColor: "text-slate-900",
       features: ["VIP Networking access", "Industry-Academic bridge sessions", "Premium kit & Proceedings", "Collaboration opportunities"]
     }
   ];
@@ -51,7 +51,7 @@ export default function RegistrationPage() {
                 </div>
                 <div className="mb-6 mt-4">
                   <h3 className="text-5xl font-headline font-extrabold text-foreground">₹{tier.price}</h3>
-                  <p className={`text-sm ${tier.iconColor} font-bold mt-2 uppercase tracking-widest`}>INR Per Participant</p>
+                  <p className={`text-sm ${tier.name === 'Industry' ? 'text-slate-600' : tier.iconColor} font-bold mt-2 uppercase tracking-widest`}>INR Per Participant</p>
                 </div>
                 <p className="text-sm text-muted-foreground mb-8 font-medium">
                   {tier.name} registration for the International Conference on Smart, Intelligent and Innovative Technologies.
@@ -59,14 +59,14 @@ export default function RegistrationPage() {
                 <ul className="space-y-4 mb-10">
                   {tier.features.map((item, j) => (
                     <li key={j} className="flex items-center gap-3">
-                      <div className={`w-5 h-5 rounded-full ${tier.color}/10 flex items-center justify-center flex-shrink-0`}>
-                        <Check className={`w-3 h-3 ${tier.iconColor} font-bold`} />
+                      <div className={`w-5 h-5 rounded-full ${tier.name === 'Industry' ? 'bg-slate-200' : tier.color + '/10'} flex items-center justify-center flex-shrink-0`}>
+                        <Check className={`w-3 h-3 ${tier.name === 'Industry' ? 'text-slate-900' : tier.iconColor} font-bold`} />
                       </div>
                       <span className="text-sm font-semibold">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <Button asChild className={`w-full ${tier.price === '3000' ? 'bg-foreground' : tier.price === '2000' ? 'bg-[#992361]' : 'bg-[#E34A21]'} text-white hover:opacity-90 py-6 text-lg font-bold mt-auto rounded-2xl shadow-lg border-none`}>
+                <Button asChild className={`w-full ${tier.name === 'Industry' ? 'bg-[#1E293B]' : tier.name === 'Faculty' ? 'bg-[#992361]' : 'bg-[#E34A21]'} text-white hover:opacity-90 py-6 text-lg font-bold mt-auto rounded-2xl shadow-lg border-none`}>
                   <a href={registrationLink} target="_blank" rel="noopener noreferrer">
                     Register <ExternalLink className="ml-2 w-5 h-5" />
                   </a>
