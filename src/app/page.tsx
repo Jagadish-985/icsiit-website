@@ -42,7 +42,8 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-8 tracking-tighter animate-fade-in text-foreground leading-[1]">
             SYNERGY 2026 <br />
             <span className="text-gradient text-3xl md:text-5xl lg:text-6xl block mt-4 font-bold">
-              International Conference on Smart, Intelligent and Innovative Technologies
+              International Conference on Smart, Intelligent and Innovative Technologies <br />
+              (IC-SIIT)
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
