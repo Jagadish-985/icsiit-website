@@ -13,9 +13,9 @@ export default function PartnerLogos() {
       <p className="text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/60 mb-8 text-center">
         Our Partners & Collaborators
       </p>
-      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 max-w-6xl mx-auto px-4">
+      <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 transition-all duration-500 max-w-6xl mx-auto px-4">
         {logos.map((logo) => (
-          <div key={logo.id} className="relative w-20 h-10 md:w-28 md:h-14 transition-transform hover:scale-110 flex items-center justify-center">
+          <div key={logo.id} className="relative w-28 h-14 md:w-40 md:h-20 transition-transform hover:scale-110 flex items-center justify-center">
             <Image
               src={logo.imageUrl}
               alt={logo.description}
