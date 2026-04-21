@@ -8,7 +8,7 @@ export default function RegistrationPage() {
 
   const tiers = [
     {
-      name: "UG/PG/ Research Scholar",
+      name: "UG / PG / Research Scholar",
       price: "1500",
       color: "bg-primary",
       borderColor: "border-primary/10",
@@ -46,10 +46,10 @@ export default function RegistrationPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 items-stretch">
             {tiers.map((tier, i) => (
               <div key={i} className={`p-8 pt-20 bg-muted rounded-[3rem] border-2 ${tier.borderColor} relative overflow-hidden group flex flex-col shadow-xl hover:shadow-2xl transition-all`}>
-                <div className={`absolute top-0 right-0 p-6 ${tier.color} text-white font-extrabold rounded-bl-[2.5rem] z-10 text-lg tracking-widest uppercase`}>
-                  {tier.name.split('/')[0]}
+                <div className={`absolute top-0 right-0 p-6 ${tier.color} text-white font-extrabold rounded-bl-[2.5rem] z-10 text-lg tracking-widest uppercase text-right max-w-[80%]`}>
+                  {tier.name}
                 </div>
-                <div className="mb-6">
+                <div className="mb-6 mt-4">
                   <h3 className="text-5xl font-headline font-extrabold text-foreground">₹{tier.price}</h3>
                   <p className={`text-sm ${tier.iconColor} font-bold mt-2 uppercase tracking-widest`}>INR Per Participant</p>
                 </div>
