@@ -119,7 +119,15 @@ export default function Footer() {
             >
               B Jagadish
             </a>{' '}
-            & Sanjeev Janardhan
+            &{' '}
+            <a 
+              href="https://in.linkedin.com/in/sanjeev-janardhan-180599292" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors font-bold"
+            >
+              Sanjeev Janardhan
+            </a>
           </p>
         </div>
       </div>
