@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -25,6 +26,7 @@ import SectionHeading from '@/components/section-heading';
 import { cn } from '@/lib/utils';
 import HeroBackground from '@/components/hero-background';
 import HeroTimeline from '@/components/hero-timeline';
+import PartnerLogos from '@/components/partner-logos';
 
 export default function Home() {
   const registrationLink = "https://ruasportal.msruas.ac.in/asd_EventPublicUserMaster.htm?eventID=174";
@@ -73,6 +75,9 @@ export default function Home() {
 
           {/* Live Horizontal Timeline */}
           <HeroTimeline />
+
+          {/* Partner Logos */}
+          <PartnerLogos />
         </div>
       </section>
 

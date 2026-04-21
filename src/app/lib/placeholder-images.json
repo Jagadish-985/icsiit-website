@@ -30,6 +30,66 @@
       "description": "Ramaiah University of Applied Sciences Logo",
       "imageUrl": "https://images.unsplash.com/photo-1599305090598-fe179d501c27?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "university logo"
+    },
+    {
+      "id": "partner-1",
+      "description": "Partner Logo 1",
+      "imageUrl": "https://picsum.photos/seed/p1/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Partner Logo 2",
+      "imageUrl": "https://picsum.photos/seed/p2/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-3",
+      "description": "Partner Logo 3",
+      "imageUrl": "https://picsum.photos/seed/p3/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-4",
+      "description": "Partner Logo 4",
+      "imageUrl": "https://picsum.photos/seed/p4/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-5",
+      "description": "Partner Logo 5",
+      "imageUrl": "https://picsum.photos/seed/p5/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-6",
+      "description": "Partner Logo 6",
+      "imageUrl": "https://picsum.photos/seed/p6/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-7",
+      "description": "Partner Logo 7",
+      "imageUrl": "https://picsum.photos/seed/p7/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-8",
+      "description": "Partner Logo 8",
+      "imageUrl": "https://picsum.photos/seed/p8/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-9",
+      "description": "Partner Logo 9",
+      "imageUrl": "https://picsum.photos/seed/p9/200/100",
+      "imageHint": "partner logo"
+    },
+    {
+      "id": "partner-10",
+      "description": "Partner Logo 10",
+      "imageUrl": "https://picsum.photos/seed/p10/200/100",
+      "imageHint": "partner logo"
     }
   ]
 }
