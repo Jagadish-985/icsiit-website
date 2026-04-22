@@ -22,7 +22,7 @@ export default function HeroTimeline() {
   }, []);
 
   if (!currentDate) {
-    return <div className="max-w-6xl mx-auto mt-20 h-[180px] hidden lg:block" />;
+    return <div className="max-w-7xl mx-auto mt-20 h-[180px] hidden lg:block" />;
   }
 
   const getStatus = (target: Date, index: number) => {
@@ -49,11 +49,11 @@ export default function HeroTimeline() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto mt-20 animate-fade-in [animation-delay:1000ms]">
+    <div className="max-w-7xl mx-auto mt-20 animate-fade-in [animation-delay:1000ms]">
       {/* Desktop Timeline */}
       <div className="hidden lg:block relative pt-12">
         {/* Progress Track Wrapper */}
-        <div className="absolute top-[76px] left-[28px] right-[28px] h-1 z-0">
+        <div className="absolute top-[76px] left-[40px] right-[40px] h-1 z-0">
           <div className="absolute inset-0 bg-white/20 rounded-full" />
           <div 
             className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000 ease-in-out shadow-[0_0_10px_rgba(227,74,33,0.5)]"
@@ -65,7 +65,7 @@ export default function HeroTimeline() {
           {timelineItems.map((item, i) => {
             const status = getStatus(item.target, i);
             return (
-              <div key={i} className="flex flex-col items-center group relative px-2 flex-1 max-w-[200px]">
+              <div key={i} className="flex flex-col items-center group relative px-2 flex-1 min-w-[160px] max-w-[200px]">
                 {/* Milestone Node */}
                 <div className={cn(
                   "w-14 h-14 rounded-2xl shadow-2xl flex items-center justify-center mb-6 z-10 transition-all duration-500 transform group-hover:-translate-y-2 border-2",
@@ -75,9 +75,9 @@ export default function HeroTimeline() {
                 )}>
                   {status === 'completed' ? <CheckCircle2 className="w-6 h-6" /> : <Calendar className="w-6 h-6" />}
                 </div>
-                {/* Info Card */}
+                {/* Info Card - Fixed height ensures uniform dimensions for all 6 items */}
                 <div className={cn(
-                  "space-y-1 p-4 rounded-2xl border shadow-xl transition-all duration-300 w-full text-center backdrop-blur-sm min-h-[110px] flex flex-col justify-center",
+                  "space-y-1 p-4 rounded-2xl border shadow-xl transition-all duration-300 w-full text-center backdrop-blur-sm h-[130px] flex flex-col justify-center",
                   status === 'completed' ? "bg-white border-primary/30" : 
                   status === 'active' ? "bg-white border-secondary shadow-secondary/10" : 
                   "bg-white/90 border-muted"
@@ -98,12 +98,12 @@ export default function HeroTimeline() {
       </div>
 
       {/* Mobile Grid Timeline */}
-      <div className="lg:hidden grid grid-cols-2 gap-4">
+      <div className="lg:hidden grid grid-cols-2 gap-4 px-4">
         {timelineItems.map((item, i) => {
           const status = getStatus(item.target, i);
           return (
             <div key={i} className={cn(
-              "p-4 rounded-2xl border transition-all backdrop-blur-sm min-h-[80px] flex flex-col justify-center",
+              "p-4 rounded-2xl border transition-all backdrop-blur-sm h-[100px] flex flex-col justify-center",
               status === 'completed' ? "bg-white border-primary shadow-md" : 
               status === 'active' ? "bg-white border-secondary shadow-lg ring-2 ring-secondary/20" : 
               "bg-white/90 border-muted"
