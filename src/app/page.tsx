@@ -40,7 +40,7 @@ export default function Home() {
         <HeroBackground />
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-8 tracking-tighter animate-fade-in text-foreground leading-[1]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-12 tracking-tighter animate-fade-in text-foreground leading-[1]">
             SYNERGY 2026 <br />
             <span className="text-gradient text-3xl md:text-5xl lg:text-6xl block mt-4 font-bold">
               International Conference on Smart, Intelligent and Innovative Technologies
@@ -53,12 +53,6 @@ export default function Home() {
               <span className="w-16 h-1 bg-primary mt-3 rounded-full opacity-60 group-hover:opacity-100 transition-opacity" />
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-12 max-w-5xl mx-auto animate-fade-in [animation-delay:200ms] leading-relaxed font-medium">
-            <span className="text-foreground font-bold">across</span> <br />
-            <span className="text-secondary font-bold">
-              Aerospace Engineering, Automotive Engineering, Civil Engineering, Computer Science Engineering, Electrical and Electronics Engineering, Electronics and Communication Engineering and Mechanical Engineering
-            </span>
-          </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
             <div className="flex items-center gap-3 bg-white px-8 py-5 rounded-3xl border border-primary/10 shadow-xl">
