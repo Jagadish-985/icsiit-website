@@ -143,7 +143,7 @@ export default function RegistrationPage() {
                   For groups of 5 or more participants from the same organization, attractive institutional discounts are available.
                 </p>
                 <Badge className="bg-accent/20 text-accent-foreground border-accent font-bold py-2 px-6 rounded-full text-base">
-                  Contact: icsmart@msruas.ac.in
+                  Contact: icsiit@msruas.ac.in
                 </Badge>
               </div>
             </div>

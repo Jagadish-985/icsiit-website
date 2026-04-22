@@ -50,8 +50,8 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4">Email Inquiry</h3>
                 <p className="text-sm text-muted-foreground mb-6">For papers and publication queries</p>
-                <a href="mailto:icsmart@msruas.ac.in" className="text-xl font-bold text-secondary hover:underline break-all">
-                  icsmart@msruas.ac.in
+                <a href="mailto:icsiit@msruas.ac.in" className="text-xl font-bold text-secondary hover:underline break-all">
+                  icsiit@msruas.ac.in
                 </a>
                 <div className="mt-8 p-4 bg-muted rounded-2xl">
                    <p className="text-xs leading-relaxed text-muted-foreground">

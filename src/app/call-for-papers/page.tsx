@@ -101,7 +101,7 @@ export default function CallForPapers() {
             <h4 className="text-xl font-bold mb-2">Need help with submission?</h4>
             <p className="text-muted-foreground mb-6">Contact our technical committee for any queries regarding templates or topics.</p>
             <Button variant="outline" asChild>
-              <a href="mailto:icsmart@msruas.ac.in">icsmart@msruas.ac.in</a>
+              <a href="mailto:icsiit@msruas.ac.in">icsiit@msruas.ac.in</a>
             </Button>
           </div>
         </div>

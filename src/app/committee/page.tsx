@@ -196,7 +196,7 @@ export default function CommitteePage() {
                 Technical Committee
               </h4>
               <p className="text-sm text-muted-foreground leading-relaxed italic font-medium">
-                "The committee consists of eminent researchers from premier institutions who ensure high-quality standards through a rigorous peer review process."
+                "The committee consists of eminent researchers from premier institutions who ensure high-quality standards through a rigorous peer review process. For queries: icsiit@msruas.ac.in"
               </p>
             </div>
           </div>
