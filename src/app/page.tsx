@@ -45,12 +45,8 @@ export default function Home() {
             <span className="text-gradient text-3xl md:text-5xl lg:text-6xl block mt-4 font-bold">
               International Conference on Smart, Intelligent and Innovative Technologies
             </span>
-            <span className="flex flex-col items-center justify-center mt-8 group">
-              <span className="w-16 h-1 bg-primary mb-3 rounded-full opacity-60 group-hover:opacity-100 transition-opacity" />
-              <span className="text-gradient block text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.4em] uppercase font-serif">
-                (IC-SIIT)
-              </span>
-              <span className="w-16 h-1 bg-primary mt-3 rounded-full opacity-60 group-hover:opacity-100 transition-opacity" />
+            <span className="text-gradient block mt-8 text-2xl md:text-4xl lg:text-5xl font-bold tracking-[0.4em] uppercase font-serif">
+              (IC-SIIT)
             </span>
           </h1>
 
