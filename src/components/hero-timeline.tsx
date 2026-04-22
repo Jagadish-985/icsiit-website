@@ -6,7 +6,7 @@ import { Calendar, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const timelineItems = [
-  { title: "Abstract Submission", date: "25th April 2026", target: new Date('2026-04-25T23:59:59') },
+  { title: "Abstract Submission Deadline", date: "25th April 2026", target: new Date('2026-04-25T23:59:59') },
   { title: "Abstract Acceptance", date: "28th April 2026", target: new Date('2026-04-28T23:59:59') },
   { title: "Full Paper Submission", date: "5th May 2026", target: new Date('2026-05-05T23:59:59') },
   { title: "Full Paper Acceptance", date: "7th May 2026", target: new Date('2026-05-07T23:59:59') },
