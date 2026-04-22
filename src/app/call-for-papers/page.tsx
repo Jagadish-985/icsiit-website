@@ -12,7 +12,7 @@ export default function CallForPapers() {
     "Sustainable Infrastructure: Monitoring, Assessment and Smart Construction Materials",
     "Aerospace Automotive and Future Mobility Systems",
     "Energy, Material and Advance Manufacturing",
-    "Biotechnology, Health care, Life sciences and Clinical Applications",
+    "Biotechnology, Health care, Life sciences, Pharmacy and Clinical Applications",
     "Innovation, Entrepreneurship and Management"
   ];
 

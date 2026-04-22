@@ -99,7 +99,7 @@ export default function Home() {
               { title: 'Electrical & Electronics Engineering', icon: Zap, color: 'bg-yellow-600', desc: 'Power Systems, Renewable Energy and Smart Grids.' },
               { title: 'Electronics & Communication Engineering', icon: Cpu, color: 'bg-secondary', desc: 'IoT, VLSI, Sensors and Communication Networks.' },
               { title: 'Mechanical Engineering', icon: Settings, color: 'bg-primary', desc: 'Additive Manufacturing, Smart Materials and Robotics.' },
-              { title: 'Life & Allied Health Sciences', icon: Activity, color: 'bg-rose-500', desc: 'Biotechnology, Healthcare, Life Sciences and Clinical Applications.' }
+              { title: 'Life & Allied Health Sciences', icon: Activity, color: 'bg-rose-500', desc: 'Biotechnology, Healthcare, Life Sciences, Pharmacy and Clinical Applications.' }
             ].map((area, i) => (
               <Card key={area.title} className="hover:border-primary/50 transition-all duration-500 group border-border shadow-lg rounded-[2.5rem] overflow-hidden bg-white border-2 hover:-translate-y-2">
                 <CardContent className="pt-10 pb-10 flex flex-col items-center text-center">
