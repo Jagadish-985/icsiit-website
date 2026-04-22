@@ -75,17 +75,7 @@ export default function RegistrationPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div className="p-8 bg-accent/5 border-2 border-accent/20 rounded-[3rem] flex items-center gap-6 group hover:bg-accent/10 transition-colors">
-              <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center shrink-0 shadow-lg group-hover:rotate-6 transition-transform">
-                <Tag className="w-8 h-8 text-accent-foreground" />
-              </div>
-              <div>
-                <h4 className="font-extrabold text-xl text-foreground">Professional Membership</h4>
-                <p className="text-muted-foreground font-medium">Get <span className="text-primary font-bold">15% Discount</span> on all registration types if you hold a professional body membership.</p>
-              </div>
-            </div>
-
+          <div className="mt-12 max-w-2xl mx-auto">
             <div className="p-8 bg-primary/5 border-2 border-primary/20 rounded-[3rem] flex items-center gap-6 group hover:bg-primary/10 transition-colors">
               <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg group-hover:rotate-6 transition-transform text-white">
                 <CreditCard className="w-8 h-8" />
