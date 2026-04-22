@@ -84,6 +84,12 @@
       "description": "Roobotics Logo",
       "imageUrl": "/Roobotics.png",
       "imageHint": "roobotics logo"
+    },
+    {
+      "id": "partner-ieee-ceda",
+      "description": "IEEE CEDA Bangalore Chapter Logo",
+      "imageUrl": "/IEEE_CEDA.png",
+      "imageHint": "ieee ceda logo"
     }
   ]
 }
