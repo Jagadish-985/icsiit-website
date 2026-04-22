@@ -7,9 +7,10 @@ import { cn } from '@/lib/utils';
 
 const timelineItems = [
   { title: "Abstract Submission", date: "25th April 2026", target: new Date('2026-04-25T23:59:59') },
-  { title: "Acceptance Notification", date: "30th April 2026", target: new Date('2026-04-30T23:59:59') },
-  { title: "Full Paper Submission", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
-  { title: "Registration", date: "12th May 2026", target: new Date('2026-05-12T23:59:59') },
+  { title: "Abstract Acceptance", date: "28th April 2026", target: new Date('2026-04-28T23:59:59') },
+  { title: "Full Paper Submission", date: "5th May 2026", target: new Date('2026-05-05T23:59:59') },
+  { title: "Full Paper Acceptance", date: "7th May 2026", target: new Date('2026-05-07T23:59:59') },
+  { title: "Camera Ready", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
   { title: "Conference", date: "13th-15th May 2026", target: new Date('2026-05-13T09:00:00') }
 ];
 
@@ -74,7 +75,7 @@ export default function HeroTimeline() {
                 )}>
                   {status === 'completed' ? <CheckCircle2 className="w-6 h-6" /> : <Calendar className="w-6 h-6" />}
                 </div>
-                {/* Info Card - Added fixed min-height and centering for consistent shape */}
+                {/* Info Card */}
                 <div className={cn(
                   "space-y-1 p-4 rounded-2xl border shadow-xl transition-all duration-300 w-full text-center backdrop-blur-sm min-h-[110px] flex flex-col justify-center",
                   status === 'completed' ? "bg-white border-primary/30" : 
@@ -86,7 +87,7 @@ export default function HeroTimeline() {
                     status === 'active' ? "text-secondary" : "text-muted-foreground"
                   )}>{item.title}</p>
                   <p className={cn(
-                    "text-lg font-bold leading-tight",
+                    "text-sm xl:text-lg font-bold leading-tight",
                     status === 'completed' ? "text-primary" : status === 'active' ? "text-foreground" : "text-muted-foreground"
                   )}>{renderDate(item.date)}</p>
                 </div>
