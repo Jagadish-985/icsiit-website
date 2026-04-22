@@ -34,7 +34,7 @@ export default function CommitteePage() {
       name: "Dr. Jyothi A P",
       role: "Associate Professor and Head, Mathematics and Computing Program, Department of Computer Science and Engineering, RUAS",
       phone: "9686311475",
-      email: "Jyothi.cs.et@msruas.ac.in"
+      email: "jyothi.cs.et@msruas.ac.in"
     },
     {
       name: "Dr. Ananth S. Iyengar",
