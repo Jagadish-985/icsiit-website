@@ -60,7 +60,7 @@ export default function RegistrationPage() {
                   {tier.features.map((item, j) => (
                     <li key={j} className="flex items-center gap-3">
                       <div className={`w-5 h-5 rounded-full ${tier.name === 'Industry' ? 'bg-slate-200' : tier.color + '/10'} flex items-center justify-center flex-shrink-0`}>
-                        <Check className={`w-3 h-3 ${tier.name === 'Industry' ? 'text-slate-900' : tier.iconColor} font-bold`} />
+                        <ConfirmCheckIcon className={`w-3 h-3 ${tier.name === 'Industry' ? 'text-slate-900' : tier.iconColor} font-bold`} />
                       </div>
                       <span className="text-sm font-semibold">{item}</span>
                     </li>
@@ -111,6 +111,12 @@ export default function RegistrationPage() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-8 text-lg font-medium text-muted-foreground">
+                <div className="bg-primary/10 border border-primary/20 p-6 rounded-3xl flex items-start gap-4 mb-4">
+                  <Info className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <p className="text-primary font-bold leading-relaxed">
+                    Important Note: Payment has to be done only after the abstract is accepted.
+                  </p>
+                </div>
                 <div className="flex gap-6 items-start">
                   <span className="w-10 h-10 bg-white rounded-full flex items-center justify-center font-bold text-primary flex-shrink-0 shadow-md">1</span>
                   <p>Payments must be completed online via the secure gateway linked in the registration form.</p>
@@ -141,5 +147,21 @@ export default function RegistrationPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function ConfirmCheckIcon({ className }: { className?: string }) {
+  return (
+    <svg 
+      className={className} 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="4" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
   );
 }
