@@ -45,16 +45,16 @@ export default function CommitteePage() {
   ];
 
   const advisoryCommittee = [
-    { name: "Dr. Dhanesh G. Mohan", institution: "Programme Leader, Senior Lecturer, University of Sunderland, UK" },
-    { name: "Mr. Charles Chow", institution: "Singapore Management University, Singapore" },
-    { name: "Dr. Salunkhe Sachin", institution: "Professor, Gazi University, Turkiye" },
-    { name: "Prof Dileep A. D.", institution: "Professor, IIT Dharwad" },
-    { name: "Prof. Bidyadhar Subudhi", institution: "Member Director, NIT Warangal" },
-    { name: "Dr. G. L. Samuel", institution: "Professor, IITM, Chennai" },
     { name: "Dr. Narendra Nath S.", institution: "Professor, NITK - Surathkal" },
     { name: "Dr. Basavarajappa", institution: "Professor, UBDT, Davangere" },
-    { name: "Dr. Mallikarjun U. S.", institution: "Professor & Head, SIT - Tumkur" },
-    { name: "Dr Vijaykumar S Jatti", institution: "Professor, Bennett University, UP" }
+    { name: "Mr. Charles Chow", institution: "Singapore Management University, Singapore" },
+    { name: "Dr. Mallikarjun. U. S.", institution: "Professor and Head, Mechanical Engineering Department, SIT – Tumkur" },
+    { name: "Dr. Dakshitha Anandakumar", institution: "Applied Scientist, Microsoft, Redmond, Seattle, USA" },
+    { name: "Dr. Salunkhe Sachin", institution: "Professor, Mechanical Engineering Department, Gazi University, Turkiye" },
+    { name: "Dr Vijaykumar S Jatti", institution: "Professor, Mechanical Engineering Department, Bennett University, UP" },
+    { name: "Prof. D. Nagesh Kumar", institution: "Professor, Department of Civil Engineering, IISc, Bengaluru" },
+    { name: "Ms. Shweta Shete", institution: "Senior Industrial Controls Engineer at Symbotic LLC, San Diego, California, United States" },
+    { name: "Mr. Sajal Mittal", institution: "Associate Director, Samsung Semiconductor, Bengaluru" }
   ];
 
   return (
