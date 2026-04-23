@@ -87,21 +87,6 @@ export default function RegistrationPage() {
             </div>
           </div>
 
-          <div className="mt-12 p-8 bg-secondary/5 border-2 border-secondary/20 rounded-[3rem] flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-110 transition-transform">
-              <Info className="w-32 h-32 text-secondary" />
-            </div>
-            <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-white relative z-10">
-              <ShieldCheck className="w-8 h-8" />
-            </div>
-            <div className="relative z-10">
-              <h4 className="font-extrabold text-2xl text-foreground mb-2">Online Attendance Policy</h4>
-              <p className="text-muted-foreground text-lg leading-relaxed font-medium">
-                Maximum <span className="text-secondary font-bold">200 participants</span> may be allowed to attend the conference online on a <span className="italic">first-come, first-served basis</span>.
-              </p>
-            </div>
-          </div>
-
           <div className="mt-20 bg-[#f6f6f6] p-12 rounded-[4rem] border-2 border-border shadow-inner">
             <div className="flex items-center gap-4 mb-10">
                <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center shadow-lg">
