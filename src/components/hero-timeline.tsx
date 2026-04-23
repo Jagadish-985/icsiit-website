@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -10,8 +9,7 @@ const timelineItems = [
   { title: "Abstract Acceptance Notification", date: "30th April 2026", target: new Date('2026-04-30T23:59:59') },
   { title: "Full Paper Submission Deadline", date: "5th May 2026", target: new Date('2026-05-05T23:59:59') },
   { title: "Full Paper Acceptance Notification", date: "7th May 2026", target: new Date('2026-05-07T23:59:59') },
-  { title: "Camera Ready Paper Submission", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
-  { title: "Payment Deadline", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
+  { title: "Camera Ready & Payment Deadline", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
   { title: "Conference", date: "13th-15th May 2026", target: new Date('2026-05-13T09:00:00') }
 ];
 
