@@ -6,11 +6,12 @@ import { Calendar, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const timelineItems = [
-  { title: "Abstract Submission Deadline", date: "25th April 2026", target: new Date('2026-04-25T23:59:59') },
-  { title: "Abstract Acceptance Notification", date: "28th April 2026", target: new Date('2026-04-28T23:59:59') },
+  { title: "Abstract Submission Deadline", date: "28th April 2026", target: new Date('2026-04-28T23:59:59') },
+  { title: "Abstract Acceptance Notification", date: "30th April 2026", target: new Date('2026-04-30T23:59:59') },
   { title: "Full Paper Submission Deadline", date: "5th May 2026", target: new Date('2026-05-05T23:59:59') },
   { title: "Full Paper Acceptance Notification", date: "7th May 2026", target: new Date('2026-05-07T23:59:59') },
   { title: "Camera Ready Paper Submission", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
+  { title: "Payment Deadline", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
   { title: "Conference", date: "13th-15th May 2026", target: new Date('2026-05-13T09:00:00') }
 ];
 
@@ -65,29 +66,29 @@ export default function HeroTimeline() {
           {timelineItems.map((item, i) => {
             const status = getStatus(item.target, i);
             return (
-              <div key={i} className="flex flex-col items-center group relative px-2 flex-1 min-w-[160px] max-w-[200px]">
+              <div key={i} className="flex flex-col items-center group relative px-2 flex-1 min-w-[140px] max-w-[180px]">
                 {/* Milestone Node */}
                 <div className={cn(
-                  "w-14 h-14 rounded-2xl shadow-2xl flex items-center justify-center mb-6 z-10 transition-all duration-500 transform group-hover:-translate-y-2 border-2",
+                  "w-12 h-12 rounded-2xl shadow-2xl flex items-center justify-center mb-6 z-10 transition-all duration-500 transform group-hover:-translate-y-2 border-2",
                   status === 'completed' ? "bg-primary border-primary text-white scale-110 shadow-primary/40" : 
                   status === 'active' ? "bg-white border-secondary text-secondary animate-pulse shadow-secondary/20" : 
                   "bg-white/90 border-muted text-muted-foreground shadow-black/5"
                 )}>
-                  {status === 'completed' ? <CheckCircle2 className="w-6 h-6" /> : <Calendar className="w-6 h-6" />}
+                  {status === 'completed' ? <CheckCircle2 className="w-5 h-5" /> : <Calendar className="w-5 h-5" />}
                 </div>
-                {/* Info Card - Fixed height ensures uniform dimensions for all 6 items */}
+                {/* Info Card - Fixed height ensures uniform dimensions */}
                 <div className={cn(
-                  "space-y-1 p-4 rounded-2xl border shadow-xl transition-all duration-300 w-full text-center backdrop-blur-sm h-[130px] flex flex-col justify-center",
+                  "space-y-1 p-3 rounded-2xl border shadow-xl transition-all duration-300 w-full text-center backdrop-blur-sm h-[120px] flex flex-col justify-center",
                   status === 'completed' ? "bg-white border-primary/30" : 
                   status === 'active' ? "bg-white border-secondary shadow-secondary/10" : 
                   "bg-white/90 border-muted"
                 )}>
                   <p className={cn(
-                    "text-[10px] font-extrabold uppercase tracking-widest mb-1",
+                    "text-[9px] font-extrabold uppercase tracking-widest mb-1",
                     status === 'active' ? "text-secondary" : "text-muted-foreground"
                   )}>{item.title}</p>
                   <p className={cn(
-                    "text-sm xl:text-lg font-bold leading-tight",
+                    "text-xs xl:text-base font-bold leading-tight",
                     status === 'completed' ? "text-primary" : status === 'active' ? "text-foreground" : "text-muted-foreground"
                   )}>{renderDate(item.date)}</p>
                 </div>
