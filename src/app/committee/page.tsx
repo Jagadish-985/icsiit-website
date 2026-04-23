@@ -44,7 +44,7 @@ export default function CommitteePage() {
     }
   ];
 
-  const advisoryCommittee = [
+  const technicalCommittee = [
     { name: "Dr. Narendra Nath S.", institution: "Professor, NITK - Surathkal" },
     { name: "Dr. Basavarajappa", institution: "Professor, UBDT, Davangere" },
     { name: "Mr. Charles Chow", institution: "Singapore Management University, Singapore" },
@@ -166,16 +166,16 @@ export default function CommitteePage() {
             </Card>
           </div>
 
-          {/* Advisory Committee */}
+          {/* Technical Committee */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-secondary/10 rounded-2xl">
                 <Globe className="w-6 h-6 text-secondary" />
               </div>
-              <h3 className="text-3xl font-headline font-bold">Advisory Committee</h3>
+              <h3 className="text-3xl font-headline font-bold">Technical Committee</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {advisoryCommittee.map((member, i) => (
+              {technicalCommittee.map((member, i) => (
                 <Card key={i} className="border-border hover:border-secondary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
                   <CardContent className="p-6 flex items-center gap-6">
                     <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
@@ -188,16 +188,6 @@ export default function CommitteePage() {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-
-            <div className="p-10 bg-muted/30 border border-border rounded-[2.5rem] mt-12 max-w-4xl">
-              <h4 className="font-bold text-xl mb-4 flex items-center gap-3">
-                <Users className="w-6 h-6 text-primary" />
-                Technical Committee
-              </h4>
-              <p className="text-sm text-muted-foreground leading-relaxed italic font-medium">
-                "The committee consists of eminent researchers from premier institutions who ensure high-quality standards through a rigorous peer review process. For queries: icsiit@msruas.ac.in"
-              </p>
             </div>
           </div>
         </div>
