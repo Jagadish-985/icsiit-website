@@ -74,19 +74,19 @@ export default function Footer() {
           <div>
             <h4 className="font-headline font-extrabold text-2xl mb-10 text-white">Contact</h4>
             <ul className="space-y-6 text-base font-bold text-gray-300">
-              <li className="flex gap-5 items-start">
+              <li className="flex gap-5 items-center">
                 <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 shadow-lg border border-white/10">
                    <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <span className="text-white">+91 9480343844 <br /> +91 9611640888</span>
               </li>
-              <li className="flex gap-5 items-start">
+              <li className="flex gap-5 items-center">
                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 shadow-lg border border-white/10">
                    <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <a href="mailto:icsiit@msruas.ac.in" className="break-all text-white hover:text-primary transition-colors">icsiit@msruas.ac.in</a>
               </li>
-              <li className="flex gap-5 items-start">
+              <li className="flex gap-5 items-center">
                  <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0 shadow-lg border border-white/10">
                    <Globe className="w-6 h-6 text-primary" />
                 </div>
