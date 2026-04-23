@@ -114,7 +114,7 @@ export default function RegistrationPage() {
                 <div className="bg-primary/10 border border-primary/20 p-6 rounded-3xl flex items-start gap-4 mb-4">
                   <Info className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-primary font-bold leading-relaxed">
-                    Important Note: Payment has to be done only after the abstract is accepted.
+                    Important Note: Payment has to be done only after the full paper is accepted.
                   </p>
                 </div>
                 <div className="flex gap-6 items-start">
