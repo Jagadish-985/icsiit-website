@@ -1,7 +1,7 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Users, User, ShieldCheck, Globe, Star, Cpu, Award, Phone, Mail } from 'lucide-react';
+import { Users, User, ShieldCheck, Globe, Star, Cpu, Award, Phone, Mail, GraduationCap } from 'lucide-react';
 
 export default function CommitteePage() {
   const leadership = [
@@ -17,34 +17,44 @@ export default function CommitteePage() {
     { name: "Dr. Indira Ramarao", role: "Provost (Social Sciences & Allied Faculties), RUAS" }
   ];
 
+  const advisoryCommittee = [
+    { name: "Dr. Dhanesh G. Mohan", role: "Programme Leader & Senior Lecturer, School of Computer Science and Engineering, University of Sunderland, UK" },
+    { name: "Prof. Dileep A. D.", role: "Professor, Computer Science and Engineering (CSE), IIT Dharwad" },
+    { name: "Mr. Srihari Raghavendra Rao", role: "Senior Data Scientist, Light Horse Therapeutics, San Diego, California, United States" },
+    { name: "Prof. Bidyadhar Subudhi", role: "Member Director, NIT Warangal" },
+    { name: "Dr. G.L. Samuel", role: "Professor, Dept. of Mechanical Engineering (Manuf. Division), IITM, Chennai, TN" },
+    { name: "Mr. Touseef Khan", role: "Senior Staff Engineer, Qualcomm Inc., Sandiego, USA" },
+    { name: "Dr. Raviraj H M", role: "Associate Professor, Department of Civil Engineering, NITK, Surathkal" }
+  ];
+
   const organizingCommittee = [
-    { name: "Dr. Dayananda. B. S.", role: "Associate Dean - RTC, RUAS" },
-    { name: "Dr. Nayana P Patil", role: "Associate Dean, Student Wellbeing - RTC, RUAS" },
-    { name: "Dr. Rinki Sharma", role: "Associate Dean, CADAR - RTC, RUAS" },
+    { name: "Dr. Dayananda. B. S.", role: "Associate Dean Academics- RTC, RUAS" },
+    { name: "Dr. Nayana P Patil", role: "Associate Dean Student Wellbeing - RTC, RUAS" },
+    { name: "Dr. Rinki Sharma", role: "Associate Dean CADAR – RTC, RUAS" },
     { name: "Dr. Suresh R", role: "HOD, MME, RUAS" },
-    { name: "Dr. Narendra Babu Chindanur", role: "HOD, CSE, RUAS" },
-    { name: "Dr. Harshad Rameshwar Parate", role: "HOD, Civil, RUAS" },
-    { name: "Dr. Sulake Nagaraja Rao", role: "HOD, EEE, RUAS" },
+    { name: "Dr. C. Narendra Babu", role: "HOD, CSE, RUAS" },
     { name: "Dr. Mahesh K Varpe", role: "HOD, AAE, RUAS" },
-    { name: "Dr. T. Christy Bobby", role: "HOD, ECE, RUAS" }
+    { name: "Dr. T. Christy Bobby", role: "HOD, ECE, RUAS" },
+    { name: "Dr. Harshad Rameshwar Parate", role: "HOD, Civil, RUAS" },
+    { name: "Dr. Sulake Nagaraja Rao", role: "HOD, EEE, RUAS" }
   ];
 
   const conveners = [
     {
       name: "Dr. Jyothi A P",
       role: "Associate Professor and Head, Mathematics and Computing Program, Department of Computer Science and Engineering, RUAS",
-      phone: "9686311475",
+      phone: "+91 9686311475",
       email: "jyothi.cs.et@msruas.ac.in"
     },
     {
       name: "Dr. Ananth S. Iyengar",
       role: "Assistant Professor, Dept. of Mechanical and Manufacturing Engineering, RUAS",
-      phone: "9480343844",
+      phone: "+91 9480343844",
       email: "ananth.me.et@msruas.ac.in"
     }
   ];
 
-  const technicalCommittee = [
+  const technicalProgramCommittee = [
     { name: "Dr. Narendra Nath S.", institution: "Professor, NITK - Surathkal" },
     { name: "Dr. Basavarajappa", institution: "Professor, UBDT, Davangere" },
     { name: "Mr. Charles Chow", institution: "Singapore Management University, Singapore" },
@@ -63,7 +73,7 @@ export default function CommitteePage() {
         <div className="max-w-6xl mx-auto">
           <SectionHeading centered title="Conference Committees" subtitle="Visionary leadership and global experts driving SYNERGY 2026." />
           
-          {/* Main Leadership Section */}
+          {/* Patrons & General Chair */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {leadership.map((leader, i) => (
               <Card key={i} className="glass-card text-center hover:border-primary/50 transition-all group overflow-hidden border-border bg-white shadow-sm rounded-3xl">
@@ -95,6 +105,26 @@ export default function CommitteePage() {
                   <p className="font-bold text-foreground leading-tight">{member.name}</p>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Advisory Committee */}
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-3 bg-indigo-50 rounded-2xl">
+                <GraduationCap className="w-6 h-6 text-indigo-600" />
+              </div>
+              <h3 className="text-3xl font-headline font-bold">Advisory Committee</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {advisoryCommittee.map((member, i) => (
+                <Card key={i} className="border-border hover:border-indigo-300 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
+                  <CardContent className="p-6">
+                    <h4 className="font-bold text-lg text-foreground mb-1">{member.name}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{member.role}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
@@ -139,7 +169,7 @@ export default function CommitteePage() {
               </div>
               <h3 className="text-3xl font-headline font-bold">Organizing Committee</h3>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {organizingCommittee.map((member, i) => (
                 <div key={i} className="p-6 bg-white rounded-3xl border border-border hover:shadow-lg hover:border-primary/20 transition-all flex flex-col gap-1">
                   <p className="font-bold text-foreground leading-tight">{member.name}</p>
@@ -147,35 +177,18 @@ export default function CommitteePage() {
                 </div>
               ))}
             </div>
-
-            {/* Technical Program Chair */}
-            <Card className="bg-primary/[0.02] border-primary/10 rounded-[2.5rem] p-8 overflow-hidden relative group max-w-2xl">
-              <div className="absolute top-0 right-0 p-8 opacity-5">
-                 <Cpu className="w-32 h-32 text-primary" />
-              </div>
-              <div className="relative z-10">
-                 <h4 className="font-bold text-2xl mb-6 flex items-center gap-3">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
-                  Technical Program Chair
-                </h4>
-                <div className="p-5 bg-white rounded-2xl border border-border shadow-sm w-fit min-w-[300px]">
-                   <p className="font-bold text-lg">Dr. Suresh R</p>
-                   <p className="text-sm text-muted-foreground font-semibold">HOD, Dept. of MME, RUAS</p>
-                </div>
-              </div>
-            </Card>
           </div>
 
-          {/* Technical Committee */}
+          {/* Technical Program Committee */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-secondary/10 rounded-2xl">
                 <Globe className="w-6 h-6 text-secondary" />
               </div>
-              <h3 className="text-3xl font-headline font-bold">Technical Committee</h3>
+              <h3 className="text-3xl font-headline font-bold">Technical Program Committee</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {technicalCommittee.map((member, i) => (
+              {technicalProgramCommittee.map((member, i) => (
                 <Card key={i} className="border-border hover:border-secondary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
                   <CardContent className="p-6 flex items-center gap-6">
                     <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
