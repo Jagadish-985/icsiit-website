@@ -1,7 +1,7 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FileText, Mail, Download } from 'lucide-react';
+import { FileText, Mail, Download, CheckCircle2, Award, Globe, ShieldCheck, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function CallForPapers() {
@@ -17,6 +17,39 @@ export default function CallForPapers() {
   ];
 
   const submissionLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
+
+  const keyPoints = [
+    {
+      icon: Award,
+      text: "Certificate will be provided to all participants",
+      color: "text-primary"
+    },
+    {
+      icon: Globe,
+      text: "National and International Experts/Resources Persons are from esteemed academic institutions like IISc, IIT, NIT and industries.",
+      color: "text-secondary"
+    },
+    {
+      icon: ShieldCheck,
+      text: "Authors should make sure the plagiarism, and AI similarity should be less than 10%",
+      color: "text-green-600"
+    },
+    {
+      icon: CheckCircle2,
+      text: "Selected papers will be published in Scopus Indexed Journal.",
+      color: "text-blue-600"
+    },
+    {
+      icon: CheckCircle2,
+      text: "Rest of the papers will be published in Journal with DOI",
+      color: "text-indigo-600"
+    },
+    {
+      icon: AlertCircle,
+      text: "An extra cost to be borne by the author depending on the paper is selected for Scopus indexed journal or journal with DOI",
+      color: "text-primary"
+    }
+  ];
 
   return (
     <div className="pt-32 pb-24">
@@ -55,6 +88,19 @@ export default function CallForPapers() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+            {keyPoints.map((point, i) => (
+              <Card key={i} className="border-border bg-white shadow-sm rounded-2xl overflow-hidden hover:border-primary/20 transition-all">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className={`p-2 rounded-lg bg-muted flex-shrink-0`}>
+                    <point.icon className={`w-5 h-5 ${point.color}`} />
+                  </div>
+                  <p className="text-sm font-bold text-foreground leading-tight">{point.text}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           <h3 className="text-2xl font-headline font-bold mb-8">Conference Themes</h3>
