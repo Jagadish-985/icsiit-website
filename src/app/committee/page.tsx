@@ -7,7 +7,7 @@ export default function CommitteePage() {
   const leadership = [
     { role: "Chief Patron", name: "Dr. M. R. Jayaram", organization: "Hon'ble Chancellor, RUAS" },
     { role: "Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
-    { role: "General Chair", name: "Dr. Sarat Kumar Maharana", organization: "Professor & Dean - FET, RUAS" }
+    { role: "Conference Chair", name: "Dr. Sarat Kumar Maharana", organization: "Professor & Dean - FET, RUAS" }
   ];
 
   const coPatrons = [
@@ -73,7 +73,7 @@ export default function CommitteePage() {
         <div className="max-w-6xl mx-auto">
           <SectionHeading centered title="Conference Committees" subtitle="Visionary leadership and global experts driving SYNERGY 2026." />
           
-          {/* Patrons & General Chair */}
+          {/* Patrons & Conference Chair */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {leadership.map((leader, i) => (
               <Card key={i} className="glass-card text-center hover:border-primary/50 transition-all group overflow-hidden border-border bg-white shadow-sm rounded-3xl">
