@@ -106,33 +106,29 @@ export default function CommitteePage() {
             {leadership.map((leader, i) => {
               const imageInfo = PlaceHolderImages.find(img => img.id === leader.imageId);
               return (
-                <Card key={i} className="glass-card text-center hover:border-primary/50 transition-all group overflow-hidden border-border bg-white shadow-sm rounded-3xl">
-                  <CardHeader className="pb-2 pt-8">
-                    <Badge variant="secondary" className="w-fit mx-auto mb-2 px-4 py-1 bg-primary/10 text-primary border-primary/20">{leader.role}</Badge>
-                  </CardHeader>
-                  <CardContent className="pb-8 px-6">
-                    <div className="relative w-32 h-32 mx-auto mb-6 group-hover:scale-105 transition-transform">
-                      <div className="absolute inset-0 bg-primary/10 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform" />
-                      <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-white shadow-lg bg-muted">
-                        {imageInfo ? (
-                          <Image 
-                            src={imageInfo.imageUrl} 
-                            alt={leader.name} 
-                            fill 
-                            className="object-cover" 
-                            data-ai-hint={imageInfo.imageHint}
-                          />
-                        ) : (
-                          <div className="flex items-center justify-center w-full h-full">
-                            <User className="w-12 h-12 text-primary/40" />
-                          </div>
-                        )}
-                      </div>
+                <div key={i} className="text-center group p-8 transition-all">
+                  <Badge variant="secondary" className="w-fit mx-auto mb-6 px-4 py-1 bg-primary/10 text-primary border-primary/20">{leader.role}</Badge>
+                  <div className="relative w-40 h-40 mx-auto mb-6 group-hover:scale-105 transition-transform">
+                    <div className="absolute inset-0 bg-primary/5 rounded-[2rem] transform rotate-6 group-hover:rotate-12 transition-transform" />
+                    <div className="relative w-full h-full rounded-[2rem] overflow-hidden border-2 border-white shadow-xl bg-muted/20">
+                      {imageInfo ? (
+                        <Image 
+                          src={imageInfo.imageUrl} 
+                          alt={leader.name} 
+                          fill 
+                          className="object-cover" 
+                          data-ai-hint={imageInfo.imageHint}
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center w-full h-full">
+                          <User className="w-16 h-16 text-primary/20" />
+                        </div>
+                      )}
                     </div>
-                    <h4 className="text-xl font-bold mb-2 text-foreground">{leader.name}</h4>
-                    <p className="text-sm text-muted-foreground">{leader.organization}</p>
-                  </CardContent>
-                </Card>
+                  </div>
+                  <h4 className="text-xl font-bold mb-2 text-foreground">{leader.name}</h4>
+                  <p className="text-sm text-muted-foreground">{leader.organization}</p>
+                </div>
               );
             })}
           </div>
