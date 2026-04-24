@@ -1,6 +1,6 @@
 import SectionHeading from '@/components/section-heading';
 import { Button } from '@/components/ui/button';
-import { Check, ExternalLink, CreditCard, ShieldCheck, Info, Tag } from 'lucide-react';
+import { Check, ExternalLink, CreditCard, ShieldCheck, Info, Tag, Users } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function RegistrationPage() {
@@ -78,11 +78,11 @@ export default function RegistrationPage() {
           <div className="mt-12 max-w-2xl mx-auto">
             <div className="p-8 bg-primary/5 border-2 border-primary/20 rounded-[3rem] flex items-center gap-6 group hover:bg-primary/10 transition-colors">
               <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg group-hover:rotate-6 transition-transform text-white">
-                <CreditCard className="w-8 h-8" />
+                <Users className="w-8 h-8" />
               </div>
               <div>
-                <h4 className="font-extrabold text-xl text-foreground">Additional Participation</h4>
-                <p className="text-muted-foreground font-medium">Bringing a guest? Extra participation is available at <span className="text-primary font-bold">₹200 per person</span>.</p>
+                <h4 className="font-extrabold text-xl text-foreground">Conference Attendees (Non-Presenting)</h4>
+                <p className="text-muted-foreground font-medium">Want to attend technical sessions and keynotes without presenting a paper? Participation is available at <span className="text-primary font-bold">₹200 per person</span>.</p>
               </div>
             </div>
           </div>
