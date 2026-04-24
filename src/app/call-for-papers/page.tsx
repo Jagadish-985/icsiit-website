@@ -50,7 +50,7 @@ export default function CallForPapers() {
               <FileText className="w-8 h-8 text-primary flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-bold mb-2">Originality Guidelines</h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-justify">
                   Papers submitted must be original and not previously published or under consideration elsewhere. 
                   All submissions will undergo a plagiarism check before the peer review process.
                 </p>
@@ -115,21 +115,21 @@ export default function CallForPapers() {
               <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center font-bold text-primary flex-shrink-0">1</div>
               <div>
                 <h4 className="font-bold mb-2">Prepare Abstract</h4>
-                <p className="text-muted-foreground">Submit a 300-word abstract outlining the scope, methodology, and key results of your research.</p>
+                <p className="text-muted-foreground text-justify">Submit a 300-word abstract outlining the scope, methodology, and key results of your research.</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
               <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center font-bold text-primary flex-shrink-0">2</div>
               <div>
                 <h4 className="font-bold mb-2">Full Paper Submission</h4>
-                <p className="text-muted-foreground">Once the abstract is accepted, submit the full-length paper following the conference template.</p>
+                <p className="text-muted-foreground text-justify">Once the abstract is accepted, submit the full-length paper following the conference template.</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
               <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center font-bold text-primary flex-shrink-0">3</div>
               <div>
                 <h4 className="font-bold mb-2">Registration</h4>
-                <p className="text-muted-foreground">Pay the registration fee to confirm your slot for presentation and publication.</p>
+                <p className="text-muted-foreground text-justify">Pay the registration fee to confirm your slot for presentation and publication.</p>
               </div>
             </div>
           </div>
