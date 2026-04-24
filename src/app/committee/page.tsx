@@ -28,7 +28,8 @@ export default function CommitteePage() {
     { name: "Dr. Bharath Srinivasan", role: "Dean, Faculty of Pharmacy, MSRUAS" },
     { name: "Dr. Sonali Tarachand Jadhav", role: "Dean, MS Ramaiah Institute of Nursing Education and Research" },
     { name: "Dr. Kavitha Prasad", role: "Dean, Faculty of Dental Sciences, MSRUAS" },
-    { name: "Dr. Soma Chaki", role: "Dean, Faculty of Life and Allied Health Sciences, MSRUAS" }
+    { name: "Dr. Soma Chaki", role: "Dean, Faculty of Life and Allied Health Sciences, MSRUAS" },
+    { name: "Dr. Shalini Nooyi", role: "Dean, Ramaiah Medical College, MSRUAS" }
   ];
 
   const organizingCommittee = [
