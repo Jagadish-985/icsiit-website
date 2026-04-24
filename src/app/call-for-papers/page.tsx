@@ -80,8 +80,9 @@ export default function CallForPapers() {
                   </Button>
                   <Button size="sm" className="gap-2" asChild>
                     <a 
-                      href="/ConferencePresentationTemplate.pptx" 
-                      download="ConferencePresentationTemplate.pptx"
+                      href="https://docs.google.com/presentation/d/10uCjMEtTYBzwwo_WExHD6Y2xKPDWd6a_/edit?usp=sharing&ouid=103297635095690463938&rtpof=true&sd=true" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Download className="w-4 h-4" /> Conference Presentation Template
                     </a>
