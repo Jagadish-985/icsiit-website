@@ -25,7 +25,8 @@ export default function CommitteePage() {
     { name: "Dr. G.L. Samuel", role: "Professor, Dept. of Mechanical Engineering (Manuf. Division), IITM, Chennai, TN" },
     { name: "Mr. Touseef Khan", role: "Senior Staff Engineer, Qualcomm Inc., Sandiego, USA" },
     { name: "Dr. Raviraj H M", role: "Associate Professor, Department of Civil Engineering, NITK, Surathkal" },
-    { name: "Dr. Bharath Srinivasan", role: "Dean, Faculty of Pharmacy, MSRUAS" }
+    { name: "Dr. Bharath Srinivasan", role: "Dean, Faculty of Pharmacy, MSRUAS" },
+    { name: "Dr. Sonali Tarachand Jadhav", role: "Dean, MS Ramaiah Institute of Nursing Education and Research" }
   ];
 
   const organizingCommittee = [
