@@ -148,7 +148,20 @@ export default function CommitteePage() {
     { name: "Ms. Shaista" },
     { name: "Ms. Naganandini" },
     { name: "Ms. Vaishnavi" },
-    { name: "Ms. Vidyashree" }
+    { name: "Ms. Vidyashree" },
+    { name: "Ms. Praneetha GN" },
+    { name: "Dr. Nayana" },
+    { name: "Dr. Prabhadevi B" },
+    { name: "Mr. Sandeep" },
+    { name: "Dr. Sreenivas Padala" },
+    { name: "Dr. Pramod" },
+    { name: "Dr. Sivapragasam" },
+    { name: "Dr. Praveen" },
+    { name: "Dr. Balappa" },
+    { name: "Mr. Umesh" },
+    { name: "Dr. Yogesh" },
+    { name: "Mr. Akshay" },
+    { name: "Mr. Vijaykumar" }
   ];
 
   return (
