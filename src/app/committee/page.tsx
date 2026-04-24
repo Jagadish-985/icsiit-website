@@ -31,7 +31,8 @@ export default function CommitteePage() {
     { name: "Dr. Soma Chaki", role: "Dean, Faculty of Life and Allied Health Sciences, MSRUAS" },
     { name: "Dr. Shalini Nooyi", role: "Dean, Ramaiah Medical College, MSRUAS" },
     { name: "Dr. K M Sharath Kumar", role: "Dean, Faculty of Management and Commerce, MSRUAS" },
-    { name: "Dr. Hemanth Thapsey", role: "Associate Dean (Administration), Joint Registrar and Director - Admissions (Health Sciences), RUAS" }
+    { name: "Dr. Hemanth Thapsey", role: "Associate Dean (Administration), Joint Registrar and Director - Admissions (Health Sciences), RUAS" },
+    { name: "Dr. Nanda Kumar BS", role: "Head- Research & Intellectual Property Rights, RUAS" }
   ];
 
   const organizingCommittee = [
