@@ -33,7 +33,8 @@ export default function CommitteePage() {
     { name: "Dr. K M Sharath Kumar", role: "Dean, Faculty of Management and Commerce, MSRUAS" },
     { name: "Dr. Hemanth Thapsey", role: "Associate Dean (Administration), Joint Registrar and Director - Admissions (Health Sciences), RUAS" },
     { name: "Dr. Nanda Kumar BS", role: "Head- Research & Intellectual Property Rights, RUAS" },
-    { name: "Dr. Tapasi Ghosh", role: "HoD, Data Sciences And Analytics, School of Social Sciences" }
+    { name: "Dr. Tapasi Ghosh", role: "HoD, Data Sciences And Analytics, School of Social Sciences" },
+    { name: "Shri. Gurucharan Gollerkeri", role: "Director — School of Social Sciences & School of Law" }
   ];
 
   const organizingCommittee = [
