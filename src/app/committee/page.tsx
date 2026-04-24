@@ -1,13 +1,31 @@
+
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Users, User, ShieldCheck, Globe, Star, Cpu, Award, Phone, Mail, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function CommitteePage() {
   const leadership = [
-    { role: "Chief Patron", name: "Dr. M. R. Jayaram", organization: "Hon'ble Chancellor, RUAS" },
-    { role: "Patron", name: "Prof. Kuldeep Kumar Raina", organization: "Vice Chancellor, RUAS" },
-    { role: "Conference Chair", name: "Dr. Sarat Kumar Maharana", organization: "Professor & Dean - FET, RUAS" }
+    { 
+      role: "Chief Patron", 
+      name: "Dr. M. R. Jayaram", 
+      organization: "Hon'ble Chancellor, RUAS",
+      imageId: "leader-jayaram"
+    },
+    { 
+      role: "Patron", 
+      name: "Prof. Kuldeep Kumar Raina", 
+      organization: "Vice Chancellor, RUAS",
+      imageId: "leader-raina"
+    },
+    { 
+      role: "Conference Chair", 
+      name: "Dr. Sarat Kumar Maharana", 
+      organization: "Professor & Dean - FET, RUAS",
+      imageId: "leader-maharana"
+    }
   ];
 
   const coPatrons = [
@@ -85,20 +103,38 @@ export default function CommitteePage() {
           
           {/* Patrons & Conference Chair */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {leadership.map((leader, i) => (
-              <Card key={i} className="glass-card text-center hover:border-primary/50 transition-all group overflow-hidden border-border bg-white shadow-sm rounded-3xl">
-                <CardHeader className="pb-2 pt-8">
-                  <Badge variant="secondary" className="w-fit mx-auto mb-2 px-4 py-1 bg-primary/10 text-primary border-primary/20">{leader.role}</Badge>
-                </CardHeader>
-                <CardContent className="pb-8">
-                  <div className="w-16 h-16 bg-muted rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:bg-primary/5 transition-all">
-                    <User className="w-8 h-8 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-bold mb-2 text-foreground">{leader.name}</h4>
-                  <p className="text-sm text-muted-foreground">{leader.organization}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {leadership.map((leader, i) => {
+              const imageInfo = PlaceHolderImages.find(img => img.id === leader.imageId);
+              return (
+                <Card key={i} className="glass-card text-center hover:border-primary/50 transition-all group overflow-hidden border-border bg-white shadow-sm rounded-3xl">
+                  <CardHeader className="pb-2 pt-8">
+                    <Badge variant="secondary" className="w-fit mx-auto mb-2 px-4 py-1 bg-primary/10 text-primary border-primary/20">{leader.role}</Badge>
+                  </CardHeader>
+                  <CardContent className="pb-8 px-6">
+                    <div className="relative w-32 h-32 mx-auto mb-6 group-hover:scale-105 transition-transform">
+                      <div className="absolute inset-0 bg-primary/10 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform" />
+                      <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-white shadow-lg bg-muted">
+                        {imageInfo ? (
+                          <Image 
+                            src={imageInfo.imageUrl} 
+                            alt={leader.name} 
+                            fill 
+                            className="object-cover" 
+                            data-ai-hint={imageInfo.imageHint}
+                          />
+                        ) : (
+                          <div className="flex items-center justify-center w-full h-full">
+                            <User className="w-12 h-12 text-primary/40" />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <h4 className="text-xl font-bold mb-2 text-foreground">{leader.name}</h4>
+                    <p className="text-sm text-muted-foreground">{leader.organization}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           {/* Co-Patrons Section */}

@@ -32,6 +32,24 @@
       "imageHint": "university logo"
     },
     {
+      "id": "leader-jayaram",
+      "description": "Dr. M. R. Jayaram - Chief Patron",
+      "imageUrl": "https://picsum.photos/seed/jayaram/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "leader-raina",
+      "description": "Prof. Kuldeep Kumar Raina - Patron",
+      "imageUrl": "https://picsum.photos/seed/raina/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "leader-maharana",
+      "description": "Dr. Sarat Kumar Maharana - Conference Chair",
+      "imageUrl": "https://picsum.photos/seed/maharana/400/400",
+      "imageHint": "professional portrait"
+    },
+    {
       "id": "partner-cynergy",
       "description": "Cynergy Coding Club Logo",
       "imageUrl": "/cynergy.jpeg",
