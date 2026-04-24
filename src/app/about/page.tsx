@@ -18,7 +18,7 @@ export default function AboutPage() {
               The rapid convergence of engineering disciplines is reshaping the way we design, build, and sustain the systems that power modern society. In this context, the International Conference on Smart, Intelligent and Innovative Technologies (IC-SIIT) serves as a dynamic platform to explore the transformative potential of interdisciplinary innovation.
             </p>
             <p>
-              Bringing together researchers, academicians, industry experts, and practitioners, the conference aims to foster collaboration across the domains of mechanical, aerospace, automotive, electronics, communication, and civil engineering.
+              Bringing together researchers, academicians, industry experts, and practitioners, the conference aims to foster collaboration across the domains of aerospace, automotive, civil, computer science and engineering, electrical and electronics, electronics and communication, mechanical, life and allied health sciences, and management and commerce.
             </p>
             <p>
               SYNERGY 2026 is focussed on projects involving intelligent sensing, advanced materials, automation, connectivity, and data-driven decision-making seamlessly interact. From autonomous vehicles and sustainable infrastructure to smart cities and aerospace advancements, the integration of diverse engineering fields is enabling enhanced levels of efficiency, safety, and performance.
