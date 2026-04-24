@@ -27,7 +27,8 @@ export default function CommitteePage() {
     { name: "Dr. Raviraj H M", role: "Associate Professor, Department of Civil Engineering, NITK, Surathkal" },
     { name: "Dr. Bharath Srinivasan", role: "Dean, Faculty of Pharmacy, MSRUAS" },
     { name: "Dr. Sonali Tarachand Jadhav", role: "Dean, MS Ramaiah Institute of Nursing Education and Research" },
-    { name: "Dr. Kavitha Prasad", role: "Dean, Faculty of Dental Sciences, MSRUAS" }
+    { name: "Dr. Kavitha Prasad", role: "Dean, Faculty of Dental Sciences, MSRUAS" },
+    { name: "Dr. Soma Chaki", role: "Dean, Faculty of Life and Allied Health Sciences, MSRUAS" }
   ];
 
   const organizingCommittee = [
