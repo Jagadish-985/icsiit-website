@@ -81,7 +81,7 @@ export default function RegistrationPage() {
                 <Users className="w-8 h-8" />
               </div>
               <div>
-                <h4 className="font-extrabold text-xl text-foreground">Conference Attendees (Non-Presenting)</h4>
+                <h4 className="font-extrabold text-xl text-foreground">Conference Attendees</h4>
                 <p className="text-muted-foreground font-medium">Want to attend technical sessions and keynotes without presenting a paper? Participation is available at <span className="text-primary font-bold">₹200 per person</span>.</p>
               </div>
             </div>
