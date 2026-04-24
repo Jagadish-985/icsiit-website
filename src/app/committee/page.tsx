@@ -161,7 +161,8 @@ export default function CommitteePage() {
     { name: "Mr. Umesh" },
     { name: "Dr. Yogesh" },
     { name: "Mr. Akshay" },
-    { name: "Mr. Vijaykumar" }
+    { name: "Mr. Vijaykumar" },
+    { name: "Dr. Suresh" }
   ];
 
   return (
