@@ -108,26 +108,26 @@ export default function CommitteePage() {
               return (
                 <div key={i} className="text-center group p-8 transition-all">
                   <Badge variant="secondary" className="w-fit mx-auto mb-6 px-4 py-1 bg-primary/10 text-primary border-primary/20">{leader.role}</Badge>
-                  <div className="relative w-40 h-40 mx-auto mb-6 group-hover:scale-105 transition-transform">
-                    <div className="absolute inset-0 bg-primary/5 rounded-[2rem] transform rotate-6 group-hover:rotate-12 transition-transform" />
-                    <div className="relative w-full h-full rounded-[2rem] overflow-hidden border-2 border-white shadow-xl bg-muted/20">
+                  <div className="relative w-56 h-56 mx-auto mb-6 group-hover:scale-105 transition-transform">
+                    <div className="absolute inset-0 bg-primary/5 rounded-[2rem] transform rotate-3 group-hover:rotate-6 transition-transform" />
+                    <div className="relative w-full h-full rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl bg-muted/10">
                       {imageInfo ? (
                         <Image 
                           src={imageInfo.imageUrl} 
                           alt={leader.name} 
                           fill 
-                          className="object-cover" 
+                          className="object-cover object-top" 
                           data-ai-hint={imageInfo.imageHint}
                         />
                       ) : (
                         <div className="flex items-center justify-center w-full h-full">
-                          <User className="w-16 h-16 text-primary/20" />
+                          <User className="w-20 h-20 text-primary/20" />
                         </div>
                       )}
                     </div>
                   </div>
-                  <h4 className="text-xl font-bold mb-2 text-foreground">{leader.name}</h4>
-                  <p className="text-sm text-muted-foreground">{leader.organization}</p>
+                  <h4 className="text-2xl font-bold mb-2 text-foreground">{leader.name}</h4>
+                  <p className="text-sm text-muted-foreground font-medium">{leader.organization}</p>
                 </div>
               );
             })}
