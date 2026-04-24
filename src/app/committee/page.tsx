@@ -23,10 +23,11 @@ export default function CommitteePage() {
     { name: "Mr. Srihari Raghavendra Rao", role: "Senior Data Scientist, Light Horse Therapeutics, San Diego, California, United States" },
     { name: "Prof. Bidyadhar Subudhi", role: "Member Director, NIT Warangal" },
     { name: "Dr. G.L. Samuel", role: "Professor, Dept. of Mechanical Engineering (Manuf. Division), IITM, Chennai, TN" },
-    { name: "Mr. Touseef Khan", role: "Senior Staff Engineer, Qualcomm Inc., Sandiego, USA" },
+    { name: "Mr. Touseef Khan", role: "Senior Staff Engineer, Qualcomm Inc., San Diego, USA" },
     { name: "Dr. Raviraj H M", role: "Associate Professor, Department of Civil Engineering, NITK, Surathkal" },
     { name: "Dr. Bharath Srinivasan", role: "Dean, Faculty of Pharmacy, MSRUAS" },
-    { name: "Dr. Sonali Tarachand Jadhav", role: "Dean, MS Ramaiah Institute of Nursing Education and Research" }
+    { name: "Dr. Sonali Tarachand Jadhav", role: "Dean, MS Ramaiah Institute of Nursing Education and Research" },
+    { name: "Dr. Kavitha Prasad", role: "Dean, Faculty of Dental Sciences, MSRUAS" }
   ];
 
   const organizingCommittee = [
