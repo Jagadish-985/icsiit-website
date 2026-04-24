@@ -1,3 +1,4 @@
+
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -12,7 +13,7 @@ export default function CallForPapers() {
     "Sustainable Infrastructure: Monitoring, Assessment and Smart Construction Materials",
     "Aerospace Automotive and Future Mobility Systems",
     "Energy, Material and Advance Manufacturing",
-    "Biotechnology, Health care, Life sciences, Pharmacy and Clinical Applications",
+    "Medical, Dental, Biotechnology, Health care, Life sciences, Pharmacy and Clinical Applications",
     "Innovation, Entrepreneurship and Management"
   ];
 
