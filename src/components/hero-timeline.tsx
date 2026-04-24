@@ -51,8 +51,8 @@ export default function HeroTimeline() {
     <div className="max-w-7xl mx-auto mt-20 animate-fade-in [animation-delay:1000ms]">
       {/* Desktop Timeline */}
       <div className="hidden lg:block relative pt-12">
-        {/* Progress Track Wrapper */}
-        <div className="absolute top-[76px] left-[40px] right-[40px] h-1 z-0">
+        {/* Progress Track Wrapper - Adjusted top position to center perfectly with 48px icons */}
+        <div className="absolute top-[70px] left-[40px] right-[40px] h-1 z-0">
           <div className="absolute inset-0 bg-white/20 rounded-full" />
           <div 
             className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary via-secondary to-primary rounded-full transition-all duration-1000 ease-in-out shadow-[0_0_10px_rgba(227,74,33,0.5)]"
