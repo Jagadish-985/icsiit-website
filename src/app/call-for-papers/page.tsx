@@ -83,7 +83,7 @@ export default function CallForPapers() {
                       href="/ConferencePresentationTemplate.pptx" 
                       download="ConferencePresentationTemplate.pptx"
                     >
-                      <Download className="w-4 h-4" /> Presentation Template
+                      <Download className="w-4 h-4" /> Conference Presentation Template
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2" asChild>
