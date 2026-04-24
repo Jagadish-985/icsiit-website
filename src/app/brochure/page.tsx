@@ -22,7 +22,7 @@ export default function BrochurePage() {
                   <FileText className="w-10 h-10" />
                 </div>
                 <h3 className="text-3xl font-headline font-bold mb-4 text-foreground">Official Brochure</h3>
-                <p className="text-muted-foreground font-medium mb-8">kindly go through the official brochure in detail</p>
+                <p className="text-muted-foreground font-medium mb-8">Kindly go through the Official Brochure in detail</p>
                 
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 w-full rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 max-w-sm">
                   <a href="/SynergyOfficial.docx" download="SynergyOfficial.docx" className="flex items-center gap-2">
