@@ -6,7 +6,6 @@ export default function ContactPage() {
   const coordinators = [
     { name: "General Inquiry", phone: "+91 9480343844" },
     { name: "Technical Support", phone: "+91 9611640888" },
-    { name: "Registration Help", phone: "+91 7975255006" },
     { name: "Venue Logistics", phone: "+91 9535762626" }
   ];
 
