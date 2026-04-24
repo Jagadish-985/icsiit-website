@@ -63,6 +63,7 @@ export default function Footer() {
             <h4 className="font-headline font-extrabold text-2xl mb-10 text-white">Navigation</h4>
             <ul className="space-y-5 text-base font-bold text-gray-400">
               <li><Link href="/about" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> About</Link></li>
+              <li><Link href="/brochure" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Brochure</Link></li>
               <li><Link href="/call-for-papers" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Call for Papers</Link></li>
               <li><Link href="/committee" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Committees</Link></li>
               <li><Link href="/registration" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> Registration</Link></li>

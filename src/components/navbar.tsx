@@ -10,6 +10,7 @@ import Image from 'next/image';
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
+  { name: 'Brochure', href: '/brochure' },
   { name: 'Call for Papers', href: '/call-for-papers' },
   { name: 'Committee', href: '/committee' },
   { name: 'Dates', href: '/important-dates' },
@@ -55,13 +56,13 @@ export default function Navbar() {
 
         {/* Right: Desktop Navigation & Mobile Toggle */}
         <div className="flex items-center gap-6 w-auto">
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm xl:text-base font-semibold transition-all hover:text-white whitespace-nowrap pb-1 border-b-2",
+                  "text-[13px] xl:text-sm font-semibold transition-all hover:text-white whitespace-nowrap pb-1 border-b-2",
                   pathname === item.href 
                     ? "text-white border-[#E34A21]" 
                     : "text-white/80 border-transparent hover:border-white/20"
