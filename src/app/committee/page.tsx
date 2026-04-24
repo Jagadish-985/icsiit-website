@@ -95,6 +95,15 @@ export default function CommitteePage() {
     { name: "Mr. Sajal Mittal", institution: "Associate Director, Samsung Semiconductor, Bengaluru" }
   ];
 
+  const coordinators = [
+    { name: "Dr. Suresh R" },
+    { name: "Dr. Christy Bobby" },
+    { name: "Dr. Narendra Babu C" },
+    { name: "Dr. Mahesh Varpe" },
+    { name: "Dr. Nagaraj Rao" },
+    { name: "Dr. Harshad Rameshwar" }
+  ];
+
   return (
     <div className="pt-32 pb-24">
       <div className="container mx-auto px-4">
@@ -239,6 +248,30 @@ export default function CommitteePage() {
                     <div>
                       <p className="font-bold text-foreground text-lg leading-tight">{member.name}</p>
                       <p className="text-xs font-semibold text-muted-foreground leading-relaxed mt-1">{member.institution}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Co-ordinators Section */}
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-3 bg-primary/10 rounded-2xl">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-3xl font-headline font-bold">Co-ordinators</h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {coordinators.map((member, i) => (
+                <Card key={i} className="border-border hover:border-primary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
+                  <CardContent className="p-6 flex items-center gap-4">
+                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                       <User className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-foreground text-lg leading-tight">{member.name}</p>
                     </div>
                   </CardContent>
                 </Card>
