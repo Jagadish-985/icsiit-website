@@ -1,4 +1,3 @@
-
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -34,21 +33,6 @@ export default function CallForPapers() {
       icon: ShieldCheck,
       text: "Authors should make sure the plagiarism, and AI similarity should be less than 10%",
       color: "text-green-600"
-    },
-    {
-      icon: CheckCircle2,
-      text: "Selected papers will be published in Scopus Indexed Journal.",
-      color: "text-blue-600"
-    },
-    {
-      icon: CheckCircle2,
-      text: "Rest of the papers will be published in Journal with DOI",
-      color: "text-indigo-600"
-    },
-    {
-      icon: AlertCircle,
-      text: "An extra cost to be borne by the author depending on the paper is selected for Scopus indexed journal or journal with DOI",
-      color: "text-primary"
     }
   ];
 
@@ -98,7 +82,7 @@ export default function CallForPapers() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
             {keyPoints.map((point, i) => (
               <Card key={i} className="border-border bg-white shadow-sm rounded-2xl overflow-hidden hover:border-primary/20 transition-all">
                 <CardContent className="p-6 flex items-start gap-4">
