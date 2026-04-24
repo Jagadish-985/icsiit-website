@@ -85,9 +85,9 @@ export default function CallForPapers() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
             {keyPoints.map((point, i) => (
               <Card key={i} className="border-border bg-white shadow-sm rounded-2xl overflow-hidden hover:border-primary/20 transition-all flex h-full">
-                <CardContent className="p-6 flex items-start gap-4">
-                  <div className="p-2 rounded-lg bg-muted flex-shrink-0 mt-0.5">
-                    <point.icon className={`w-5 h-5 ${point.color}`} />
+                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
+                  <div className="p-3 rounded-xl bg-muted flex-shrink-0">
+                    <point.icon className={`w-8 h-8 ${point.color}`} />
                   </div>
                   <p className="text-sm font-semibold text-foreground leading-normal">{point.text}</p>
                 </CardContent>
