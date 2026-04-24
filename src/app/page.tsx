@@ -40,7 +40,7 @@ export default function Home() {
         <HeroBackground />
 
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-12 tracking-tighter animate-fade-in text-foreground leading-[1]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold mb-8 tracking-tighter animate-fade-in text-foreground leading-[1]">
             SYNERGY 2026 <br />
             <span className="text-gradient text-3xl md:text-5xl lg:text-6xl block mt-4 font-bold">
               International Conference on Smart, Intelligent and Innovative Technologies
@@ -49,6 +49,12 @@ export default function Home() {
               (IC-SIIT)
             </span>
           </h1>
+
+          <div className="mb-12 animate-fade-in [animation-delay:300ms] flex flex-col items-center">
+            <p className="text-sm md:text-base font-bold text-muted-foreground/80 uppercase tracking-[0.3em] mb-2 italic">held at</p>
+            <h2 className="text-xl md:text-2xl font-extrabold text-foreground">Ramaiah University Of Applied Sciences</h2>
+            <p className="text-sm md:text-base text-muted-foreground font-semibold mt-1">Ramaiah Technology Campus Peenya, Bengaluru</p>
+          </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
             <div className="flex items-center gap-3 bg-white px-8 py-5 rounded-3xl border border-primary/10 shadow-xl">
