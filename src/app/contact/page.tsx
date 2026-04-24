@@ -53,11 +53,6 @@ export default function ContactPage() {
                 <a href="mailto:icsiit@msruas.ac.in" className="text-xl font-bold text-secondary hover:underline break-all">
                   icsiit@msruas.ac.in
                 </a>
-                <div className="mt-8 p-4 bg-muted rounded-2xl">
-                   <p className="text-xs leading-relaxed text-muted-foreground">
-                    Expected response time: <span className="font-bold text-foreground">24-48 working hours</span>.
-                   </p>
-                </div>
               </CardContent>
             </Card>
 
