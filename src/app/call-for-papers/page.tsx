@@ -69,13 +69,21 @@ export default function CallForPapers() {
                   Papers submitted must be original and not previously published or under consideration elsewhere. 
                   All submissions will undergo a plagiarism check before the peer review process.
                 </p>
-                <div className="mt-4 flex gap-4">
+                <div className="mt-4 flex flex-wrap gap-4">
                   <Button size="sm" className="gap-2" asChild>
                     <a 
                       href="/CRCWordTemplate.docx" 
                       download="CRCWordTemplate.docx"
                     >
                       <Download className="w-4 h-4" /> Download Template
+                    </a>
+                  </Button>
+                  <Button size="sm" className="gap-2" asChild>
+                    <a 
+                      href="/ConferencePresentationTemplate.pptx" 
+                      download="ConferencePresentationTemplate.pptx"
+                    >
+                      <Download className="w-4 h-4" /> Presentation Template
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2" asChild>
