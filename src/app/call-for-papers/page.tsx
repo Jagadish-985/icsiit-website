@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 export default function CallForPapers() {
   const themes = [
-    "Artificial Intelligence, Data science and its Application",
+    "Artificial Intelligence, Data science, Cybersecurity and its Application",
     "Design, Robotics and Product engineering",
     "Design Automation, IoT & Computational Engineering",
     "Sustainable Infrastructure: Monitoring, Assessment and Smart Construction Materials",
