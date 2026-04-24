@@ -91,7 +91,7 @@ export default function Home() {
               { title: 'Aerospace Engineering', icon: Rocket, color: 'bg-[#E34A21]', desc: 'UAVs, Satellite Systems and Aerodynamics.' },
               { title: 'Automotive Engineering', icon: Truck, color: 'bg-[#992361]', desc: 'EV Technology, Smart Mobility and Autonomous Vehicles.' },
               { title: 'Civil Engineering', icon: Building, color: 'bg-green-600', desc: 'Smart Cities, Sustainable Infrastructure and Monitoring.' },
-              { title: 'Computer Science and Engineering', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics and Intelligent Systems.' },
+              { title: 'Computer Science and Engineering', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics, Cybersecurity and Intelligent Systems.' },
               { title: 'Electrical & Electronics Engineering', icon: Zap, color: 'bg-yellow-600', desc: 'Power Systems, Renewable Energy and Smart Grids.' },
               { title: 'Electronics & Communication Engineering', icon: Cpu, color: 'bg-secondary', desc: 'IoT, VLSI, Sensors and Communication Networks.' },
               { title: 'Mechanical Engineering', icon: Settings, color: 'bg-primary', desc: 'Additive Manufacturing, Smart Materials and Robotics.' },
