@@ -75,7 +75,7 @@ export default function CallForPapers() {
                       href="/CRCWordTemplate.docx" 
                       download="CRCWordTemplate.docx"
                     >
-                      <Download className="w-4 h-4" /> CRCWordTemplate.docx
+                      <Download className="w-4 h-4" /> Download Template
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2" asChild>
