@@ -96,6 +96,14 @@ export default function CommitteePage() {
   ];
 
   const coordinators = [
+    // Priority Co-ordinators
+    { name: "Dr. Suresh R" },
+    { name: "Dr. Christy Bobby" },
+    { name: "Dr. Narendra Babu C" },
+    { name: "Dr. Mahesh Varpe" },
+    { name: "Dr. Nagaraj Rao" },
+    { name: "Dr. Harshad Rameshwar" },
+    // General Co-ordinators
     { name: "Dr. J Venkata Giri" },
     { name: "Dr. Viji" },
     { name: "Dr. Bharath" },
@@ -120,7 +128,7 @@ export default function CommitteePage() {
     { name: "Mr. Bhargav" },
     { name: "Mr. Gowtham" },
     { name: "Ms. Shaista" },
-    { name: "Dr. Sarumathy from Renuka IIC" },
+    { name: "Dr. Sarumathy" },
     { name: "Dr. Shreyanka" },
     { name: "Dr. Pranupa S" },
     { name: "Dr. Sushma" },
