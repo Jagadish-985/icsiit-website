@@ -9,7 +9,7 @@ export default function ImportantDates() {
     { title: "Abstract Acceptance Notification", date: "30th April 2026", status: "Upcoming" },
     { title: "Full Paper Submission Deadline", date: "5th May 2026", status: "Pending" },
     { title: "Full Paper Acceptance Notification", date: "7th May 2026", status: "Pending" },
-    { title: "Camera Ready Paper & Payment Deadline", date: "10th May 2026", status: "Pending" },
+    { title: "Camera Ready Paper and Payment Deadline", date: "10th May 2026", status: "Pending" },
     { title: "Conference Dates", date: "13th - 15th May 2026", status: "Event", highlight: true }
   ];
 
