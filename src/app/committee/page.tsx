@@ -29,7 +29,9 @@ export default function CommitteePage() {
     { name: "Dr. Sonali Tarachand Jadhav", role: "Dean, MS Ramaiah Institute of Nursing Education and Research" },
     { name: "Dr. Kavitha Prasad", role: "Dean, Faculty of Dental Sciences, MSRUAS" },
     { name: "Dr. Soma Chaki", role: "Dean, Faculty of Life and Allied Health Sciences, MSRUAS" },
-    { name: "Dr. Shalini Nooyi", role: "Dean, Ramaiah Medical College, MSRUAS" }
+    { name: "Dr. Shalini Nooyi", role: "Dean, Ramaiah Medical College, MSRUAS" },
+    { name: "Dr. K M Sharath Kumar", role: "Dean, Faculty of Management and Commerce, MSRUAS" },
+    { name: "Dr. Hemanth Thapsey", role: "Associate Dean (Administration), Joint Registrar and Director - Admissions (Health Sciences), RUAS" }
   ];
 
   const organizingCommittee = [
