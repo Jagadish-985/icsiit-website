@@ -11,21 +11,19 @@ export default function BrochurePage() {
           <SectionHeading 
             centered 
             title="Conference Brochure" 
-            subtitle="Download the official brochure and technical guidelines for SYNERGY 2026." 
+            subtitle="Download the official brochure for SYNERGY 2026." 
           />
 
           <div className="flex justify-center mt-12">
             {/* Primary Brochure Download */}
-            <Card className="max-w-xl rounded-[2.5rem] border-border shadow-lg overflow-hidden group hover:border-primary/30 transition-all bg-white border-2">
-              <CardContent className="p-10 flex flex-col h-full">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
-                  <FileText className="w-8 h-8" />
+            <Card className="w-full max-w-xl rounded-[2.5rem] border-border shadow-lg overflow-hidden group hover:border-primary/30 transition-all bg-white border-2">
+              <CardContent className="p-10 flex flex-col items-center text-center">
+                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                  <FileText className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-headline font-bold mb-4 text-foreground">Official Brochure</h3>
-                <p className="text-muted-foreground mb-8 flex-grow text-justify leading-relaxed font-medium">
-                  Get a comprehensive overview of the conference, including session details, speaker profiles, thrust areas, and venue information. This document provides all the necessary details for participants, researchers, and attendees to plan their involvement in SYNERGY 2026 effectively.
-                </p>
-                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 w-full rounded-2xl h-14 font-bold shadow-lg shadow-primary/20">
+                <h3 className="text-3xl font-headline font-bold mb-8 text-foreground">Official Brochure</h3>
+                
+                <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 w-full rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 max-w-sm">
                   <a href="/IC-SIIT-Brochure.pdf" download="IC-SIIT-Brochure.pdf" className="flex items-center gap-2">
                     <Download className="w-5 h-5" /> Download Brochure (PDF)
                   </a>
