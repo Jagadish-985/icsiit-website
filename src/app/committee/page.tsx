@@ -113,7 +113,7 @@ export default function CommitteePage() {
               {coPatrons.map((member, i) => (
                 <div key={i} className="p-6 bg-white rounded-3xl border border-border hover:shadow-lg hover:border-secondary/20 transition-all flex flex-col gap-2">
                   <p className="font-bold text-foreground leading-tight">{member.name}</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
+                  <p className="text-xs text-muted-foreground font-semibold">{member.role}</p>
                 </div>
               ))}
             </div>
@@ -183,7 +183,7 @@ export default function CommitteePage() {
               {organizingCommittee.map((member, i) => (
                 <div key={i} className="p-6 bg-white rounded-3xl border border-border hover:shadow-lg hover:border-primary/20 transition-all flex flex-col gap-1">
                   <p className="font-bold text-foreground leading-tight">{member.name}</p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">{member.role}</p>
+                  <p className="text-xs text-muted-foreground font-semibold">{member.role}</p>
                 </div>
               ))}
             </div>
