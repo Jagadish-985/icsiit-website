@@ -140,16 +140,15 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-6">
                   {[
-                    "Double-blind peer review",
-                    "Assistance in DOI generation",
-                    "International networking",
-                    "Expert technical sessions"
+                    "Selected papers will be published in Scopus Indexed Journal.",
+                    "Rest of the papers will be published in Journal with DOI",
+                    "An extra cost to be borne by the author depending on the paper is selected for Scopus indexed journal or journal with DOI"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-border shadow-sm">
-                      <CheckCircle2 className="w-6 h-6 text-secondary" />
-                      <span className="text-base font-bold text-foreground">{item}</span>
+                    <div key={i} className="flex items-start gap-4 p-6 bg-white rounded-[2rem] border border-border shadow-sm hover:shadow-md transition-shadow">
+                      <CheckCircle2 className="w-6 h-6 text-secondary shrink-0 mt-0.5" />
+                      <span className="text-base font-bold text-foreground leading-snug">{item}</span>
                     </div>
                   ))}
                 </div>
