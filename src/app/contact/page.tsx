@@ -4,9 +4,9 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function ContactPage() {
   const coordinators = [
-    { name: "General Inquiry", phone: "+91 9480343844" },
-    { name: "Technical Support", phone: "+91 9611640888" },
-    { name: "Venue Logistics", phone: "+91 9535762626" }
+    { name: "Registration", phone: "+91 8281662714" },
+    { name: "General Enquiry", phone: "+91 9686311475" },
+    { name: "General Enquiry", phone: "+91 9480343844" }
   ];
 
   return (
