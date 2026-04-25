@@ -3,10 +3,9 @@ import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function ContactPage() {
-  const coordinators = [
-    { name: "Registration", phone: "+91 8281662714" },
-    { name: "General Enquiry", phone: "+91 9686311475" },
-    { name: "General Enquiry", phone: "+91 9480343844" }
+  const contactGroups = [
+    { label: "Registration", numbers: ["+91 8281662714"] },
+    { label: "General Enquiry", numbers: ["+91 9686311475", "+91 9480343844"] }
   ];
 
   return (
@@ -28,13 +27,15 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4">Phone Support</h3>
                 <p className="text-sm text-muted-foreground mb-6">Available Mon - Sat (9 AM - 6 PM IST)</p>
-                <div className="space-y-3">
-                  {coordinators.map((c, i) => (
+                <div className="space-y-5">
+                  {contactGroups.map((group, i) => (
                     <div key={i} className="flex flex-col">
-                      <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{c.name}</span>
-                      <a href={`tel:${c.phone.replace(/\s/g, '')}`} className="text-lg font-bold text-primary hover:underline">
-                        {c.phone}
-                      </a>
+                      <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1">{group.label}</span>
+                      {group.numbers.map((num, idx) => (
+                        <a key={idx} href={`tel:${num.replace(/\s/g, '')}`} className="text-lg font-bold text-primary hover:underline">
+                          {num}
+                        </a>
+                      ))}
                     </div>
                   ))}
                 </div>
