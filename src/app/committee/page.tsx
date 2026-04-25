@@ -348,31 +348,31 @@ export default function CommitteePage() {
               </div>
               <h3 className="text-3xl font-headline font-bold">Website</h3>
             </div>
-            <Card className="border-border bg-white shadow-sm rounded-[2.5rem] overflow-hidden">
-              <CardContent className="p-10 text-center">
-                <h4 className="text-lg font-bold text-muted-foreground mb-8 uppercase tracking-[0.2em]">Developed and Maintained by</h4>
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-12">
-                  <a 
-                    href="https://in.linkedin.com/in/b-jagadish" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-2xl md:text-3xl font-extrabold text-foreground hover:text-primary transition-all hover:scale-110 group"
-                  >
-                    B Jagadish
-                    <div className="h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full mt-1" />
-                  </a>
-                  <a 
-                    href="https://in.linkedin.com/in/sanjeev-janardhan-180599292" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-2xl md:text-3xl font-extrabold text-foreground hover:text-primary transition-all hover:scale-110 group"
-                  >
-                    Sanjeev Janardhan
-                    <div className="h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full mt-1" />
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-6">Developed and Maintained by</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: "B Jagadish", linkedin: "https://in.linkedin.com/in/b-jagadish" },
+                { name: "Sanjeev Janardhan", linkedin: "https://in.linkedin.com/in/sanjeev-janardhan-180599292" }
+              ].map((member, i) => (
+                <Card key={i} className="border-border hover:border-primary/30 transition-all bg-white shadow-sm rounded-3xl overflow-hidden">
+                  <CardContent className="p-6 flex items-center gap-4">
+                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                       <User className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <a 
+                        href={member.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-bold text-foreground text-lg leading-tight hover:text-primary transition-colors"
+                      >
+                        {member.name}
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
