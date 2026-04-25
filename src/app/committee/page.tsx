@@ -348,7 +348,7 @@ export default function CommitteePage() {
               </div>
               <h3 className="text-3xl font-headline font-bold">Website</h3>
             </div>
-            <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-6">Developed and Maintained by</h4>
+            <h4 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-6">Developed and Maintained by Students from Dept. of Computer Science and Engineering</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { name: "B Jagadish", linkedin: "https://in.linkedin.com/in/b-jagadish" },
