@@ -7,7 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'SYNERGY 2026 | International Conference on Smart, Intelligent and Innovative Technologies (IC-SIIT)',
-  description: 'Three days International Conference organized by Ramaiah University of Applied Sciences. 13th, 14th & 15th May 2026.',
+  description: 'Three days International Conference organized by Ramaiah University of Applied Sciences. 15th, 16th & 17th July 2026.',
 };
 
 export default function RootLayout({

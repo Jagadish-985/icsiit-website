@@ -10,7 +10,7 @@ const timelineItems = [
   { title: "Full Paper Submission Deadline", date: "5th May 2026", target: new Date('2026-05-05T23:59:59') },
   { title: "Full Paper Acceptance Notification", date: "7th May 2026", target: new Date('2026-05-07T23:59:59') },
   { title: "Camera Ready Paper and Payment Deadline", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
-  { title: "Conference", date: "13th-15th May 2026", target: new Date('2026-05-13T09:00:00') }
+  { title: "Conference", date: "15th-17th July 2026", target: new Date('2026-07-15T09:00:00') }
 ];
 
 export default function HeroTimeline() {

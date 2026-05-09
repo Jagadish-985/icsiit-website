@@ -101,7 +101,7 @@ export default function HowToReachPage() {
                   <div>
                     <h4 className="font-bold text-xl mb-1">Weather</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Bangalore typically enjoys pleasant weather in May (22°C - 33°C). 
+                      Bangalore typically enjoys pleasant weather in July (22°C - 33°C). 
                       Light summer wear is recommended for all participants.
                     </p>
                   </div>

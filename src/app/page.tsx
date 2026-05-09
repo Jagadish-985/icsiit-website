@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -59,7 +58,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16 animate-fade-in [animation-delay:400ms]">
             <div className="flex items-center gap-3 bg-white px-8 py-5 rounded-3xl border border-primary/10 shadow-xl">
               <Zap className="w-6 h-6 text-primary" />
-              <span className="font-bold text-foreground text-lg md:text-xl">13th - 15th May 2026</span>
+              <span className="font-bold text-foreground text-lg md:text-xl">15th - 17th July 2026</span>
             </div>
           </div>
 
