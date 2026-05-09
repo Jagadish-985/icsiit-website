@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export default function ImportantDates() {
   const dates = [
-    { title: "Abstract Submission Deadline", date: "28th April 2026", status: "Open" },
+    { title: "Abstract Submission Deadline", date: "25th May 2026", status: "Open" },
     { title: "Abstract Acceptance Notification", date: "30th April 2026", status: "Upcoming" },
     { title: "Full Paper Submission Deadline", date: "5th May 2026", status: "Pending" },
     { title: "Full Paper Acceptance Notification", date: "7th May 2026", status: "Pending" },
