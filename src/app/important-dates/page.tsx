@@ -7,7 +7,7 @@ export default function ImportantDates() {
   const dates = [
     { title: "Abstract Submission Deadline", date: "25th May 2026", status: "Open" },
     { title: "Abstract Acceptance Notification", date: "5th June 2026", status: "Upcoming" },
-    { title: "Full Paper Submission Deadline", date: "5th May 2026", status: "Pending" },
+    { title: "Full Paper Submission Deadline", date: "15th June 2026", status: "Pending" },
     { title: "Full Paper Acceptance Notification", date: "7th May 2026", status: "Pending" },
     { title: "Camera Ready Paper and Payment Deadline", date: "10th May 2026", status: "Pending" },
     { title: "Conference Dates", date: "15th - 17th July 2026", status: "Event", highlight: true }
