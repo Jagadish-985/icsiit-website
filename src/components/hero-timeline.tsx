@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 const timelineItems = [
   { title: "Abstract Submission Deadline", date: "25th May 2026", target: new Date('2026-05-25T23:59:59') },
-  { title: "Abstract Acceptance Notification", date: "30th April 2026", target: new Date('2026-04-30T23:59:59') },
+  { title: "Abstract Acceptance Notification", date: "5th June 2026", target: new Date('2026-06-05T23:59:59') },
   { title: "Full Paper Submission Deadline", date: "5th May 2026", target: new Date('2026-05-05T23:59:59') },
   { title: "Full Paper Acceptance Notification", date: "7th May 2026", target: new Date('2026-05-07T23:59:59') },
   { title: "Camera Ready Paper and Payment Deadline", date: "10th May 2026", target: new Date('2026-05-10T23:59:59') },
