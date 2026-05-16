@@ -64,6 +64,12 @@ export default function AboutPage() {
               allowFullScreen
             ></iframe>
           </div>
+
+          <div className="mt-24 pt-8 border-t border-border/40">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+            </p>
+          </div>
         </div>
       </div>
     </div>
