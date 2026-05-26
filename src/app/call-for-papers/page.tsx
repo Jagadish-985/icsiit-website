@@ -1,7 +1,7 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FileText, Mail, Download, CheckCircle2, Award, Globe, ShieldCheck, AlertCircle } from 'lucide-react';
+import { FileText, Mail, Download, CheckCircle2, Award, Globe, ShieldCheck, AlertCircle, FileType } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -28,13 +28,13 @@ export default function CallForPapers() {
     },
     {
       icon: Globe,
-      text: "National and International Experts/Resources Persons are from esteemed academic institutions like IISc, IIT, NIT and industries.",
+      text: "National and International Experts from IISc, IIT, NIT and industries.",
       color: "text-secondary",
       bgColor: "bg-secondary/10"
     },
     {
       icon: ShieldCheck,
-      text: "Authors should make sure the plagiarism, and AI similarity should be less than 10%",
+      text: "Plagiarism and AI similarity must be less than 10%",
       color: "text-green-600",
       bgColor: "bg-green-50"
     }
@@ -55,28 +55,21 @@ export default function CallForPapers() {
               <div>
                 <h3 className="text-xl font-bold mb-2">Originality Guidelines</h3>
                 <p className="text-muted-foreground text-justify leading-relaxed">
-                  Papers submitted must be original and not previously published or under consideration elsewhere. 
+                  Papers submitted must be original and not previously published. 
                   All submissions will undergo a plagiarism check before the peer review process.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
-                  <Button size="sm" className="gap-2 rounded-xl" asChild>
-                    <a 
-                      href="/CRCWordTemplate.docx" 
-                      download="CRCWordTemplate.docx"
-                    >
-                      <Download className="w-4 h-4" /> Download Template
+                  <Button size="sm" className="gap-2 rounded-xl h-11 px-6 font-bold" asChild>
+                    <a href="/CRCWordTemplate.docx" download>
+                      <FileType className="w-4 h-4" /> Word Template
                     </a>
                   </Button>
-                  <Button size="sm" className="gap-2 rounded-xl" asChild>
-                    <a 
-                      href="https://docs.google.com/presentation/d/10uCjMEtTYBzwwo_WExHD6Y2xKPDWd6a_/edit?usp=sharing&ouid=103297635095690463938&rtpof=true&sd=true" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Download className="w-4 h-4" /> Presentation Template
+                  <Button size="sm" variant="secondary" className="gap-2 rounded-xl h-11 px-6 font-bold" asChild>
+                    <a href="https://docs.google.com/presentation/d/10uCjMEtTYBzwwo_WExHD6Y2xKPDWd6a_/edit?usp=sharing" target="_blank">
+                      <Download className="w-4 h-4" /> PPT Template
                     </a>
                   </Button>
-                  <Button size="sm" variant="outline" className="gap-2 rounded-xl" asChild>
+                  <Button size="sm" variant="outline" className="gap-2 rounded-xl h-11 px-6 font-bold border-2" asChild>
                     <a href={submissionLink} target="_blank" rel="noopener noreferrer">
                       Submission Portal
                     </a>
@@ -121,7 +114,7 @@ export default function CallForPapers() {
               <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center font-bold text-primary flex-shrink-0 shadow-sm border border-border">1</div>
               <div>
                 <h4 className="font-bold text-lg mb-2">Prepare Abstract</h4>
-                <p className="text-muted-foreground text-justify leading-relaxed">Submit a 300-word abstract outlining the scope, methodology, and key results of your research.</p>
+                <p className="text-muted-foreground text-justify leading-relaxed">Submit a 300-word abstract outlining the scope, methodology, and key results.</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
