@@ -1,7 +1,6 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { FileText, Mail, Download, CheckCircle2, Award, Globe, ShieldCheck, AlertCircle, FileType, ExternalLink } from 'lucide-react';
+import { FileText, Mail, Download, Award, Globe, ShieldCheck, FileType, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -76,10 +75,10 @@ export default function CallForPapers() {
                     </a>
                   </Button>
                 </div>
-                <div className="mt-4">
-                  <Button variant="default" className="gap-2 rounded-xl h-12 px-8 font-bold bg-secondary text-white hover:bg-secondary/90 w-full md:w-auto shadow-lg" asChild>
+                <div className="mt-6">
+                  <Button variant="default" className="gap-2 rounded-xl h-14 px-8 font-bold bg-secondary text-white hover:bg-secondary/90 w-full md:w-auto shadow-lg" asChild>
                     <a href={cmtSubmissionLink} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4" /> Full Paper Submission (Microsoft CMT)
+                      <ExternalLink className="w-5 h-5" /> Full Paper Submission (Microsoft CMT)
                     </a>
                   </Button>
                 </div>
