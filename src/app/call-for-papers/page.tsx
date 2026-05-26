@@ -18,7 +18,7 @@ export default function CallForPapers() {
   ];
 
   const abstractSubmissionLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
-  const cmtSubmissionLink = "https://cmt3.research.microsoft.com/";
+  const cmtSubmissionLink = "https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FSYNERG2026";
 
   const keyPoints = [
     {
