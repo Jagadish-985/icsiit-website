@@ -25,7 +25,11 @@ export default function BrochurePage() {
                 <p className="text-muted-foreground font-medium mb-8">Kindly go through the Official Brochure in detail</p>
                 
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 w-full rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 max-w-sm">
-                  <a href="/Official_Brochure_2026.pdf" download="Official_Brochure_2026.pdf" className="flex items-center gap-2">
+                  <a 
+                    href="/Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf" 
+                    download="Brochure SYNERGY 2026 IC-SIIT.pdf" 
+                    className="flex items-center gap-2"
+                  >
                     <Download className="w-5 h-5" /> Download Brochure
                   </a>
                 </Button>
