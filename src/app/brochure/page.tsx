@@ -4,10 +4,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Download, FileText, Info, Mail } from 'lucide-react';
 
 export default function BrochurePage() {
-  // Exact filename as provided by the user
+  // The exact filename provided by the user
   const brochureFileName = "Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf";
-  // Direct path to the file in the public folder
-  const brochureUrl = `/${brochureFileName}`;
+  // Encode the URI to handle spaces and special characters for the browser
+  const brochureUrl = `/${encodeURIComponent(brochureFileName)}`;
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
@@ -33,8 +33,6 @@ export default function BrochurePage() {
                     <a 
                       href={brochureUrl}
                       download={brochureFileName}
-                      target="_blank"
-                      rel="noopener noreferrer"
                     >
                       <Download className="w-5 h-5 mr-2" /> Download Brochure
                     </a>
@@ -44,7 +42,7 @@ export default function BrochurePage() {
             </Card>
 
             <p className="text-sm text-muted-foreground italic">
-              Note: If the download is blocked, try right-clicking the button and selecting "Save Link As...".
+              Note: If the download fails, right-click the button and select "Save Link As...".
             </p>
           </div>
 
