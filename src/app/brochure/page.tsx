@@ -27,7 +27,7 @@ export default function BrochurePage() {
                 <p className="text-muted-foreground font-medium mb-8">Kindly download and review the official conference brochure.</p>
                 
                 <div className="flex flex-col gap-4 w-full justify-center items-center">
-                  <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 px-12 w-full max-w-sm">
+                  <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 px-12 w-full max-w-sm border-none">
                     <a 
                       href={brochureUrl}
                       download={brochureFileName}
