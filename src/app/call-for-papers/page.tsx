@@ -65,7 +65,7 @@ export default function CallForPapers() {
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2 rounded-xl h-11 px-6 font-bold border-2" asChild>
-                    <a href="https://docs.google.com/presentation/d/10uCjMEtTYBzwwo_WExHD6Y2xKPDWd6a_/edit?usp=sharing" target="_blank">
+                    <a href="https://docs.google.com/presentation/d/10uCjMEtTYBzwwo_WExHD6Y2xKPDWd6a_/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                       <Download className="w-4 h-4" /> PPT Template
                     </a>
                   </Button>
