@@ -1,10 +1,10 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, FileText, Info, Mail } from 'lucide-react';
+import { Download, FileText, Mail } from 'lucide-react';
 
 export default function BrochurePage() {
-  const brochureUrl = "/SYNERGY_2026.pdf";
-  const brochureFileName = "SYNERGY_2026.pdf";
+  const brochureFileName = "Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf";
+  const brochureUrl = `/${brochureFileName}`;
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
@@ -29,6 +29,8 @@ export default function BrochurePage() {
                   <a 
                     href={brochureUrl}
                     download={brochureFileName}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-primary text-white hover:bg-primary/90 rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 px-12 w-full max-w-sm border-none transition-all"
                   >
                     <Download className="w-5 h-5 mr-2" /> Download Brochure
