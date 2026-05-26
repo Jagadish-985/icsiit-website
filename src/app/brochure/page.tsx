@@ -4,8 +4,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Download, FileText, Info, Mail } from 'lucide-react';
 
 export default function BrochurePage() {
-  // Properly encoded filename to avoid browser download blocks
-  const brochureUrl = "/Brochure%20SYNERGY%202026%20IC-SIIT%20-Microsoft%20CMT%20Paper%20submission.pdf";
+  // Filename provided: Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf
+  // We use the exact filename. Browsers resolve spaces in public folder assets.
+  const brochureFileName = "Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf";
+  const brochureUrl = `/${encodeURIComponent(brochureFileName)}`;
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
@@ -30,7 +32,9 @@ export default function BrochurePage() {
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 w-full rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 max-w-sm">
                   <a 
                     href={brochureUrl}
-                    download="Brochure_SYNERGY_2026_IC-SIIT.pdf" 
+                    download="Brochure_SYNERGY_2026_IC-SIIT.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
                     <Download className="w-5 h-5" /> Download Brochure
@@ -44,7 +48,9 @@ export default function BrochurePage() {
           <div className="mt-16 p-10 bg-[#f6f6f6] border-2 border-border rounded-[3rem] shadow-inner">
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-border">
-                <Info className="w-6 h-6 text-primary" />
+                <div className="w-6 h-6 flex items-center justify-center">
+                  <Info className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <div>
                 <h4 className="font-bold text-xl mb-3 text-foreground">Publication Integrity</h4>
