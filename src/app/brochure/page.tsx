@@ -4,6 +4,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Download, FileText, Info, Mail } from 'lucide-react';
 
 export default function BrochurePage() {
+  // Properly encoded filename to avoid browser download blocks
+  const brochureUrl = "/Brochure%20SYNERGY%202026%20IC-SIIT%20-Microsoft%20CMT%20Paper%20submission.pdf";
+
   return (
     <div className="pt-32 pb-24 min-h-screen">
       <div className="container mx-auto px-4">
@@ -26,8 +29,8 @@ export default function BrochurePage() {
                 
                 <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 w-full rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 max-w-sm">
                   <a 
-                    href="/Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf" 
-                    download="Brochure SYNERGY 2026 IC-SIIT.pdf" 
+                    href={brochureUrl}
+                    download="Brochure_SYNERGY_2026_IC-SIIT.pdf" 
                     className="flex items-center gap-2"
                   >
                     <Download className="w-5 h-5" /> Download Brochure
