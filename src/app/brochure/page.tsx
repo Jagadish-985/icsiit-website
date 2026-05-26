@@ -4,10 +4,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Download, FileText, Info, Mail } from 'lucide-react';
 
 export default function BrochurePage() {
-  // The exact filename provided by the user
+  // The exact filename re-uploaded by the user
   const brochureFileName = "Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf";
-  // Encode the URI to handle spaces and special characters for the browser
-  const brochureUrl = `/${encodeURIComponent(brochureFileName)}`;
+  // Explicitly encoded path for maximum compatibility
+  const brochureUrl = "/Brochure%20SYNERGY%202026%20IC-SIIT%20-Microsoft%20CMT%20Paper%20submission.pdf";
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
@@ -29,7 +29,7 @@ export default function BrochurePage() {
                 <p className="text-muted-foreground font-medium mb-8">Kindly download and review the official conference brochure.</p>
                 
                 <div className="flex flex-col gap-4 w-full justify-center items-center">
-                  <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 px-12">
+                  <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 px-12 w-full max-w-sm">
                     <a 
                       href={brochureUrl}
                       download={brochureFileName}
@@ -42,7 +42,7 @@ export default function BrochurePage() {
             </Card>
 
             <p className="text-sm text-muted-foreground italic">
-              Note: If the download fails, right-click the button and select "Save Link As...".
+              Note: If the download fails, please ensure the file is uploaded to the public directory.
             </p>
           </div>
 
