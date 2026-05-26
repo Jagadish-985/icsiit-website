@@ -1,6 +1,6 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
-import { FileText, Mail, Download, Award, Globe, ShieldCheck, FileType, ExternalLink } from 'lucide-react';
+import { FileText, Mail, Download, Award, Globe, ShieldCheck, FileType } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 

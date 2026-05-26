@@ -4,10 +4,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Download, FileText, Info, Mail } from 'lucide-react';
 
 export default function BrochurePage() {
-  // The exact filename re-uploaded by the user
-  const brochureFileName = "Brochure SYNERGY 2026 IC-SIIT -Microsoft CMT Paper submission.pdf";
-  // Explicitly encoded path for maximum compatibility
-  const brochureUrl = "/Brochure%20SYNERGY%202026%20IC-SIIT%20-Microsoft%20CMT%20Paper%20submission.pdf";
+  // Renamed file for better compatibility
+  const brochureFileName = "SYNERGY_2026.pdf";
+  const brochureUrl = "/SYNERGY_2026.pdf";
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
@@ -42,7 +41,7 @@ export default function BrochurePage() {
             </Card>
 
             <p className="text-sm text-muted-foreground italic">
-              Note: If the download fails, please ensure the file is uploaded to the public directory.
+              Note: Download the file to view full details.
             </p>
           </div>
 
