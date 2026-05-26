@@ -59,26 +59,27 @@ export default function CallForPapers() {
                   All submissions will undergo a plagiarism check before the peer review process.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
-                  <Button size="sm" className="gap-2 rounded-xl h-11 px-6 font-bold" asChild>
+                  <Button size="sm" variant="outline" className="gap-2 rounded-xl h-11 px-6 font-bold border-2" asChild>
                     <a href="/CRCWordTemplate.docx" download>
                       <FileType className="w-4 h-4" /> Word Template
                     </a>
                   </Button>
-                  <Button size="sm" variant="secondary" className="gap-2 rounded-xl h-11 px-6 font-bold" asChild>
+                  <Button size="sm" variant="outline" className="gap-2 rounded-xl h-11 px-6 font-bold border-2" asChild>
                     <a href="https://docs.google.com/presentation/d/10uCjMEtTYBzwwo_WExHD6Y2xKPDWd6a_/edit?usp=sharing" target="_blank">
                       <Download className="w-4 h-4" /> PPT Template
                     </a>
                   </Button>
-                  <Button size="sm" variant="outline" className="gap-2 rounded-xl h-11 px-6 font-bold border-2" asChild>
+                </div>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Button variant="outline" className="gap-2 rounded-xl h-14 px-8 font-bold border-2 w-full sm:w-auto shadow-sm" asChild>
                     <a href={abstractSubmissionLink} target="_blank" rel="noopener noreferrer">
                       Abstract Submission Form
                     </a>
                   </Button>
-                </div>
-                <div className="mt-6">
-                  <Button variant="default" className="gap-2 rounded-xl h-14 px-8 font-bold bg-secondary text-white hover:bg-secondary/90 w-full md:w-auto shadow-lg" asChild>
+                  <Button variant="default" className="gap-2 rounded-xl h-14 px-8 font-bold bg-secondary text-white hover:bg-secondary/90 w-full sm:w-auto shadow-lg" asChild>
                     <a href={cmtSubmissionLink} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-5 h-5" /> Full Paper Submission (Microsoft CMT)
+                      <ExternalLink className="w-5 h-5" /> Full Paper Submission
                     </a>
                   </Button>
                 </div>
