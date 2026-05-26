@@ -1,5 +1,4 @@
 import SectionHeading from '@/components/section-heading';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Download, FileText, Info, Mail } from 'lucide-react';
 
@@ -27,14 +26,13 @@ export default function BrochurePage() {
                 <p className="text-muted-foreground font-medium mb-8">Kindly download and review the official conference brochure.</p>
                 
                 <div className="flex flex-col gap-4 w-full justify-center items-center">
-                  <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 px-12 w-full max-w-sm border-none">
-                    <a 
-                      href={brochureUrl}
-                      download={brochureFileName}
-                    >
-                      <Download className="w-5 h-5 mr-2" /> Download Brochure
-                    </a>
-                  </Button>
+                  <a 
+                    href={brochureUrl}
+                    download={brochureFileName}
+                    className="inline-flex items-center justify-center bg-primary text-white hover:bg-primary/90 rounded-2xl h-14 font-bold shadow-lg shadow-primary/20 px-12 w-full max-w-sm border-none transition-all"
+                  >
+                    <Download className="w-5 h-5 mr-2" /> Download Brochure
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -47,7 +45,7 @@ export default function BrochurePage() {
           <div className="mt-16 p-10 bg-[#f6f6f6] border-2 border-border rounded-[3rem] shadow-inner">
             <div className="flex items-start gap-6">
               <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm border border-border">
-                <Info className="w-6 h-6 text-primary" />
+                <span className="text-primary font-bold">!</span>
               </div>
               <div>
                 <h4 className="font-bold text-xl mb-3 text-foreground">Publication Integrity</h4>
