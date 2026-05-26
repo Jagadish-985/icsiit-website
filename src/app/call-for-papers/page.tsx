@@ -71,7 +71,7 @@ export default function CallForPapers() {
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2 rounded-xl h-11 px-6 font-bold border-2" asChild>
                     <a href={submissionLink} target="_blank" rel="noopener noreferrer">
-                      Submission Portal
+                      Abstract Submission Form
                     </a>
                   </Button>
                 </div>
