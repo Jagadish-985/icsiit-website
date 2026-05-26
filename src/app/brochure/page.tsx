@@ -4,9 +4,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Download, FileText, Info, Mail } from 'lucide-react';
 
 export default function BrochurePage() {
-  // Renamed file for better compatibility
-  const brochureFileName = "SYNERGY_2026.pdf";
   const brochureUrl = "/SYNERGY_2026.pdf";
+  const brochureFileName = "SYNERGY_2026.pdf";
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
