@@ -1,7 +1,7 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FileText, Mail, Download, CheckCircle2, Award, Globe, ShieldCheck, AlertCircle, FileType } from 'lucide-react';
+import { FileText, Mail, Download, CheckCircle2, Award, Globe, ShieldCheck, AlertCircle, FileType, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -17,7 +17,8 @@ export default function CallForPapers() {
     "Innovation, Entrepreneurship and Management"
   ];
 
-  const submissionLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
+  const abstractSubmissionLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
+  const cmtSubmissionLink = "https://cmt3.research.microsoft.com/";
 
   const keyPoints = [
     {
@@ -70,8 +71,15 @@ export default function CallForPapers() {
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="gap-2 rounded-xl h-11 px-6 font-bold border-2" asChild>
-                    <a href={submissionLink} target="_blank" rel="noopener noreferrer">
+                    <a href={abstractSubmissionLink} target="_blank" rel="noopener noreferrer">
                       Abstract Submission Form
+                    </a>
+                  </Button>
+                </div>
+                <div className="mt-4">
+                  <Button variant="default" className="gap-2 rounded-xl h-12 px-8 font-bold bg-secondary text-white hover:bg-secondary/90 w-full md:w-auto shadow-lg" asChild>
+                    <a href={cmtSubmissionLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4" /> Full Paper Submission (Microsoft CMT)
                     </a>
                   </Button>
                 </div>
