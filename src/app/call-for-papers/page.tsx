@@ -72,12 +72,12 @@ export default function CallForPapers() {
                 </div>
                 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Button variant="outline" className="gap-2 rounded-xl h-14 px-8 font-bold border-2 w-full sm:w-72 shadow-sm" asChild>
+                  <Button variant="outline" className="gap-2 rounded-xl h-14 px-8 font-bold border-2 w-full sm:w-80 shadow-sm" asChild>
                     <a href={abstractSubmissionLink} target="_blank" rel="noopener noreferrer">
                       Abstract Submission Form
                     </a>
                   </Button>
-                  <Button variant="default" className="gap-2 rounded-xl h-14 px-8 font-bold bg-secondary text-white hover:bg-secondary/90 w-full sm:w-72 shadow-lg" asChild>
+                  <Button variant="default" className="gap-2 rounded-xl h-14 px-8 font-bold bg-secondary text-white hover:bg-secondary/90 w-full sm:w-80 shadow-lg" asChild>
                     <a href={cmtSubmissionLink} target="_blank" rel="noopener noreferrer">
                       Full Paper Submission
                     </a>
