@@ -30,7 +30,7 @@ import HeroTimeline from '@/components/hero-timeline';
 import PartnerLogos from '@/components/partner-logos';
 
 export default function Home() {
-  const registrationLink = "https://ruasportal.msruas.ac.in/asd_EventPublicUserMaster.htm?eventID=174";
+  const registrationLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
 
   return (
     <div className="flex flex-col">

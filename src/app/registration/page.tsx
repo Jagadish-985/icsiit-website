@@ -4,7 +4,7 @@ import { Check, ExternalLink, CreditCard, ShieldCheck, Info, Tag, Users } from '
 import { Badge } from '@/components/ui/badge';
 
 export default function RegistrationPage() {
-  const registrationLink = "https://ruasportal.msruas.ac.in/asd_EventPublicUserMaster.htm?eventID=174";
+  const registrationLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
 
   const tiers = [
     {
