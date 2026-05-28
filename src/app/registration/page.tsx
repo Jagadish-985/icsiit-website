@@ -1,10 +1,11 @@
 import SectionHeading from '@/components/section-heading';
 import { Button } from '@/components/ui/button';
-import { Check, ExternalLink, CreditCard, ShieldCheck, Info, Tag, Users } from 'lucide-react';
+import { ExternalLink, CreditCard, ShieldCheck, Info, Users } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function RegistrationPage() {
-  const registrationLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
+  // Portal link restored as requested for this page
+  const registrationLink = "https://ruasportal.msruas.ac.in/asd_EventPublicUserMaster.htm?eventID=174";
 
   const tiers = [
     {
