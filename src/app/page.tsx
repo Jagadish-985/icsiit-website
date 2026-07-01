@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -20,7 +21,11 @@ import {
   Calendar,
   ZapIcon,
   Activity,
-  Briefcase
+  Briefcase,
+  Mic2,
+  ExternalLink,
+  MapPin,
+  Clock
 } from 'lucide-react';
 import CountdownTimer from '@/components/countdown-timer';
 import SectionHeading from '@/components/section-heading';
@@ -28,9 +33,12 @@ import { cn } from '@/lib/utils';
 import HeroBackground from '@/components/hero-background';
 import HeroTimeline from '@/components/hero-timeline';
 import PartnerLogos from '@/components/partner-logos';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
   const registrationLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
+  const keynoteImage = PlaceHolderImages.find(img => img.id === 'speaker-florimond');
+  const joinOnlineLink = "https://teams.microsoft.com/meet/45138104407902?p=BViiOK3bFsgGcdqdrm";
 
   return (
     <div className="flex flex-col">
@@ -76,6 +84,97 @@ export default function Home() {
 
           {/* Live Horizontal Timeline */}
           <HeroTimeline />
+
+          {/* Keynote Speaker Hype Section */}
+          <div className="mt-24 max-w-6xl mx-auto animate-fade-in [animation-delay:1100ms]">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative bg-white rounded-[3rem] border border-border shadow-2xl overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                  {/* Speaker Image */}
+                  <div className="lg:col-span-5 relative h-[400px] lg:h-auto overflow-hidden">
+                    {keynoteImage && (
+                      <Image 
+                        src={keynoteImage.imageUrl} 
+                        alt="Dr. Florimond Guéniat" 
+                        fill 
+                        className="object-cover object-top hover:scale-105 transition-transform duration-700"
+                        data-ai-hint="professional speaker portrait"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent lg:hidden" />
+                    <div className="absolute bottom-6 left-6 lg:hidden">
+                      <Badge className="bg-primary text-white mb-2 px-4 py-1">KEYNOTE SPEAKER</Badge>
+                      <h3 className="text-3xl font-bold text-white drop-shadow-lg">Dr. Florimond Guéniat</h3>
+                    </div>
+                  </div>
+
+                  {/* Speaker Info */}
+                  <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center">
+                    <div className="hidden lg:block">
+                      <Badge variant="outline" className="border-primary text-primary mb-6 px-4 py-1.5 font-bold tracking-widest uppercase flex items-center gap-2 w-fit">
+                        <Mic2 className="w-4 h-4" /> Keynote Speaker
+                      </Badge>
+                      <h3 className="text-4xl md:text-5xl font-headline font-extrabold text-foreground mb-4">
+                        Dr. Florimond Guéniat
+                      </h3>
+                      <p className="text-xl font-bold text-secondary mb-2">Associate Professor, Department of Engineering</p>
+                      <p className="text-lg font-semibold text-muted-foreground mb-8">
+                        Birmingham City University (BCU), United Kingdom <br />
+                        <span className="text-sm italic font-medium">IET AI Technical Network Committee Member & Research Officer</span>
+                      </p>
+                    </div>
+
+                    <div className="bg-[#f6f6f6] p-8 rounded-[2rem] border-l-8 border-primary relative mb-8">
+                      <div className="absolute -top-4 -left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
+                        <ZapIcon className="w-6 h-6" />
+                      </div>
+                      <h4 className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-3">Keynote Topic</h4>
+                      <p className="text-xl md:text-2xl font-headline font-bold text-foreground leading-tight">
+                        "Bridging Edge-AI and Rural Economics: Digital Twins for Sustainable Agritech Micro-Grids in South Asia"
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center text-primary shadow-sm border border-border">
+                          <Calendar className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold text-muted-foreground uppercase">Date</p>
+                          <p className="text-sm font-bold">15 July 2026</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center text-primary shadow-sm border border-border">
+                          <Clock className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold text-muted-foreground uppercase">Time</p>
+                          <p className="text-sm font-bold">11:45 AM - 1:00 PM IST</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 sm:col-span-2">
+                        <div className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center text-primary shadow-sm border border-border">
+                          <MapPin className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold text-muted-foreground uppercase">Venue</p>
+                          <p className="text-sm font-bold">Ramaiah Technology Campus, Bengaluru</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Button asChild className="w-full sm:w-fit bg-secondary text-white hover:bg-secondary/90 px-10 h-14 rounded-2xl font-bold shadow-lg gap-2">
+                      <a href={joinOnlineLink} target="_blank" rel="noopener noreferrer">
+                        Join Session Online <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Partner Logos */}
           <PartnerLogos />

@@ -50,6 +50,12 @@
       "imageHint": "professional portrait"
     },
     {
+      "id": "speaker-florimond",
+      "description": "Dr. Florimond Guéniat - Keynote Speaker",
+      "imageUrl": "/Keynote_speaker.jpeg",
+      "imageHint": "professional portrait"
+    },
+    {
       "id": "partner-cynergy",
       "description": "Cynergy Coding Club Logo",
       "imageUrl": "/cynergy.jpeg",
