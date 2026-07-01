@@ -36,6 +36,7 @@ export default function CommitteePage() {
   ];
 
   const advisoryCommittee = [
+    { name: "Prof. Georges Zissis", role: "Chair, IEEE Smart Cities, Professor at University of Toulouse, France" },
     { name: "Prof. Prerna Gaur", role: "Chair, IEEE Smart Cities Ambassador Program, NSUT, Delhi, India" },
     { name: "Dr. Dhanesh G. Mohan", role: "Programme Leader & Senior Lecturer, School of Computer Science and Engineering, University of Sunderland, UK" },
     { name: "Prof. Dileep A. D.", role: "Professor, Computer Science and Engineering (CSE), IIT Dharwad" },
