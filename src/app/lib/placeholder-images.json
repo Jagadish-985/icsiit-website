@@ -56,6 +56,12 @@
       "imageHint": "professional portrait"
     },
     {
+      "id": "chief-guest-bidyadhar",
+      "description": "Prof. Bidyadhar Subudhi - Chief Guest",
+      "imageUrl": "/Chief_Prof.png",
+      "imageHint": "professor portrait"
+    },
+    {
       "id": "partner-cynergy",
       "description": "Cynergy Coding Club Logo",
       "imageUrl": "/cynergy.jpeg",

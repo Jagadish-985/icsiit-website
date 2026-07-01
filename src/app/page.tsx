@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -23,7 +24,8 @@ import {
   Briefcase,
   ExternalLink,
   MapPin,
-  Clock
+  Clock,
+  User
 } from 'lucide-react';
 import CountdownTimer from '@/components/countdown-timer';
 import SectionHeading from '@/components/section-heading';
@@ -36,6 +38,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 export default function Home() {
   const registrationLink = "https://forms.office.com/pages/responsepage.aspx?id=Cxg44CEAH0CDqaLUWs7g3IGx20TiK4NLhAlTIWTrf9tUNFNGVEVES1JVUjhYR1JWMUZKV1o5WEFQSS4u&route=shorturl";
   const keynoteImage = PlaceHolderImages.find(img => img.id === 'speaker-florimond');
+  const chiefGuestImage = PlaceHolderImages.find(img => img.id === 'chief-guest-bidyadhar');
   const joinOnlineLink = "https://teams.microsoft.com/meet/45138104407902?p=BViiOK3bFsgGcdqdrm";
 
   return (
@@ -174,6 +177,46 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Chief Guest Section */}
+          <div className="mt-16 max-w-5xl mx-auto animate-fade-in [animation-delay:1150ms]">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-secondary via-primary to-secondary rounded-[3rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+              <div className="relative bg-white rounded-[3rem] border border-border shadow-xl overflow-hidden p-8 md:p-12">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 text-center md:text-left">
+                  <div className="relative w-48 h-48 md:w-56 md:h-56 shrink-0 rounded-[2.5rem] overflow-hidden border-8 border-[#f6f6f6] shadow-inner group-hover:scale-105 transition-transform duration-500">
+                    {chiefGuestImage ? (
+                      <Image 
+                        src={chiefGuestImage.imageUrl} 
+                        alt="Prof. Bidyadhar Subudhi" 
+                        fill 
+                        className="object-cover object-top"
+                        data-ai-hint="official portrait"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-muted flex items-center justify-center">
+                        <User className="w-20 h-20 text-muted-foreground/20" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <Badge variant="outline" className="border-secondary text-secondary mb-6 px-5 py-2 font-bold tracking-[0.2em] uppercase text-xs w-fit mx-auto md:mx-0">
+                      Chief Guest
+                    </Badge>
+                    <h3 className="text-3xl md:text-5xl font-headline font-extrabold text-foreground mb-4 tracking-tight">
+                      Prof. Bidyadhar Subudhi
+                    </h3>
+                    <div className="space-y-2">
+                      <p className="text-2xl font-bold text-primary">Director</p>
+                      <p className="text-xl font-semibold text-muted-foreground leading-relaxed">
+                        National Institute of Technology (NIT) Warangal, India
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Partner Logos */}
           <PartnerLogos />
         </div>
@@ -192,7 +235,7 @@ export default function Home() {
             {[
               { title: 'Aerospace Engineering', icon: Rocket, color: 'bg-[#E34A21]', desc: 'UAVs, Satellite Systems and Aerodynamics.' },
               { title: 'Automotive Engineering', icon: Truck, color: 'bg-[#992361]', desc: 'EV Technology, Smart Mobility and Autonomous Vehicles.' },
-              { title: 'Civil Engineering', icon: Building, color: 'bg-green-600', desc: 'Smart Cities, Sustainable Infrastructure and Monitoring.' },
+              { title: 'Civil Engineering', icon: Building, color: 'bg-green-600', desc: 'Smart cities, sustainable infrastructure and Monitoring.' },
               { title: 'Computer Science and Engineering', icon: Monitor, color: 'bg-blue-500', desc: 'AI, Machine Learning, Data Analytics, Cybersecurity and Intelligent Systems.' },
               { title: 'Electrical & Electronics Engineering', icon: Zap, color: 'bg-yellow-600', desc: 'Power Systems, Renewable Energy and Smart Grids.' },
               { title: 'Electronics & Communication Engineering', icon: Cpu, color: 'bg-secondary', desc: 'IoT, VLSI, Sensors and Communication Networks.' },
