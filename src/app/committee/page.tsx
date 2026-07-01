@@ -85,6 +85,8 @@ export default function CommitteePage() {
   ];
 
   const technicalProgramCommittee = [
+    { name: "Dr. Neelu Nagpal", institution: "Vice-Chair, IEEE Smart Cities Ambassador Program" },
+    { name: "Mr. Rakshit Jain", institution: "Secretary, IEEE Smart Cities Ambassador" },
     { name: "Dr. Narendra Nath S.", institution: "Professor, NITK - Surathkal" },
     { name: "Dr. Basavarajappa", institution: "Professor, UBDT, Davangere" },
     { name: "Mr. Charles Chow", institution: "Singapore Management University, Singapore" },
@@ -98,14 +100,12 @@ export default function CommitteePage() {
   ];
 
   const coordinators = [
-    // Priority Co-ordinators
     { name: "Dr. Suresh R" },
     { name: "Dr. Christy Bobby" },
     { name: "Dr. Narendra Babu C" },
     { name: "Dr. Mahesh Varpe" },
     { name: "Dr. Nagaraj Rao" },
     { name: "Dr. Harshad Rameshwar" },
-    // General Co-ordinators
     { name: "Dr. J Venkata Giri" },
     { name: "Dr. Viji" },
     { name: "Dr. Bharath" },
@@ -171,7 +171,6 @@ export default function CommitteePage() {
         <div className="max-w-6xl mx-auto">
           <SectionHeading centered title="Conference Committees" subtitle="Visionary leadership and global experts driving SYNERGY 2026." />
           
-          {/* Patrons & Conference Chair */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {leadership.map((leader, i) => {
               const imageInfo = PlaceHolderImages.find(img => img.id === leader.imageId);
@@ -203,7 +202,6 @@ export default function CommitteePage() {
             })}
           </div>
 
-          {/* Co-Patrons Section */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8 justify-center md:justify-start">
               <div className="p-3 bg-secondary/10 rounded-2xl">
@@ -221,7 +219,6 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Advisory Committee */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-indigo-50 rounded-2xl">
@@ -241,7 +238,6 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Conveners Section */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-primary/10 rounded-2xl">
@@ -273,7 +269,6 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Organizing Committee */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-primary/10 rounded-2xl">
@@ -291,7 +286,6 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Technical Program Committee */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-secondary/10 rounded-2xl">
@@ -316,7 +310,6 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Co-ordinators Section */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-primary/10 rounded-2xl">
@@ -340,7 +333,6 @@ export default function CommitteePage() {
             </div>
           </div>
 
-          {/* Website Section */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-primary/10 rounded-2xl">
