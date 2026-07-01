@@ -108,7 +108,7 @@ export default function Home() {
                   </div>
 
                   {/* Speaker Info */}
-                  <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center">
+                  <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center text-left">
                     <div className="hidden lg:block">
                       <Badge variant="outline" className="border-primary text-primary mb-6 px-4 py-1.5 font-bold tracking-widest uppercase w-fit">
                         Keynote Speaker
@@ -116,14 +116,14 @@ export default function Home() {
                       <h3 className="text-4xl md:text-5xl font-headline font-extrabold text-foreground mb-4">
                         Dr. Florimond Guéniat
                       </h3>
-                      <p className="text-xl font-bold text-secondary mb-2">Associate Professor, Department of Engineering</p>
+                      <p className="text-xl font-bold text-secondary mb-2">Associate Professor & Research Officer</p>
                       <p className="text-lg font-semibold text-muted-foreground mb-8">
                         Birmingham City University (BCU), United Kingdom <br />
-                        <span className="text-sm italic font-medium">IET AI Technical Network Committee Member & Research Officer</span>
+                        <span className="text-sm italic font-medium">IET AI Technical Network Committee Member</span>
                       </p>
                     </div>
 
-                    <div className="bg-[#f6f6f6] p-8 rounded-[2rem] border-l-8 border-primary relative mb-8">
+                    <div className="bg-[#f6f6f6] p-8 rounded-[2rem] border-l-8 border-primary relative mb-8 text-left">
                       <div className="absolute -top-4 -left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
                         <ZapIcon className="w-6 h-6" />
                       </div>
