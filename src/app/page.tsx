@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,6 @@ import {
   ZapIcon,
   Activity,
   Briefcase,
-  Mic2,
   ExternalLink,
   MapPin,
   Clock
@@ -112,8 +110,8 @@ export default function Home() {
                   {/* Speaker Info */}
                   <div className="lg:col-span-7 p-8 md:p-12 flex flex-col justify-center">
                     <div className="hidden lg:block">
-                      <Badge variant="outline" className="border-primary text-primary mb-6 px-4 py-1.5 font-bold tracking-widest uppercase flex items-center gap-2 w-fit">
-                        <Mic2 className="w-4 h-4" /> Keynote Speaker
+                      <Badge variant="outline" className="border-primary text-primary mb-6 px-4 py-1.5 font-bold tracking-widest uppercase w-fit">
+                        Keynote Speaker
                       </Badge>
                       <h3 className="text-4xl md:text-5xl font-headline font-extrabold text-foreground mb-4">
                         Dr. Florimond Guéniat
