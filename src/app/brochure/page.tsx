@@ -1,12 +1,13 @@
 import SectionHeading from '@/components/section-heading';
 import { Card, CardContent } from '@/components/ui/card';
-import { Download, FileText, Mail } from 'lucide-react';
+import { Download, FileText, Mail, Calendar } from 'lucide-react';
 
 export default function BrochurePage() {
-  // Updated filename as requested
   const brochureFileName = "LATESTBrochure_SYNERGY_2026_IC-SIIT-1.pdf";
-  // Robust URL path for the public folder asset
   const brochureUrl = "/LATESTBrochure_SYNERGY_2026_IC-SIIT-1.pdf";
+  
+  const invitationFileName = "synergy 2026 schedule,invitation Updated.pdf";
+  const invitationUrl = "/synergy%202026%20schedule,invitation%20Updated.pdf";
 
   return (
     <div className="pt-32 pb-24 min-h-screen">
@@ -14,11 +15,12 @@ export default function BrochurePage() {
         <div className="max-w-4xl mx-auto">
           <SectionHeading 
             centered 
-            title="Conference Brochure" 
-            subtitle="Download the official brochure for SYNERGY 2026." 
+            title="Conference Documents" 
+            subtitle="Download the official brochure and event invitations for SYNERGY 2026." 
           />
 
-          <div className="flex flex-col items-center mt-12 gap-6">
+          <div className="flex flex-col items-center mt-12 gap-8">
+            {/* Brochure Card */}
             <Card className="w-full max-w-xl rounded-[2.5rem] border-border shadow-lg overflow-hidden group hover:border-primary/30 transition-all bg-white border-2">
               <CardContent className="p-10 flex flex-col items-center text-center">
                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
@@ -39,8 +41,29 @@ export default function BrochurePage() {
               </CardContent>
             </Card>
 
+            {/* Invitation & Schedule Card */}
+            <Card className="w-full max-w-xl rounded-[2.5rem] border-border shadow-lg overflow-hidden group hover:border-secondary/30 transition-all bg-white border-2">
+              <CardContent className="p-10 flex flex-col items-center text-center">
+                <div className="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary group-hover:text-white transition-all">
+                  <Calendar className="w-10 h-10" />
+                </div>
+                <h3 className="text-3xl font-headline font-bold mb-4 text-foreground">Event Schedule & Invitation</h3>
+                <p className="text-muted-foreground font-medium mb-8">Download the official event schedule and invitation letter.</p>
+                
+                <div className="flex flex-col gap-4 w-full justify-center items-center">
+                  <a 
+                    href={invitationUrl}
+                    download={invitationFileName}
+                    className="inline-flex items-center justify-center bg-secondary text-white hover:bg-secondary/90 rounded-2xl h-14 font-bold shadow-lg shadow-secondary/20 px-12 w-full max-w-sm transition-all"
+                  >
+                    <Download className="w-5 h-5 mr-2" /> Download Invitation
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
             <p className="text-sm text-muted-foreground italic">
-              Note: Click the button to download the PDF file directly.
+              Note: Click the buttons above to download the PDF files directly.
             </p>
           </div>
 
