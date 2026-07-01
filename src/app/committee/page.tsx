@@ -36,6 +36,7 @@ export default function CommitteePage() {
   ];
 
   const advisoryCommittee = [
+    { name: "Prof. Prerna Gaur", role: "Chair, IEEE Smart Cities Ambassador Program, NSUT, Delhi, India" },
     { name: "Dr. Dhanesh G. Mohan", role: "Programme Leader & Senior Lecturer, School of Computer Science and Engineering, University of Sunderland, UK" },
     { name: "Prof. Dileep A. D.", role: "Professor, Computer Science and Engineering (CSE), IIT Dharwad" },
     { name: "Mr. Srihari Raghavendra Rao", role: "Senior Data Scientist, Light Horse Therapeutics, San Diego, California, United States" },
@@ -145,8 +146,6 @@ export default function CommitteePage() {
     { name: "Dr. Bhanu Pratap" },
     { name: "Dr. Rema" },
     { name: "Dr. Sangeetha Shenoy" },
-    { name: "Ms. Shaista" },
-    { name: "Ms. Naganandini" },
     { name: "Ms. Vaishnavi" },
     { name: "Ms. Vidyashree" },
     { name: "Ms. Praneetha GN" },
