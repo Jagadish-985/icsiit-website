@@ -50,12 +50,19 @@ export default function RegistrationPage() {
                 <div className={`absolute top-0 right-0 p-6 ${tier.color} text-white font-extrabold rounded-bl-[2.5rem] z-10 text-lg tracking-widest uppercase text-right max-w-[80%]`}>
                   {tier.name}
                 </div>
-                <div className="mb-6 mt-4">
+                <div className="mb-4 mt-4">
                   <h3 className="text-5xl font-headline font-extrabold text-foreground">₹{tier.price}</h3>
-                  <p className={`text-sm ${tier.name === 'Industry' ? 'text-slate-600' : tier.iconColor} font-bold mt-2 uppercase tracking-widest`}>INR Per Participant</p>
+                  <div className="mt-2">
+                    <p className={`text-sm ${tier.name === 'Industry' ? 'text-slate-600' : tier.iconColor} font-bold uppercase tracking-widest`}>
+                      INR Per Participant
+                    </p>
+                    <p className="text-[10px] mt-1 text-muted-foreground leading-tight italic">
+                      * Registering as a co-author? Please refer to the "Conference Attendees" section below for special pricing.
+                    </p>
+                  </div>
                 </div>
                 <p className="text-sm text-muted-foreground mb-8 font-medium">
-                  {tier.name} registration for the International Conference on Smart, Intelligent and Innovative Technologies.
+                  Official registration for {tier.name} delegates at the International Conference on Smart, Intelligent and Innovative Technologies.
                 </p>
                 <ul className="space-y-4 mb-10">
                   {tier.features.map((item, j) => (
@@ -69,21 +76,23 @@ export default function RegistrationPage() {
                 </ul>
                 <Button asChild className={`w-full ${tier.name === 'Industry' ? 'bg-[#1E293B]' : tier.name === 'Faculty' ? 'bg-[#992361]' : 'bg-[#E34A21]'} text-white hover:opacity-90 py-6 text-lg font-bold mt-auto rounded-2xl shadow-lg border-none`}>
                   <a href={registrationLink} target="_blank" rel="noopener noreferrer">
-                    Register <ExternalLink className="ml-2 w-5 h-5" />
+                    Register Now <ExternalLink className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 max-w-2xl mx-auto">
+          <div className="mt-12 max-w-3xl mx-auto">
             <div className="p-8 bg-primary/5 border-2 border-primary/20 rounded-[3rem] flex items-center gap-6 group hover:bg-primary/10 transition-colors">
               <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shrink-0 shadow-lg group-hover:rotate-6 transition-transform text-white">
                 <Users className="w-8 h-8" />
               </div>
               <div>
-                <h4 className="font-extrabold text-xl text-foreground">Conference Attendees</h4>
-                <p className="text-muted-foreground font-medium">Want to attend technical sessions and keynotes without presenting a paper? Participation is available at <span className="text-primary font-bold">₹200 per person</span>.</p>
+                <h4 className="font-extrabold text-xl text-foreground">Conference Attendees & Co-Authors</h4>
+                <p className="text-muted-foreground font-medium">
+                  Additional co-authors or delegates wishing to attend technical sessions and keynotes without paper presentation can register at <span className="text-primary font-bold">₹800 per person</span>.
+                </p>
               </div>
             </div>
           </div>
@@ -100,32 +109,32 @@ export default function RegistrationPage() {
                 <div className="bg-primary/10 border border-primary/20 p-6 rounded-3xl flex items-start gap-4 mb-4">
                   <Info className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-primary font-bold leading-relaxed">
-                    Important Note: Payment has to be done only after the full paper is accepted.
+                    Notice: Final registration payment should only be processed after receiving full paper acceptance notification.
                   </p>
                 </div>
                 <div className="flex gap-6 items-start">
                   <span className="w-10 h-10 bg-white rounded-full flex items-center justify-center font-bold text-primary flex-shrink-0 shadow-md">1</span>
-                  <p>Payments must be completed online via the secure gateway linked in the registration form.</p>
+                  <p>All payments must be completed online via the secure transaction gateway linked in the registration portal.</p>
                 </div>
                 <div className="flex gap-6 items-start">
                   <span className="w-10 h-10 bg-white rounded-full flex items-center justify-center font-bold text-primary flex-shrink-0 shadow-md">2</span>
-                  <p>Retain your transaction ID and digital receipt before starting the form submission.</p>
+                  <p>Please record your transaction ID and secure a digital copy of the receipt before final form submission.</p>
                 </div>
                 <div className="flex gap-6 items-start">
                   <span className="w-10 h-10 bg-white rounded-full flex items-center justify-center font-bold text-primary flex-shrink-0 shadow-md">3</span>
-                  <p>Upload a clear soft copy of the payment receipt in the registration portal.</p>
+                  <p>Ensure a clear soft copy of the payment confirmation is uploaded to complete the verification process.</p>
                 </div>
               </div>
               <div className="p-10 bg-white rounded-[3rem] border border-border shadow-xl h-fit">
                 <div className="flex items-center gap-3 mb-6">
                   <ShieldCheck className="w-8 h-8 text-secondary" />
-                  <h4 className="font-extrabold text-2xl text-foreground">Group Registrations</h4>
+                  <h4 className="font-extrabold text-2xl text-foreground">Institutional Group Registration</h4>
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  For groups of 5 or more participants from the same organization, attractive institutional discounts are available.
+                  Institutional discounts are available for groups of five or more participants from the same organization. For corporate or academic bulk inquiries, please contact our administrative team.
                 </p>
                 <Badge className="bg-accent/20 text-accent-foreground border-accent font-bold py-2 px-6 rounded-full text-base">
-                  Contact: icsiit@msruas.ac.in
+                  Inquiries: icsiit@msruas.ac.in
                 </Badge>
               </div>
             </div>
