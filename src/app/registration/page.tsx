@@ -22,7 +22,7 @@ export default function RegistrationPage() {
       color: "bg-secondary",
       borderColor: "border-secondary/10",
       iconColor: "text-secondary",
-      features: ["Priority session access", "Premium professional kit", "Executive Networking lunch", "Presentation Certificate", "Journal publication support"]
+      features: ["Priority session access", "Premium professional kit", "Executive Networking lunch", "Presentation Certificate"]
     },
     {
       name: "Industry",
